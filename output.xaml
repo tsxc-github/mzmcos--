@@ -5,19 +5,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Margin="0,10,0,14">
@@ -47,6 +48,49 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
       </Grid>
     </StackPanel>
   </Border>
+</local:MyCard><local:MyCard Title="oi 小鬼，元旦晚会要来力！" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">oi 小鬼，元旦晚会要来力！</Paragraph><Paragraph>发布时间: 2025年01月26日 20:41:03</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/2025poster-Release-1.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph>亲爱的绵中方块人们：
+蛇年新春将至，绵中方块人服务器为大家准备了一场精彩绝伦的春节联欢活动！活动将于 1 月 28 日开启，一直持续到 1 月 29 日，期间有各种丰富有趣的游戏和丰厚的奖励等你来拿。</Paragraph><Paragraph Style="{StaticResource H3}">邀请对象</Paragraph><Paragraph>绵中在校学生、绵中毕业学生、绵中学生邀请的好朋友</Paragraph><Paragraph Style="{StaticResource H3}">活动日程</Paragraph><Paragraph>1 月 28 日 （除夕）</Paragraph><Paragraph>06:00~18:00：解密前置任务
+12:00~19:00：小游戏开放 （包括贪吃蛇、2048、打地鼠等多种小游戏）
+19:00~20:00：起床战争
+20:00~20:20：开幕式
+20:20~21:00：寻宝
+21:00~21:30：躲猫猫
+21:30~22:00：跑酷
+22:00~22:30：足球 （自行组队）
+22:30~23:00：相扑 （自行报名）
+23:00~23:50：冰船、赛车
+23:50~00:00：许愿
+00:00~00:30：倒计时、烟花、歌唱比赛
+20:00~01:00：发红包 （活动间隙）</Paragraph><Paragraph Style="{StaticResource H3}">奖励内容</Paragraph><Paragraph><Bold>游戏内奖励</Bold>：建筑大礼包 （混凝土、玻璃、羊毛、木头、陶瓦、室内装饰等）、食物尝鲜包、玩家头颅、载具 （自行车、摩托车、小轿车、赛车）、游戏币、飞行卡
+<Bold>周边奖励</Bold>（管理送到班:)）：钥匙扣、明信片、书签</Paragraph><Paragraph Style="{StaticResource H3}">活动亮点</Paragraph><Paragraph><Bold>解密前置任务</Bold>：挑战智慧，解锁神秘奖励。
+<Bold>小游戏开放</Bold>：多种趣味小游戏，等你来战。
+<Bold>起床战争</Bold>：团队协作，争夺胜利。
+<Bold>寻宝</Bold>：探索未知，发现宝藏。
+<Bold>躲猫猫</Bold>：经典游戏，欢乐无限。
+<Bold>跑酷</Bold>：展示技巧，一决高下。
+<Bold>足球</Bold>：团队对抗，激情四溢。
+<Bold>相扑</Bold>：力量与技巧的较量。
+<Bold>冰船、赛车</Bold>：速度与激情的完美结合。
+<Bold>许愿</Bold>：许下新年愿望，开启美好未来。
+<Bold>倒计时、烟花、歌唱比赛</Bold>：共同迎接新年，欢庆时刻。</Paragraph><Paragraph Style="{StaticResource H3}">参与方式</Paragraph><Paragraph><Bold>宣传任务</Bold>：完成宣传任务，拉人或点赞，赢取周边奖励。
+<Bold>解密任务</Bold>：参与解密前置任务，集齐任务卡片，兑换丰厚奖励。
+<Bold>游戏参与</Bold>：在活动期间，积极参与各项游戏，赢取游戏内奖励和周边奖励。</Paragraph><Paragraph Style="{StaticResource H3}">期待你的加入</Paragraph><Paragraph>我们期待你的参与，一起度过一个欢乐、难忘的春节联欢活动！快来加入我们，共同迎接新的一年吧！
+绵中方块人服务器团队</Paragraph><Paragraph Style="{StaticResource H3}">宣传奖励</Paragraph><Paragraph>邀请 1 个人以上——明信片
+  邀请 5 个人以上——书签、管理组亲签明信片
+  邀请 10 个人以上——钥匙扣、管理组亲签明信片
+  动态转发获赞 28 赞以上——书签
+  动态转发获赞 58 赞以上——亲签明信片
+  动态转发获赞 88 赞以上——钥匙扣
+注意：
+1、每一个被邀请人仅能制定一个邀请人，以新进服和超过 3 月未上线的玩家为主，正月初一中午 12 点后把邀请证明截图发给服主 Boen_Shi 核验
+2、动态转发请在正月初一中午 12 点后截图发给服主 Boen_Shi 核验</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
 </local:MyCard><local:MyCard Title="服务器视距已升级！" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
