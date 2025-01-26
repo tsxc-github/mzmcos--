@@ -11,6 +11,9 @@ with open("feed.xml","w",encoding='UTF-8') as f:
     f.write(response.text)
 tree =ET.parse("feed.xml")
 
+response.keep_alive = False
+response.close()
+
 print(tree)
 root = tree.getroot()
 
