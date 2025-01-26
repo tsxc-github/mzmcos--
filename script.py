@@ -23,7 +23,7 @@ for i in range(1,100):
 
 os.open("pages/pages.yml",os.O_CREAT)
 with open("pages/pages.yml","w",encoding='UTF-8') as f:
-    f.write("name: pages\ncards:\n")
+    f.write("name: pages\ncards:\n - header\n")
 
 order=1
 for child in root:
@@ -49,7 +49,7 @@ for child in root:
                     # print(item.text)# 文章描述
                     description=item.text
             print("=====================================")
-            pubDate=(parse(pubDate)+datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+            pubDate=(parse(pubDate)+datetime.timedelta(hours=8)).strftime("%Y年%m月%d日 %H:%M:%S")
             MDcontent=md(content)
             os.open("libraries/"+"page"+str(order)+".md",os.O_CREAT)
             with open("libraries/"+"page"+str(order)+".md","w",encoding='UTF-8') as f:
