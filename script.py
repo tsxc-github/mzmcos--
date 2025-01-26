@@ -62,6 +62,3 @@ for child in root:
             
             
 os.system("builder build")
-os.system("git add output.xaml -f")
-os.system("git commit -m \"更新output.xaml\"")
-os.system("git push")

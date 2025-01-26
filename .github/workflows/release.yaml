@@ -6,9 +6,7 @@ on:
       - main
 
 jobs:
-
   release:
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -26,3 +24,8 @@ jobs:
       - name: run shell script
         run: |
           bash ./run.sh
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
