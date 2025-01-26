@@ -5,7 +5,7 @@ from dateutil.parser import parse
 from markdownify import markdownify as md
 import os
 
-response = requests.get("https://mc.boen.fun/feed")
+response = requests.get("https://mc.boen.fun/feed",verify=False)
 os.open("feed.xml",os.O_CREAT)
 with open("feed.xml","w",encoding='UTF-8') as f:
     f.write(response.text)
