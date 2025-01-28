@@ -6,7 +6,7 @@ from markdownify import markdownify as md
 import os
 
 response = requests.get("https://mc.boen.fun/feed",verify=False)
-os.open("feed.xml",os.O_CREAT)
+# os.open("feed.xml",os.O_CREAT)
 with open("feed.xml","w",encoding='UTF-8') as f:
     f.write(response.text)
 tree =ET.parse("feed.xml")
@@ -23,8 +23,9 @@ for i in range(1,100):
         os.remove("libraries/"+"page"+str(i)+".md")
     except:
         pass
-
-os.open("pages/pages.yml",os.O_CREAT)
+    
+os.makedirs("pages", exist_ok=True)
+# os.open("pages/pages.yml",os.O_CREAT)
 with open("pages/pages.yml","w",encoding='UTF-8') as f:
     f.write("name: pages\ncards:\n - header\n")
 
@@ -57,6 +58,7 @@ for child in root:
             os.open("libraries/"+"page"+str(order)+".md",os.O_CREAT)
             with open("libraries/"+"page"+str(order)+".md","w",encoding='UTF-8') as f:
                 f.write("# "+title+"\n")
+                f.write("[文章链接]("+link+") ")
                 f.write("发布时间: "+pubDate+"\n")
                 f.write(MDcontent)
             with open("pages/pages.yml","a",encoding='UTF-8') as f:
@@ -65,3 +67,9 @@ for child in root:
             
             
 os.system("builder build")
+
+# os.open("output.xaml",os.O_CREAT)
+with open("output.xaml","r",encoding='UTF-8') as f:
+    Text=f.read().replace("IsSwaped=\"False\"","IsSwaped=\"True\"")
+with open("output.xaml","w",encoding='UTF-8') as f:
+    f.write(Text)
