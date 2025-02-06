@@ -5,24 +5,43 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：手机可以用FCL玩javaMC" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -52,7 +71,19 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="失落之国前置Ⅱ-序章一" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="探索游戏内点歌系统" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">探索游戏内点歌系统</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mc.boen.fun/2025/02/160/p=%e6%8e%a2%e7%b4%a2%e6%b8%b8%e6%88%8f%e5%86%85%e7%82%b9%e6%ad%8c%e7%b3%bb%e7%bb%9f">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 13:10:17</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/02/1738808881179.png"/></BlockUIContainer><Paragraph>在 Minecraft 的世界里，玩家不仅可以自由探索、建造，还能通过独特的游戏内点歌系统，享受音乐带来的乐趣。这一创新功能为传统的沙盒游戏体验增添了别样的魅力，让玩家在方块世界中也能沉浸在音乐的海洋。</Paragraph><Paragraph Style="{StaticResource H3}">什么是游戏内点歌系统</Paragraph><Paragraph>游戏内点歌系统是 Minecraft 绵中方块人服务器为玩家提供的一项特色服务。它允许玩家在游戏中通过简单的指令，搜索、播放、点播自己喜爱的歌曲。这一系统打破了游戏与音乐的界限，让玩家在建造、冒险的同时，能够随时聆听音乐，提升游戏的趣味性和沉浸感。</Paragraph><Paragraph Style="{StaticResource H3}">点歌系统的亮点</Paragraph><Paragraph>• 多平台支持</Paragraph><Paragraph>点歌系统支持多种音乐平台，包括网易云音乐、QQ 音乐等。玩家可以根据自己的喜好选择不同的平台进行歌曲搜索和播放。目前，网易云音乐的适配最为完善，拥有丰富的歌曲资源，包括付费歌曲。</Paragraph><Paragraph>• 便捷的操作方式</Paragraph><Paragraph>玩家可以通过简单的指令完成歌曲的搜索、播放和点播。例如，使用<TextBox Style="{StaticResource InlineCode}">/zm search &lt; 平台&gt; &lt; 歌名&gt;</TextBox>可以搜索歌曲，而<TextBox Style="{StaticResource InlineCode}">/zm play &lt; 平台&gt; &lt; 歌名&gt;</TextBox>则可以直接播放歌曲。此外，玩家还可以通过歌单功能，批量导入和播放自己喜欢的歌单。</Paragraph><Paragraph>• 社交互动性</Paragraph><Paragraph>点歌系统不仅是一个音乐播放工具，更是一个社交平台。玩家可以将自己喜欢的歌曲推送给全服玩家，让大家一起欣赏。这种互动性让游戏内的社交氛围更加浓厚，玩家之间的联系也更加紧密。</Paragraph><Paragraph>• 个性化体验</Paragraph><Paragraph>玩家可以根据自己的心情和游戏场景选择不同的音乐。无论是冒险时的激昂旋律，还是建造时的舒缓音乐，点歌系统都能满足玩家的需求。此外，系统还提供了多种播放模式，如单曲循环、列表随机等，让玩家能够根据自己的喜好自由调整。</Paragraph><Paragraph Style="{StaticResource H3}">如何使用全服点歌系统</Paragraph><Paragraph>下面链接的 WIKI 介绍得非常清楚，快去看吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://wiki.boen.fun/zh/playinggame/music-in-server">https://wiki.boen.fun/zh/playinggame/music-in-server</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Quote}">
+  
+<Paragraph>在未来，随着技术的不断进步和更多平台的适配，游戏内点歌系统有望为玩家带来更加丰富和个性化的音乐体验。让我们一起期待这个系统在未来的发展，为 Minecraft 的世界增添更多色彩。</Paragraph>
+
+</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/02/1738818383664.webp"/></BlockUIContainer>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="失落之国前置Ⅱ-序章一" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -170,14 +201,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">服务器挂机池开放！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mc.boen.fun/2024/08/77/p=%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%8c%82%e6%9c%ba%e6%b1%a0%e5%bc%80%e6%94%be%ef%bc%81">文章链接</local:MyTextButton></Underline> 发布时间: 2024年08月10日 14:47:17</Paragraph><Paragraph><Span TextDecorations="Strikethrough">腐竹写插件头发快掉了……</Span></Paragraph><Paragraph><Bold>很好，Mzmc 服务器现在有挂机池辣！！！</Bold></Paragraph><Paragraph>玩家在有事没事都可以前往挂机池挂机！</Paragraph><Paragraph>挂机池每 10s 恢复 1 格血、一格饱食度、半格饱和度</Paragraph><Paragraph>目前已存在的挂机池将在下面以图片的形式表示</Paragraph><Paragraph><Bold>主城挂机池：坐标：-623,67,-1383</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125313-boen_shi-66b762b9a68a4-1.jpeg"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125316-boen_shi-66b762bcde5bd-1.jpeg"/></BlockUIContainer><Paragraph><Bold>主城北挂机池：坐标：-631,68,-1855</Bold></Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125334-boen_shi-66b762ce0a1bf-1.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125349-boen_shi-66b762dd4bd1d.webp"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125402-boen_shi-66b762eae371c.webp"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/125408-boen_shi-66b762f0498fe-1.jpeg"/></InlineUIContainer></Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="服务器经济收购插件编写并测试完毕，服务器即将迎来收购潮！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">服务器经济收购插件编写并测试完毕，服务器即将迎来收购潮！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mc.boen.fun/2024/07/70/p=%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%bb%8f%e6%b5%8e%e6%94%b6%e8%b4%ad%e6%8f%92%e4%bb%b6%e7%bc%96%e5%86%99%e5%b9%b6%e6%b5%8b%e8%af%95%e5%ae%8c%e6%af%95%ef%bc%8c%e6%9c%8d%e5%8a%a1%e5%99%a8%e5%8d%b3%e5%b0%86">文章链接</local:MyTextButton></Underline> 发布时间: 2024年07月27日 14:44:47</Paragraph><Paragraph>经过 Boen_Shi 的不懈努力，于 2024 年 7 月 26 日晚 23:59 分完成收购插件的编写。并由 Akir_与 Boen_Shi 一起在 2024 年 7 月 27 日早晨进行了收购测试！</Paragraph><Paragraph>服务器收购采用自主研发的收购机制，避免通货膨胀等经济现象发生，也可以避免玩家贫富差距过大，让新玩家也能快速获取第一桶金！</Paragraph><Paragraph>服务器收购后续将陆续开启，请玩家注意留意群消息！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/022839-boen_shi-66a45b57d17c9.png"/></BlockUIContainer><Paragraph>下面是收购测试图片：</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/023028-boen_shi-66a45bc4918f8.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/023034-boen_shi-66a45bcad2c90.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/023049-boen_shi-66a45bd988d7e.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/023055-boen_shi-66a45bdf76e26.webp"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/023100-boen_shi-66a45be43ab28.jpeg"/></InlineUIContainer></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
