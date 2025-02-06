@@ -65,11 +65,10 @@ for child in root:
                 f.write(" - "+"page"+str(order)+"\n")
             order+=1
             
-            
-os.system("builder build")
+os.system("mkdir public")
+os.system("builder build --output-path public/output.xaml")
 
-# os.open("output.xaml",os.O_CREAT)
-with open("output.xaml","r",encoding='UTF-8') as f:
+with open("public/output.xaml","r",encoding='UTF-8') as f:
     Text=f.read().replace("IsSwaped=\"False\"","IsSwaped=\"True\"")
-with open("output.xaml","w",encoding='UTF-8') as f:
+with open("public/output.xaml","w",encoding='UTF-8') as f:
     f.write(Text)

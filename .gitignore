@@ -1,3 +1,5 @@
 libraries/*.md
 *.xaml
 *.xml
+pages/pages.yml
+public
