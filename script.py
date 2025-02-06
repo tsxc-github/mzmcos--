@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 from dateutil.parser import parse
 from markdownify import markdownify as md
 import os
+import random
+import yaml
 
 response = requests.get("https://mc.boen.fun/feed",verify=False)
 # os.open("feed.xml",os.O_CREAT)
@@ -68,7 +70,18 @@ for child in root:
 os.system("mkdir public")
 os.system("builder build --output-path public/output.xaml")
 
+# 将卡片设置为折叠
 with open("public/output.xaml","r",encoding='UTF-8') as f:
     Text=f.read().replace("IsSwaped=\"False\"","IsSwaped=\"True\"")
+with open("public/output.xaml","w",encoding='UTF-8') as f:
+    f.write(Text)
+    
+# 随机添加一条你知道吗
+with open("Tips.yaml","r",encoding='UTF-8') as f:
+    Tips=yaml.load(f.read(),Loader=yaml.FullLoader)["Tips"]
+Tip=Tips[random.SystemRandom().randint(0,len(Tips)-1)]
+
+with open("public/output.xaml","r",encoding='UTF-8') as f:
+    Text=f.read().replace("$你知道吗$",Tip)
 with open("public/output.xaml","w",encoding='UTF-8') as f:
     f.write(Text)
