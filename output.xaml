@@ -5,11 +5,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -29,19 +31,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：加载器的发行代号其实是绵中的各个楼以正大门为原点从近到远排的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen负责画饼，烙饼负责烙……" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -71,7 +70,19 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mc.boen.fun/2025/02/184/p=%e5%bc%80%e5%8f%91%e6%9d%82%e8%b0%88-mianzhongmincraftloader%e7%9a%84%e5%85%83%e5%ae%b5%e7%89%b9%e5%88%ab%e7%af%87">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月12日 22:29:32</Paragraph><Paragraph>恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader」 已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）~~和各位玩家老爷的使用 ~~（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
+  
+<Paragraph>发行代号 发行类型 主版本号. 次版本号. 修订版本号-日期码</Paragraph>
+
+</Section><Paragraph>比如：通慧 Release 2.5.1-202502012  </Paragraph><Paragraph>一般来说, 发行代号&amp; 发行类型&amp; 修订版本号&amp; 日期码您不需要关心，  </Paragraph><Paragraph>不过我们推荐您在次版本号变动时更新，在主版本号变动时我们强烈推荐您更新。</Paragraph><Paragraph>（其实在我们实装加载器自更新之前都是想更就更）</Paragraph><Paragraph>哈哈，今天开发杂谈就到这里了，祝各位元宵快乐!</Paragraph><Paragraph>——绵中方块人服务器管理组</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -197,14 +208,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/2025-01-19_23.01.02.webp"/></InlineUIContainer></Paragraph><Paragraph Style="{StaticResource H3}">飞越大湾区：领略现代都市的繁华</Paragraph><Paragraph>最后，我们将乘坐飞机前往大湾区。在这里，你可以看到玩家们建造的现代化城镇，高楼、桥梁、港口……每一处都展现了玩家们的精湛技艺和对细节的追求。飞越大湾区，感受现代城镇的繁华与活力，相信你会被这里的景象深深吸引。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/2025-01-19_23.14.02.webp"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/2025-01-19_23.17.10.webp"/></BlockUIContainer><Paragraph>参观结束后，我们诚挚地邀请新朋友们加入我们的建造行列。无论你是建筑新手还是资深玩家，都可以在这里找到属于自己的乐趣。群友们会为你提供各种资源和建议，帮助你建造出独一无二的房屋。你可以与大家一起合作，共同打造一个属于我们的美好家园。
 新朋友们，欢迎你们加入我们的绵中方块人服务器！在这里，你可以尽情发挥想象力，与朋友们一起创造属于我们的世界。让我们携手共进，开启一段难忘的冒险之旅！
 <Span TextDecorations="Strikethrough">下图中 Yinja_Zhu 正在做饭……</Span></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/2025-01-19_23.57.33.webp"/></BlockUIContainer>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="重磅更新！！！服务器现在有更多食物了！！！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">重磅更新！！！服务器现在有更多食物了！！！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mc.boen.fun/2024/08/84/p=%e9%87%8d%e7%a3%85%e6%9b%b4%e6%96%b0%ef%bc%81%ef%bc%81%ef%bc%81%e6%9c%8d%e5%8a%a1%e5%99%a8%e7%8e%b0%e5%9c%a8%e6%9c%89%e6%9b%b4%e5%a4%9a%e9%a3%9f%e7%89%a9%e4%ba%86%ef%bc%81%ef%bc%81%ef%bc%81">文章链接</local:MyTextButton></Underline> 发布时间: 2024年08月20日 14:55:58</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/132807-boen_shi-66c499e7e43a6.jpeg"/></BlockUIContainer><Paragraph>没错，你没听错，原版现在有更多食物了！</Paragraph><Paragraph><Bold>现腐竹制作了 4 种自定义作物，70+种自定义食物！</Bold><Span TextDecorations="Strikethrough">（创意借鉴农夫乐事 mod）</Span></Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/141414-boen_shi-66c4a4b6a345e.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/141559-boen_shi-66c4a51f0f58f.webp"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/141418-boen_shi-66c4a4ba82b56.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/141421-boen_shi-66c4a4bda941e.jpeg"/></InlineUIContainer><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/141454-boen_shi-66c4a4de3a166.jpeg"/></InlineUIContainer></Paragraph><Paragraph>而且，这个食物的图标、显示名称、恢复饱食度和饱和度都是自定义的。</Paragraph><Paragraph><Bold>不会玩？不可能的。服务器配有配方书，方便玩家游玩。</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/133302-boen_shi-66c49b0e32d4d.webp"/></BlockUIContainer><Paragraph><Bold>基岩版呢？当然也可以！</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/133427-boen_shi-66c49b63242ca.jpeg"/></BlockUIContainer><Paragraph><Bold>好了，废话少说，现在开始游玩教程：</Bold></Paragraph><Paragraph>首先，无论 Java 版和基岩版进入游戏，请同意资源包。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/133833-boen_shi-66c49c591277d.jpeg"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/133933-boen_shi-66c49c952be1e.webp"/></BlockUIContainer><Paragraph>服务器添加了 4 种自定义食物：</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/134638-boen_shi-66c49e3ebe48b.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H4}"><Bold>作物获取</Bold></Paragraph><Paragraph>1、 野外会自然生成 （如上图）</Paragraph><Paragraph>2、 通过打草获得其种子 （12.5% 概率），通过农田种植获得</Paragraph><Paragraph>种植后，获得 4 种作物：卷心菜、洋葱、稻穗、番茄</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/134403-boen_shi-66c49da3a62e8.webp"/></BlockUIContainer><Paragraph>服务器所有的配方都可以在 「配方书」 中找到。</Paragraph><Paragraph>配方书配方：</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/134908-boen_shi-66c49ed4bc8e5.webp"/></BlockUIContainer><Paragraph>有几种制作食物的工具：普通工作台、普通炉灶 （熔炉、烟熏炉）、菜板、锅 （配合灶台使用）</Paragraph><Paragraph>不同制作事物的工具的配方有不同的分类，详细请见配方书。</Paragraph><Paragraph>普通工作台和普通炉灶就不多讲了，和原版使用的方法一致。</Paragraph><Paragraph Style="{StaticResource H4}"><Bold>菜板</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/135451-boen_shi-66c4a02b782fe.jpeg"/></BlockUIContainer><Paragraph>配方在配方书中有，可自行查询</Paragraph><Paragraph>放下来是一个压力板</Paragraph><Paragraph>如何使用？</Paragraph><Paragraph>先查询配方，查看可以进行的操作</Paragraph><Paragraph>再制作一把刀，配方书理由配方。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/135624-boen_shi-66c4a088ccc30.webp"/></BlockUIContainer><Paragraph><Bold>Java 版：左手拿着需要切割物品，右手拿着刀，对准菜板右键切割即可获得</Bold></Paragraph><Paragraph><Bold>基岩版：右手拿着物品单击菜板，在 5s 之内拿着刀再单击菜板切割即可获得</Bold></Paragraph><Paragraph Style="{StaticResource H4}"><Bold>锅 （配合灶台使用）</Bold></Paragraph><Paragraph>请先制作锅和炉灶，配方在配方书</Paragraph><Paragraph>按如下方法摆放：</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/140337-boen_shi-66c4a239e21a5.webp"/></BlockUIContainer><Paragraph><Bold>上方是锅，下方是炉灶</Bold></Paragraph><Paragraph>打开炉灶，放入煤，并点击 「篝火」，即可点火</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mc.boen.fun/wp-content/uploads/2025/01/140553-boen_shi-66c4a2c1d0599.webp"/></BlockUIContainer><Paragraph>这时，打开锅 （其实就是工作台界面），按照配方书中的配发制作即可！</Paragraph><Paragraph>总而言之，多看配方书，没问题哦！</Paragraph><Paragraph>如果遇到 BUG，请马上 @腐竹，感谢！</Paragraph><Paragraph>祝大家玩得开心！<Span TextDecorations="Strikethrough">（后期可能有 DLC 哦！）</Span></Paragraph><Paragraph Style="{StaticResource H3}"><Bold>这就是食物拓展的玩法，大家快来玩吧！</Bold></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
