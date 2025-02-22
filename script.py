@@ -7,7 +7,7 @@ import os
 import random
 import yaml
 
-response = requests.get("https://mc.boen.fun/feed",verify=False)
+response = requests.get("https://mzmc.top/feed",verify=False)
 # os.open("feed.xml",os.O_CREAT)
 with open("feed.xml","w",encoding='UTF-8') as f:
     f.write(response.text)
