@@ -5,14 +5,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -32,15 +30,18 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen负责画饼，烙饼负责烙……" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：我们每年都会举行新春庆祝活动" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -56,10 +57,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             <Image Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/PHB_2.png" />
           </StackPanel>
           <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,0,0,10">
-            <local:MyIconTextButton HorizontalAlignment="Left" Text="官网" ToolTip="前往官网" EventType="打开网页" EventData="https://mc.boen.fun/" LogoScale="1" Logo="M907.636364 643.397818A54.853818 54.853818 0 0 1 852.852364 698.181818H171.147636A54.853818 54.853818 0 0 1 116.363636 643.397818V217.716364A54.877091 54.877091 0 0 1 171.147636 162.909091h681.704728A54.877091 54.877091 0 0 1 907.636364 217.716364v425.681454zM852.852364 93.090909H171.147636A124.765091 124.765091 0 0 0 46.545455 217.716364v425.681454A124.741818 124.741818 0 0 0 171.147636 768H477.090909v93.090909H302.545455a34.909091 34.909091 0 0 0 0 69.818182h418.90909a34.909091 34.909091 0 1 0 0-69.818182h-174.545454v-93.090909h305.943273A124.741818 124.741818 0 0 0 977.454545 643.397818V217.716364A124.765091 124.765091 0 0 0 852.852364 93.090909z"/>
-            <local:MyIconTextButton HorizontalAlignment="Left" Text="地图" ToolTip="打开地图" EventType="打开网页" EventData="https://map.boen.fun/" LogoScale="1" Logo="M111.3 210.5l177.9-107.9c14-8.5 32.2-4.1 40.7 9.9 2.8 4.7 4.3 10 4.3 15.5v655.6c0 10.4-5.4 20.1-14.4 25.5L142 915.4c-14 8.4-32.2 3.9-40.7-10.2-2.8-4.6-4.2-9.9-4.2-15.3v-654c0-10.4 5.4-20 14.2-25.4z m592.9 0L882 102.6c14-8.5 32.2-4.1 40.7 9.9 2.8 4.7 4.3 10 4.3 15.5v655.6c0 10.4-5.4 20.1-14.4 25.5L734.8 915.4c-14 8.4-32.2 3.9-40.7-10.2-2.8-4.6-4.2-9.9-4.2-15.3v-654c0.1-10.4 5.4-20 14.3-25.4z m-265.7-74.3l177.9 106.5c8.9 5.4 14.4 15 14.4 25.4v630.2c0 16.4-13.3 29.6-29.7 29.6-5.4 0-10.7-1.5-15.3-4.3L407.9 816.2c-8.9-5.3-14.4-15-14.4-25.4V161.6c0-16.4 13.3-29.6 29.6-29.6 5.4 0 10.7 1.4 15.4 4.2z"/>
-            <local:MyIconTextButton HorizontalAlignment="Left" Text="Wiki" ToolTip="打开Wiki" EventType="打开网页" EventData="https://wiki.boen.fun/" LogoScale="1" Logo="M515.84 559.744c-39.936 82.432-94.592 194.048-121.728 244.394667-26.282667 45.824-48.085333 39.722667-65.365333 1.237333-59.989333-141.696-183.168-390.144-241.109334-529.450667-10.709333-25.642667-18.816-42.112-26.410666-48.597333-7.722667-6.4-23.637333-10.24-47.872-11.562667C4.394667 214.741333 0 212.565333 0 208.981333v-19.413333l2.218667-1.92c39.424-0.213333 230.442667 0 230.442666 0l2.176 1.92v18.517333c0 5.077333-3.2 7.509333-9.6 7.509334l-24.064 1.322666c-20.693333 1.237333-31.018667 6.997333-31.018666 18.602667 0 5.76 2.261333 14.08 7.082666 25.642667 46.165333 112.896 205.568 448.896 205.568 448.896l5.802667 1.962666 102.869333-205.226666-20.565333-45.525334-70.741333-139.264s-13.568-27.904-18.261334-37.205333c-31.061333-61.568-30.378667-64.768-61.738666-68.992-8.832-0.981333-13.354667-2.133333-13.354667-6.357333v-19.968l2.56-1.92h183.125333l4.821334 1.578666v19.242667c0 4.48-3.242667 6.4-9.685334 6.4l-13.141333 2.005333c-33.792 2.602667-28.202667 16.256-5.802667 60.672l67.498667 138.752 75.008-149.504c12.501333-27.306667 9.941333-34.176 4.736-40.405333-2.986667-3.584-13.013333-9.386667-34.645333-10.24l-8.576-0.896a9.728 9.728 0 0 1-6.186667-2.176 6.4 6.4 0 0 1-2.858667-5.504v-18.218667l2.602667-1.92c53.205333-0.341333 172.501333 0 172.501333 0l2.517334 1.92v18.602667c0 5.162667-2.517333 7.594667-8.234667 7.594667-27.562667 1.28-33.365333 4.053333-43.648 18.730666-5.12 7.936-16 25.130667-27.562667 44.330667l-98.176 182.314667-2.773333 5.76 119.125333 243.712 7.253334 2.048 187.562666-445.354667c6.570667-18.005333 5.504-30.805333-2.730666-38.186667-8.405333-7.338667-14.762667-11.648-36.565334-12.586666l-17.92-0.682667a10.88 10.88 0 0 1-6.485333-1.92c-1.834667-1.237333-3.072-3.2-3.072-5.077333v-18.602667l2.517333-1.92h211.669334l1.749333 1.92v18.645333c0 5.077333-3.157333 7.68-8.917333 7.68-27.648 1.28-48.085333 7.68-61.568 17.962667-13.397333 10.88-23.765333 26.282667-31.402667 45.525333 0 0-172.501333 395.008-231.509333 526.464-22.4 42.965333-44.928 39.125333-64.128-1.322666-24.362667-49.962667-75.648-161.536-112.896-243.626667l2.261333-1.536z"/>
-            <local:MyIconTextButton HorizontalAlignment="Left" Text="皮肤" ToolTip="打开皮肤站，可以更换皮肤，详见wiki" EventType="打开网页" EventData="https://skin.boen.fun/" LogoScale="1" Logo="M870 126H663.8c-17.4 0-32.9 11.9-37 29.3C614.3 208.1 567 246 512 246s-102.3-37.9-114.8-90.7c-4.1-17.4-19.5-29.3-37-29.3H154c-24.3 0-44 19.7-44 44v252c0 24.3 19.7 44 44 44h75v388c0 24.3 19.7 44 44 44h478c24.3 0 44-19.7 44-44V466h75c24.3 0 44-19.7 44-44V170c0-24.3-19.7-44-44-44z m-28 268H723v432H301V394H182V198h153.3c28.2 71.2 97.5 120 176.7 120s148.5-48.8 176.7-120H842v196z"/>
+            <local:MyIconTextButton HorizontalAlignment="Left" Text="官网" ToolTip="前往官网" EventType="打开网页" EventData="https://mzmc.top/" LogoScale="1" Logo="M907.636364 643.397818A54.853818 54.853818 0 0 1 852.852364 698.181818H171.147636A54.853818 54.853818 0 0 1 116.363636 643.397818V217.716364A54.877091 54.877091 0 0 1 171.147636 162.909091h681.704728A54.877091 54.877091 0 0 1 907.636364 217.716364v425.681454zM852.852364 93.090909H171.147636A124.765091 124.765091 0 0 0 46.545455 217.716364v425.681454A124.741818 124.741818 0 0 0 171.147636 768H477.090909v93.090909H302.545455a34.909091 34.909091 0 0 0 0 69.818182h418.90909a34.909091 34.909091 0 1 0 0-69.818182h-174.545454v-93.090909h305.943273A124.741818 124.741818 0 0 0 977.454545 643.397818V217.716364A124.765091 124.765091 0 0 0 852.852364 93.090909z"/>
+            <local:MyIconTextButton HorizontalAlignment="Left" Text="地图" ToolTip="打开地图" EventType="打开网页" EventData="https://map.mzmc.top/" LogoScale="1" Logo="M111.3 210.5l177.9-107.9c14-8.5 32.2-4.1 40.7 9.9 2.8 4.7 4.3 10 4.3 15.5v655.6c0 10.4-5.4 20.1-14.4 25.5L142 915.4c-14 8.4-32.2 3.9-40.7-10.2-2.8-4.6-4.2-9.9-4.2-15.3v-654c0-10.4 5.4-20 14.2-25.4z m592.9 0L882 102.6c14-8.5 32.2-4.1 40.7 9.9 2.8 4.7 4.3 10 4.3 15.5v655.6c0 10.4-5.4 20.1-14.4 25.5L734.8 915.4c-14 8.4-32.2 3.9-40.7-10.2-2.8-4.6-4.2-9.9-4.2-15.3v-654c0.1-10.4 5.4-20 14.3-25.4z m-265.7-74.3l177.9 106.5c8.9 5.4 14.4 15 14.4 25.4v630.2c0 16.4-13.3 29.6-29.7 29.6-5.4 0-10.7-1.5-15.3-4.3L407.9 816.2c-8.9-5.3-14.4-15-14.4-25.4V161.6c0-16.4 13.3-29.6 29.6-29.6 5.4 0 10.7 1.4 15.4 4.2z"/>
+            <local:MyIconTextButton HorizontalAlignment="Left" Text="Wiki" ToolTip="打开Wiki" EventType="打开网页" EventData="https://wiki.mzmc.top/" LogoScale="1" Logo="M515.84 559.744c-39.936 82.432-94.592 194.048-121.728 244.394667-26.282667 45.824-48.085333 39.722667-65.365333 1.237333-59.989333-141.696-183.168-390.144-241.109334-529.450667-10.709333-25.642667-18.816-42.112-26.410666-48.597333-7.722667-6.4-23.637333-10.24-47.872-11.562667C4.394667 214.741333 0 212.565333 0 208.981333v-19.413333l2.218667-1.92c39.424-0.213333 230.442667 0 230.442666 0l2.176 1.92v18.517333c0 5.077333-3.2 7.509333-9.6 7.509334l-24.064 1.322666c-20.693333 1.237333-31.018667 6.997333-31.018666 18.602667 0 5.76 2.261333 14.08 7.082666 25.642667 46.165333 112.896 205.568 448.896 205.568 448.896l5.802667 1.962666 102.869333-205.226666-20.565333-45.525334-70.741333-139.264s-13.568-27.904-18.261334-37.205333c-31.061333-61.568-30.378667-64.768-61.738666-68.992-8.832-0.981333-13.354667-2.133333-13.354667-6.357333v-19.968l2.56-1.92h183.125333l4.821334 1.578666v19.242667c0 4.48-3.242667 6.4-9.685334 6.4l-13.141333 2.005333c-33.792 2.602667-28.202667 16.256-5.802667 60.672l67.498667 138.752 75.008-149.504c12.501333-27.306667 9.941333-34.176 4.736-40.405333-2.986667-3.584-13.013333-9.386667-34.645333-10.24l-8.576-0.896a9.728 9.728 0 0 1-6.186667-2.176 6.4 6.4 0 0 1-2.858667-5.504v-18.218667l2.602667-1.92c53.205333-0.341333 172.501333 0 172.501333 0l2.517334 1.92v18.602667c0 5.162667-2.517333 7.594667-8.234667 7.594667-27.562667 1.28-33.365333 4.053333-43.648 18.730666-5.12 7.936-16 25.130667-27.562667 44.330667l-98.176 182.314667-2.773333 5.76 119.125333 243.712 7.253334 2.048 187.562666-445.354667c6.570667-18.005333 5.504-30.805333-2.730666-38.186667-8.405333-7.338667-14.762667-11.648-36.565334-12.586666l-17.92-0.682667a10.88 10.88 0 0 1-6.485333-1.92c-1.834667-1.237333-3.072-3.2-3.072-5.077333v-18.602667l2.517333-1.92h211.669334l1.749333 1.92v18.645333c0 5.077333-3.157333 7.68-8.917333 7.68-27.648 1.28-48.085333 7.68-61.568 17.962667-13.397333 10.88-23.765333 26.282667-31.402667 45.525333 0 0-172.501333 395.008-231.509333 526.464-22.4 42.965333-44.928 39.125333-64.128-1.322666-24.362667-49.962667-75.648-161.536-112.896-243.626667l2.261333-1.536z"/>
+            <local:MyIconTextButton HorizontalAlignment="Left" Text="皮肤" ToolTip="打开皮肤站，可以更换皮肤，详见wiki" EventType="打开网页" EventData="https://skin.mzmc.top/" LogoScale="1" Logo="M870 126H663.8c-17.4 0-32.9 11.9-37 29.3C614.3 208.1 567 246 512 246s-102.3-37.9-114.8-90.7c-4.1-17.4-19.5-29.3-37-29.3H154c-24.3 0-44 19.7-44 44v252c0 24.3 19.7 44 44 44h75v388c0 24.3 19.7 44 44 44h478c24.3 0 44-19.7 44-44V466h75c24.3 0 44-19.7 44-44V170c0-24.3-19.7-44-44-44z m-28 268H723v432H301V394H182V198h153.3c28.2 71.2 97.5 120 176.7 120s148.5-48.8 176.7-120H842v196z"/>
             <!-- <local:MyIconTextButton Text="CC BY-NC-SA 4.0" ToolTip="无特殊声明本主页文字内容使用该授权协议" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/" LogoScale="1" Logo="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z" /> -->
           </StackPanel>
         </StackPanel>
@@ -70,15 +71,43 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="资源界随机传送、自动重制系统上线，畅享高效资源采集！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/184/p=%e5%bc%80%e5%8f%91%e6%9d%82%e8%b0%88-mianzhongmincraftloader%e7%9a%84%e5%85%83%e5%ae%b5%e7%89%b9%e5%88%ab%e7%af%87">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月12日 22:29:32</Paragraph><Paragraph>恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader」 已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）~~和各位玩家老爷的使用 ~~（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
+<Paragraph Style="{StaticResource H1}">资源界随机传送、自动重制系统上线，畅享高效资源采集！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/227/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月14日 00:15:14
+各位亲爱的玩家，绵中方块人服务器管理组一直致力于为大家提供更优质的游戏体验。针对大家反馈的资源界刷新过慢、资源更新不及时、随机传送无法使用等问题，我们经过不懈努力，终于开发出了全新的自动刷新资源界，并且搭配了便捷的随机传送系统，让资源采集不再困难！</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001316880533.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">传送方法</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>进入资源界</Bold>：首先使用指令<TextBox Style="{StaticResource InlineCode}">/res</TextBox> 传送到资源界，你将出生在一个平坦的世界，这里是资源采集的起点。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>随机传送</Bold>：到达资源界后，你可以根据需求选择不同的资源区域。使用<TextBox Style="{StaticResource InlineCode}">/zy</TextBox> 随机传送到资源主世界，这里拥有丰富的自然资源，是采集基础材料的好去处；使用<TextBox Style="{StaticResource InlineCode}">/dy</TextBox> 随机传送到资源地狱界，那里有独特的地狱资源，等待你去探索；使用<TextBox Style="{StaticResource InlineCode}">/md</TextBox> 随机传送到资源末地界，末地的稀有资源将为你的建设增添助力。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">注意事项</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>默认随机传送</Bold>：输入传送指令后，系统将自动为你随机选择一个位置进行传送，无需额外操作，方便快捷。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>刷新时间提示</Bold>：传送后，你可以在聊天框看到当前世界的刷新时间，默认为每周日晚上 12 点。请合理安排采集时间，确保在刷新前获取足够的资源。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>禁止建筑修建</Bold>：为了保证资源界的正常刷新，我们特别提醒各位玩家，请勿在资源界修建任何建筑。一旦自动刷新启动，所有建筑将被清除，且不会进行任何赔偿。</Paragraph></ListItem>
+</List><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001402852826.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>现在，就让我们一起体验全新的资源界随机传送系统吧！无论是初入游戏的新手，还是资源采集的高手，都能在这里找到属于自己的宝藏。快来绵中方块人服务器，开启你的高效资源采集之旅，为你的建设事业添砖加瓦！</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器工单系统成功上线：开启高效管理新时代" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器工单系统成功上线：开启高效管理新时代</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/219/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月02日 12:47:06
+</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124628728454.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>在方块人游戏的世界中，服务器的稳定运行和高效管理是每一位玩家和管理员的共同追求。如今，绵中方块人服务器迎来了一个重要的里程碑——全新的工单系统正式制作完成并投入使用。这一创新举措不仅为玩家带来了更加便捷的体验，也为服务器的管理注入了新的活力。</Paragraph><Paragraph>工单系统是连接玩家与管理员的重要桥梁。通过这个系统，玩家在游戏过程中遇到的任何问题，无论是游戏内的建筑损坏、物品丢失，还是与其他玩家的纠纷，都可以通过简单易用的界面快速提交。玩家只需填写游戏 ID、问题标题和详细描述，并根据问题的紧急程度进行评级，管理员就能迅速收到通知并展开处理。此外，玩家还可以上传相关截图或文件作为补充材料，帮助管理员更准确地了解问题所在。</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124701123747.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>对于管理员来说，工单系统更是提升管理效率的利器。系统会自动对工单进行分类和优先级排序，管理员可以根据紧急程度优先处理重要问题。同时，系统还提供了详细的工单记录和统计功能，方便管理员回顾过往问题的处理情况，总结经验教训，进一步优化服务器的管理策略。</Paragraph><Paragraph>绵中方块人服务器工单系统的成功上线，是服务器管理团队长期努力的成果。它不仅提升了玩家的体验，让玩家的问题能够得到更快速、更有效的解决，也为管理员提供了更加高效、透明的管理工具。未来，绵中方块人服务器将继续致力于优化系统功能，为玩家打造一个更加稳定、和谐的游戏环境。无论是在游戏内的探索，还是在游戏外的互动，绵中方块人服务器都将是玩家最可靠的伙伴。</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/184/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月12日 22:29:32
+恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader」 已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）</Span>和各位玩家老爷的使用 <Span TextDecorations="Strikethrough">（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
   
 <Paragraph>发行代号 发行类型 主版本号. 次版本号. 修订版本号-日期码</Paragraph>
 
-</Section><Paragraph>比如：通慧 Release 2.5.1-202502012  </Paragraph><Paragraph>一般来说, 发行代号&amp; 发行类型&amp; 修订版本号&amp; 日期码您不需要关心，  </Paragraph><Paragraph>不过我们推荐您在次版本号变动时更新，在主版本号变动时我们强烈推荐您更新。</Paragraph><Paragraph>（其实在我们实装加载器自更新之前都是想更就更）</Paragraph><Paragraph>哈哈，今天开发杂谈就到这里了，祝各位元宵快乐!</Paragraph><Paragraph>——绵中方块人服务器管理组</Paragraph>
+</Section><Paragraph>比如：通慧 Release 2.5.1-202502012<LineBreak/>
+一般来说, 发行代号&amp; 发行类型&amp; 修订版本号&amp; 日期码您不需要关心，<LineBreak/>
+不过我们推荐您在次版本号变动时更新，在主版本号变动时我们强烈推荐您更新。</Paragraph><Paragraph>（其实在我们实装加载器自更新之前都是想更就更）</Paragraph><Paragraph>哈哈，今天开发杂谈就到这里了，祝各位元宵快乐!</Paragraph><Paragraph>——绵中方块人服务器管理组</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -86,11 +115,22 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/163/p=%e7%bb%b5%e4%b8%ad%e6%96%b9%e5%9d%97%e4%ba%ba%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%af%ad%e9%9f%b3%e8%81%8a%e5%a4%a9%e5%8a%9f%e8%83%bd%e6%ad%a3%e5%bc%8f%e4%b8%8a%e7%ba%bf-%e5%bc%80%e5%90%af">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 14:05:25</Paragraph><Paragraph>亲爱的方块人玩家们：</Paragraph><Paragraph>历经数周的筹备与测试，我们自豪地宣布——<Bold>绵中方块人服务器语音聊天功能正式上线！</Bold> 从即日起，各位玩家可以在游戏内通过语音实时交流，让协作更高效、冒险更畅快、友谊更紧密！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>为什么需要语音聊天？</Bold></Paragraph><Paragraph>作为绵阳中学学生自发搭建的 Minecraft 服务器，我们始终以 「打造沉浸式校园社区」 为目标。随着服务器规模扩大，玩家们对实时沟通的需求日益增长。无论是组队挑战副本、合作搭建史诗建筑，还是深夜闲聊分享趣事，文字聊天已无法满足我们的热情。  </Paragraph><Paragraph><Bold>语音功能将带来三大升级：</Bold></Paragraph><List MarkerStyle="Decimal">
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/163/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 14:05:25
+亲爱的方块人玩家们：</Paragraph><Paragraph>历经数周的筹备与测试，我们自豪地宣布——<Bold>绵中方块人服务器语音聊天功能正式上线！</Bold> 从即日起，各位玩家可以在游戏内通过语音实时交流，让协作更高效、冒险更畅快、友谊更紧密！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>为什么需要语音聊天？</Bold></Paragraph><Paragraph>作为绵阳中学学生自发搭建的 Minecraft 服务器，我们始终以 「打造沉浸式校园社区」 为目标。随着服务器规模扩大，玩家们对实时沟通的需求日益增长。无论是组队挑战副本、合作搭建史诗建筑，还是深夜闲聊分享趣事，文字聊天已无法满足我们的热情。<LineBreak/>
+<Bold>语音功能将带来三大升级：</Bold></Paragraph><List MarkerStyle="Decimal">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>高效协作</Bold>：红石电路太复杂？指令总出错？直接语音沟通，手把手教学更清晰！</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>社交升级</Bold>：听见同学的笑声、语调与个性，让线上友谊更有温度。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>沉浸体验</Bold>：暴风雨夜的洞穴探险、末地屠龙的团队欢呼……用声音感受游戏世界的真实心跳！</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>如何开启语音功能？</Bold></Paragraph><Paragraph>我们已经编写了详细的 wiki 文档，请见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://wiki.boen.fun/zh/playinggame/voice-chat-in-game">这里</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>使用须知与文明公约</Bold></Paragraph><Paragraph>为维护和谐友好的交流环境，请所有玩家遵守以下规则：  </Paragraph><Paragraph>✅ <Bold>文明用语</Bold>：禁止人身攻击、恶意刷屏、传播不当内容。  </Paragraph><Paragraph>✅ <Bold>尊重隐私</Bold>：未经允许不得录制或传播他人语音。  </Paragraph><Paragraph>✅ <Bold>适度使用</Bold>：深夜游玩时请降低音量，避免打扰他人。</Paragraph><Paragraph>语音聊天记录受服务器后台监管，违规者将视情节处以<Bold>禁言、封禁</Bold>等处罚。让我们共同守护这片属于绵中人的纯净天地！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>现在，说出你的第一句话吧！</Bold></Paragraph><Paragraph>语音功能不仅是技术的升级，更是绵中人联结彼此的桥梁。无论你是建筑大师、红石工程师，还是热衷探险的生存玩家，期待听到你的声音，让方块世界因你而生动！</Paragraph><Paragraph><Bold>即刻登录服务器，开启你的语音冒险之旅！</Bold> </Paragraph><Paragraph>如有问题，请联系管理组 （QQ 群：1170263999）</Paragraph><Paragraph>——绵中方块人管理团队  </Paragraph><Paragraph>2025 年 2 月 6 日</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph><Bold>附：语音功能 Q&amp;A</Bold> </Paragraph><Paragraph>Q：语音插件是否会影响游戏流畅度？  </Paragraph><Paragraph>A：插件经优化处理，占用资源极低，无需担心卡顿！  </Paragraph><Paragraph>Q：手机版玩家如何适配？  </Paragraph><Paragraph>A：boen 已经在写网页了，敬请期待!</Paragraph><Paragraph><Bold>团结、创意、欢乐——这里是绵中人自己的 MC 家园！</Bold> 🎮✨</Paragraph>
+</List><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>如何开启语音功能？</Bold></Paragraph><Paragraph>我们已经编写了详细的 wiki 文档，请见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL3BsYXlpbmdnYW1lL3ZvaWNlLWNoYXQtaW4tZ2FtZQ==">这里</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>使用须知与文明公约</Bold></Paragraph><Paragraph>为维护和谐友好的交流环境，请所有玩家遵守以下规则：<LineBreak/>
+✅ <Bold>文明用语</Bold>：禁止人身攻击、恶意刷屏、传播不当内容。<LineBreak/>
+✅ <Bold>尊重隐私</Bold>：未经允许不得录制或传播他人语音。<LineBreak/>
+✅ <Bold>适度使用</Bold>：深夜游玩时请降低音量，避免打扰他人。</Paragraph><Paragraph>语音聊天记录受服务器后台监管，违规者将视情节处以<Bold>禁言、封禁</Bold>等处罚。让我们共同守护这片属于绵中人的纯净天地！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>现在，说出你的第一句话吧！</Bold></Paragraph><Paragraph>语音功能不仅是技术的升级，更是绵中人联结彼此的桥梁。无论你是建筑大师、红石工程师，还是热衷探险的生存玩家，期待听到你的声音，让方块世界因你而生动！</Paragraph><Paragraph><Bold>即刻登录服务器，开启你的语音冒险之旅！</Bold><LineBreak/>
+如有问题，请联系管理组 （QQ 群：1170263999）</Paragraph><Paragraph>——绵中方块人管理团队<LineBreak/>
+2025 年 2 月 6 日</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph><Bold>附：语音功能 Q&amp;A</Bold><LineBreak/>
+Q：语音插件是否会影响游戏流畅度？<LineBreak/>
+A：插件经优化处理，占用资源极低，无需担心卡顿！<LineBreak/>
+Q：手机版玩家如何适配？<LineBreak/>
+A：boen 已经在写网页了，敬请期待!</Paragraph><Paragraph><Bold>团结、创意、欢乐——这里是绵中人自己的 MC 家园！</Bold> 🎮✨</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -98,11 +138,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">探索游戏内点歌系统</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/160/p=%e6%8e%a2%e7%b4%a2%e6%b8%b8%e6%88%8f%e5%86%85%e7%82%b9%e6%ad%8c%e7%b3%bb%e7%bb%9f">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 13:10:17</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738808881179.png"/></BlockUIContainer><Paragraph>在 Minecraft 的世界里，玩家不仅可以自由探索、建造，还能通过独特的游戏内点歌系统，享受音乐带来的乐趣。这一创新功能为传统的沙盒游戏体验增添了别样的魅力，让玩家在方块世界中也能沉浸在音乐的海洋。</Paragraph><Paragraph Style="{StaticResource H3}">什么是游戏内点歌系统</Paragraph><Paragraph>游戏内点歌系统是 Minecraft 绵中方块人服务器为玩家提供的一项特色服务。它允许玩家在游戏中通过简单的指令，搜索、播放、点播自己喜爱的歌曲。这一系统打破了游戏与音乐的界限，让玩家在建造、冒险的同时，能够随时聆听音乐，提升游戏的趣味性和沉浸感。</Paragraph><Paragraph Style="{StaticResource H3}">点歌系统的亮点</Paragraph><Paragraph>• 多平台支持</Paragraph><Paragraph>点歌系统支持多种音乐平台，包括网易云音乐、QQ 音乐等。玩家可以根据自己的喜好选择不同的平台进行歌曲搜索和播放。目前，网易云音乐的适配最为完善，拥有丰富的歌曲资源，包括付费歌曲。</Paragraph><Paragraph>• 便捷的操作方式</Paragraph><Paragraph>玩家可以通过简单的指令完成歌曲的搜索、播放和点播。例如，使用<TextBox Style="{StaticResource InlineCode}">/zm search &lt; 平台&gt; &lt; 歌名&gt;</TextBox>可以搜索歌曲，而<TextBox Style="{StaticResource InlineCode}">/zm play &lt; 平台&gt; &lt; 歌名&gt;</TextBox>则可以直接播放歌曲。此外，玩家还可以通过歌单功能，批量导入和播放自己喜欢的歌单。</Paragraph><Paragraph>• 社交互动性</Paragraph><Paragraph>点歌系统不仅是一个音乐播放工具，更是一个社交平台。玩家可以将自己喜欢的歌曲推送给全服玩家，让大家一起欣赏。这种互动性让游戏内的社交氛围更加浓厚，玩家之间的联系也更加紧密。</Paragraph><Paragraph>• 个性化体验</Paragraph><Paragraph>玩家可以根据自己的心情和游戏场景选择不同的音乐。无论是冒险时的激昂旋律，还是建造时的舒缓音乐，点歌系统都能满足玩家的需求。此外，系统还提供了多种播放模式，如单曲循环、列表随机等，让玩家能够根据自己的喜好自由调整。</Paragraph><Paragraph Style="{StaticResource H3}">如何使用全服点歌系统</Paragraph><Paragraph>下面链接的 WIKI 介绍得非常清楚，快去看吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://wiki.boen.fun/zh/playinggame/music-in-server">https://wiki.boen.fun/zh/playinggame/music-in-server</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Quote}">
+<Paragraph Style="{StaticResource H1}">探索游戏内点歌系统</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/160/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 13:10:17
+</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738808881179.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>在 Minecraft 的世界里，玩家不仅可以自由探索、建造，还能通过独特的游戏内点歌系统，享受音乐带来的乐趣。这一创新功能为传统的沙盒游戏体验增添了别样的魅力，让玩家在方块世界中也能沉浸在音乐的海洋。</Paragraph><Paragraph Style="{StaticResource H3}">什么是游戏内点歌系统</Paragraph><Paragraph>游戏内点歌系统是 Minecraft 绵中方块人服务器为玩家提供的一项特色服务。它允许玩家在游戏中通过简单的指令，搜索、播放、点播自己喜爱的歌曲。这一系统打破了游戏与音乐的界限，让玩家在建造、冒险的同时，能够随时聆听音乐，提升游戏的趣味性和沉浸感。</Paragraph><Paragraph Style="{StaticResource H3}">点歌系统的亮点</Paragraph><Paragraph>• 多平台支持</Paragraph><Paragraph>点歌系统支持多种音乐平台，包括网易云音乐、QQ 音乐等。玩家可以根据自己的喜好选择不同的平台进行歌曲搜索和播放。目前，网易云音乐的适配最为完善，拥有丰富的歌曲资源，包括付费歌曲。</Paragraph><Paragraph>• 便捷的操作方式</Paragraph><Paragraph>玩家可以通过简单的指令完成歌曲的搜索、播放和点播。例如，使用<TextBox Style="{StaticResource InlineCode}">/zm search &lt; 平台&gt; &lt; 歌名&gt;</TextBox>可以搜索歌曲，而<TextBox Style="{StaticResource InlineCode}">/zm play &lt; 平台&gt; &lt; 歌名&gt;</TextBox>则可以直接播放歌曲。此外，玩家还可以通过歌单功能，批量导入和播放自己喜欢的歌单。</Paragraph><Paragraph>• 社交互动性</Paragraph><Paragraph>点歌系统不仅是一个音乐播放工具，更是一个社交平台。玩家可以将自己喜欢的歌曲推送给全服玩家，让大家一起欣赏。这种互动性让游戏内的社交氛围更加浓厚，玩家之间的联系也更加紧密。</Paragraph><Paragraph>• 个性化体验</Paragraph><Paragraph>玩家可以根据自己的心情和游戏场景选择不同的音乐。无论是冒险时的激昂旋律，还是建造时的舒缓音乐，点歌系统都能满足玩家的需求。此外，系统还提供了多种播放模式，如单曲循环、列表随机等，让玩家能够根据自己的喜好自由调整。</Paragraph><Paragraph Style="{StaticResource H3}">如何使用全服点歌系统</Paragraph><Paragraph>下面链接的 WIKI 介绍得非常清楚，快去看吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL3BsYXlpbmdnYW1lL211c2ljLWluLXNlcnZlcg==">https://wiki.boen.fun/zh/playinggame/music-in-server</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Quote}">
   
 <Paragraph>在未来，随着技术的不断进步和更多平台的适配，游戏内点歌系统有望为玩家带来更加丰富和个性化的音乐体验。让我们一起期待这个系统在未来的发展，为 Minecraft 的世界增添更多色彩。</Paragraph>
 
-</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738818383664.webp"/></BlockUIContainer>
+</Section><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738818383664.webp"/></BlockUIContainer><Paragraph></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -110,7 +151,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">节前闲得慌？来做点前置任务吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/123/p=%e8%8a%82%e5%89%8d%e9%97%b2%e5%be%97%e6%85%8c%ef%bc%9f%e6%9d%a5%e5%81%9a%e7%82%b9%e5%89%8d%e7%bd%ae%e4%bb%bb%e5%8a%a1%e5%90%a7%e8%8a%82%e5%89%8d%e9%97%b2%e5%be%97%e6%85%8c%ef%bc%9f%e6%9d%a5%e5%81%9a">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月28日 06:00:32</Paragraph><Paragraph Style="{StaticResource H1}">前言</Paragraph><Paragraph>各位方块人们，蛇年将至，我们管理组在这里先给大家拜个早年！</Paragraph><Paragraph>据不可靠消息，有些玩家已经提前解决了所有作业，正愁找不到事情做。对此，我们管理组集思广益，尽心设计了九个前置活动，作为我们除夕联欢晚会的预热！</Paragraph><Paragraph>下面，请看详细内容</Paragraph><Paragraph Style="{StaticResource H1}">内容</Paragraph><Paragraph>我们管理组<Span TextDecorations="Strikethrough">丧心病狂</Span>制作了九个散布在全服各地的指引 NPC(下文简称 NPC)，通过指引找到 NPC，完成 NPC 发布的任务，就可以获得奖励。</Paragraph><Paragraph>这个时候就有人会问了：主播主播，你的想法固然很好但生存界这么大，我去哪里找呢？</Paragraph><Paragraph>这时候，就得隆重请出我们管理组尽心制作的任务指引单了！<Span TextDecorations="Strikethrough">盐都不带盐的</Span> </Paragraph><Paragraph>我们只需要在生存界输入/kits 指令，就可以获得指引单<Span TextDecorations="Strikethrough">一张纸</Span>了</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76737972055361.png"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76739022909683.webp"/></BlockUIContainer><Paragraph>根据指引找到 NPC 进行交易就可以获得奖券 <Span TextDecorations="Strikethrough">Fabric: 那我走</Span></Paragraph><Paragraph Style="{StaticResource H1}">那我集齐以后呢</Paragraph><Paragraph>这块布也是有名字的，叫 「凭此兑换奖品」  </Paragraph><Paragraph>集齐 3 张以上可以从 Boen 身上爆金币、食物尝鲜包</Paragraph><Paragraph>集齐 6 张以上可以爆很多金币、食物尝鲜包和一张飞行卡</Paragraph><Paragraph>集齐 9 张可以把全管理组的金币爆出来还有食物尝鲜包➕一张飞行卡➕摩托车</Paragraph><Paragraph>别忘了在正月初一中午 12 点后统一找 Boen_Shi 兑换奖励！</Paragraph>
+<Paragraph Style="{StaticResource H1}">节前闲得慌？来做点前置任务吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/123/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月28日 06:00:32
+前言
+==</Paragraph><Paragraph>各位方块人们，蛇年将至，我们管理组在这里先给大家拜个早年！</Paragraph><Paragraph>据不可靠消息，有些玩家已经提前解决了所有作业，正愁找不到事情做。对此，我们管理组集思广益，尽心设计了九个前置活动，作为我们除夕联欢晚会的预热！</Paragraph><Paragraph>下面，请看详细内容</Paragraph><Paragraph Style="{StaticResource H1}">内容</Paragraph><Paragraph>我们管理组<Span TextDecorations="Strikethrough">丧心病狂</Span>制作了九个散布在全服各地的指引 NPC(下文简称 NPC)，通过指引找到 NPC，完成 NPC 发布的任务，就可以获得奖励。</Paragraph><Paragraph>这个时候就有人会问了：主播主播，你的想法固然很好但生存界这么大，我去哪里找呢？</Paragraph><Paragraph>这时候，就得隆重请出我们管理组尽心制作的任务指引单了！<Span TextDecorations="Strikethrough">盐都不带盐的</Span><LineBreak/>
+我们只需要在生存界输入/kits 指令，就可以获得指引单<Span TextDecorations="Strikethrough">一张纸</Span>了</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76737972055361.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76739022909683.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>根据指引找到 NPC 进行交易就可以获得奖券 <Span TextDecorations="Strikethrough">Fabric: 那我走</Span></Paragraph><Paragraph Style="{StaticResource H1}">那我集齐以后呢</Paragraph><Paragraph>这块布也是有名字的，叫 「凭此兑换奖品」<LineBreak/>
+集齐 3 张以上可以从 Boen 身上爆金币、食物尝鲜包</Paragraph><Paragraph>集齐 6 张以上可以爆很多金币、食物尝鲜包和一张飞行卡</Paragraph><Paragraph>集齐 9 张可以把全管理组的金币爆出来还有食物尝鲜包➕一张飞行卡➕摩托车</Paragraph><Paragraph>别忘了在正月初一中午 12 点后统一找 Boen_Shi 兑换奖励！</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -118,11 +163,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">除夕前的两则短讯</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/134/p=%e9%99%a4%e5%a4%95%e5%89%8d%e7%9a%84%e4%b8%a4%e5%88%99%e7%9f%ad%e8%ae%af">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 22:09:42</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}">专门为各位方块人制作的 『MianzhongMinecraftLoader』 在烙饼的努力和星澜曦光的测试下正式出炉力！  </Paragraph></ListItem>
-</List><Paragraph>该加载器已经实现了整合包的自动下载、自动更新和一些稀奇古怪的东西。  </Paragraph><Paragraph>欢迎各位方块人积极体验反馈 awa</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}">方块人的信息获取方式迎来重大更新！现在隆重推出 PCL2 启动器专属主页--&gt;「绵中方块人 新闻主页」。你再也不需要费劲地来到官网才能查看到最新信息，同时免去记忆网址的麻烦——你所需要做的全部就是启用此主页！  </Paragraph></ListItem>
-</List><Paragraph>新年新气象，在此新的一年里，新闻主页为大家排忧解难，让你的 mc 游戏变得更加便利，更加快捷。  </Paragraph><Paragraph>新闻主页将不断更新，如果有其他启动器也支持自定义主页，也欢迎大家提出建议，让我们为共创美好的 mzmc 贡献力量！  </Paragraph><Paragraph>如果有任何问题或意见，欢迎大家拷打 tsxc，催他加班。你的声音不仅仅是给你自己带来方便，也是为他人创造美好的 mc 游戏环境。全心全意为人民服务是我们的根本宗旨，是我们一切行动的根本出发点和落脚点，为人民服务，做人民满意的公仆！  </Paragraph><Paragraph>此致，敬礼！  </Paragraph><Paragraph>尚未完成的工作：  </Paragraph><Paragraph>给每篇文章添加原文链接  </Paragraph><Paragraph>全自动更新主页  </Paragraph><Paragraph>以下是效果图和启用教程：  </Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/FF6A95F74915C0354DA37D38819FAADE.webp"/></InlineUIContainer> </Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/399AF3E9F55D0CE784645433CC03833D.webp"/></InlineUIContainer> </Paragraph><Paragraph>wiki 教程：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://wiki.boen.fun/zh/other/pcl-news-page">https://wiki.boen.fun/zh/other/pcl-news-page</local:MyTextButton></Underline> </Paragraph><Paragraph>神秘地址：https://mzmcos.tsxc.xyz/output.xaml  </Paragraph><Paragraph>本文作者：星澜曦光_tsxc  </Paragraph><Paragraph>主页作者：星澜曦光_tsxc  </Paragraph><Paragraph>特别鸣谢：烧瑚烙饼、boen、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/Light-Beacon/HomepageBuilder">HomepageBuilder</local:MyTextButton></Underline></Paragraph>
+<Paragraph Style="{StaticResource H1}">除夕前的两则短讯</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/134/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 22:09:42
+1. 专门为各位方块人制作的 『MianzhongMinecraftLoader』 在烙饼的努力和星澜曦光的测试下正式出炉力！<LineBreak/>
+该加载器已经实现了整合包的自动下载、自动更新和一些稀奇古怪的东西。<LineBreak/>
+欢迎各位方块人积极体验反馈 awa</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}">方块人的信息获取方式迎来重大更新！现在隆重推出 PCL2 启动器专属主页--&gt;「绵中方块人 新闻主页」。你再也不需要费劲地来到官网才能查看到最新信息，同时免去记忆网址的麻烦——你所需要做的全部就是启用此主页！<LineBreak/>
+新年新气象，在此新的一年里，新闻主页为大家排忧解难，让你的 mc 游戏变得更加便利，更加快捷。<LineBreak/>
+新闻主页将不断更新，如果有其他启动器也支持自定义主页，也欢迎大家提出建议，让我们为共创美好的 mzmc 贡献力量！<LineBreak/>
+如果有任何问题或意见，欢迎大家拷打 tsxc，催他加班。你的声音不仅仅是给你自己带来方便，也是为他人创造美好的 mc 游戏环境。全心全意为人民服务是我们的根本宗旨，是我们一切行动的根本出发点和落脚点，为人民服务，做人民满意的公仆！<LineBreak/>
+此致，敬礼！<LineBreak/>
+尚未完成的工作：<LineBreak/>
+给每篇文章添加原文链接<LineBreak/>
+全自动更新主页<LineBreak/>
+以下是效果图和启用教程：<LineBreak/></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/FF6A95F74915C0354DA37D38819FAADE.webp"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}"><LineBreak/></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/399AF3E9F55D0CE784645433CC03833D.webp"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}"><LineBreak/>
+wiki 教程：<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL290aGVyL3BjbC1uZXdzLXBhZ2U=">https://wiki.boen.fun/zh/other/pcl-news-page</local:MyTextButton></Underline><LineBreak/>
+神秘地址：https://mzmcos.tsxc.xyz/output.xaml<LineBreak/>
+本文作者：星澜曦光_tsxc<LineBreak/>
+主页作者：星澜曦光_tsxc<LineBreak/>
+特别鸣谢：烧瑚烙饼、boen、<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly9naXRodWIuY29tL0xpZ2h0LUJlYWNvbi9Ib21lcGFnZUJ1aWxkZXI=">HomepageBuilder</local:MyTextButton></Underline></Paragraph></ListItem>
+</List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -130,7 +189,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">失落之国-前置 I</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/133/p=%e5%a4%b1%e8%90%bd%e4%b9%8b%e5%9b%bd-%e5%89%8d%e7%bd%aei">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 19:27:38</Paragraph><Section Style="{StaticResource Quote}">
+<Paragraph Style="{StaticResource H1}">失落之国-前置 I</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/133/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 19:27:38</Paragraph><Section Style="{StaticResource Quote}">
   
 <Paragraph>艾尔梅亚帝国覆灭之后，皇室的珍藏散落世界各地，最近，一位从南大陆来的神秘客人来到了这里，她带来了一副名画的消息，以及一道前往南大陆的委托。现在她已经到了主城中央，等待勇士的到来</Paragraph>
 
@@ -142,42 +201,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">oi 小鬼，元旦晚会要来力！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/110/p=oi%e5%b0%8f%e9%ac%bc%ef%bc%8c%e5%85%83%e6%97%a6%e6%99%9a%e4%bc%9a%e8%a6%81%e6%9d%a5%e5%8a%9b%ef%bc%81">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月26日 20:41:03</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025poster-Release-1.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph>亲爱的绵中方块人们：
-蛇年新春将至，绵中方块人服务器为大家准备了一场精彩绝伦的春节联欢活动！活动将于 1 月 28 日开启，一直持续到 1 月 29 日，期间有各种丰富有趣的游戏和丰厚的奖励等你来拿。</Paragraph><Paragraph Style="{StaticResource H3}">邀请对象</Paragraph><Paragraph>绵中在校学生、绵中毕业学生、绵中学生邀请的好朋友</Paragraph><Paragraph Style="{StaticResource H3}">活动日程</Paragraph><Paragraph>1 月 28 日 （除夕）</Paragraph><Paragraph>06:00~18:00：解密前置任务
-12:00~19:00：小游戏开放 （包括贪吃蛇、2048、打地鼠等多种小游戏）
-19:00~20:00：起床战争
-20:00~20:20：开幕式
-20:20~21:00：寻宝
-21:00~21:30：躲猫猫
-21:30~22:00：跑酷
-22:00~22:30：足球 （自行组队）
-22:30~23:00：相扑 （自行报名）
-23:00~23:50：冰船、赛车
-23:50~00:00：许愿
-00:00~00:30：倒计时、烟花、歌唱比赛
-20:00~01:00：发红包 （活动间隙）</Paragraph><Paragraph Style="{StaticResource H3}">奖励内容</Paragraph><Paragraph><Bold>游戏内奖励</Bold>：建筑大礼包 （混凝土、玻璃、羊毛、木头、陶瓦、室内装饰等）、食物尝鲜包、玩家头颅、载具 （自行车、摩托车、小轿车、赛车）、游戏币、飞行卡
-<Bold>周边奖励</Bold>（管理送到班:)）：钥匙扣、明信片、书签</Paragraph><Paragraph Style="{StaticResource H3}">活动亮点</Paragraph><Paragraph><Bold>解密前置任务</Bold>：挑战智慧，解锁神秘奖励。
-<Bold>小游戏开放</Bold>：多种趣味小游戏，等你来战。
-<Bold>起床战争</Bold>：团队协作，争夺胜利。
-<Bold>寻宝</Bold>：探索未知，发现宝藏。
-<Bold>躲猫猫</Bold>：经典游戏，欢乐无限。
-<Bold>跑酷</Bold>：展示技巧，一决高下。
-<Bold>足球</Bold>：团队对抗，激情四溢。
-<Bold>相扑</Bold>：力量与技巧的较量。
-<Bold>冰船、赛车</Bold>：速度与激情的完美结合。
-<Bold>许愿</Bold>：许下新年愿望，开启美好未来。
-<Bold>倒计时、烟花、歌唱比赛</Bold>：共同迎接新年，欢庆时刻。</Paragraph><Paragraph Style="{StaticResource H3}">参与方式</Paragraph><Paragraph><Bold>宣传任务</Bold>：完成宣传任务，拉人或点赞，赢取周边奖励。
-<Bold>解密任务</Bold>：参与解密前置任务，集齐任务卡片，兑换丰厚奖励。
-<Bold>游戏参与</Bold>：在活动期间，积极参与各项游戏，赢取游戏内奖励和周边奖励。</Paragraph><Paragraph Style="{StaticResource H3}">期待你的加入</Paragraph><Paragraph>我们期待你的参与，一起度过一个欢乐、难忘的春节联欢活动！快来加入我们，共同迎接新的一年吧！
-绵中方块人服务器团队</Paragraph><Paragraph Style="{StaticResource H3}">宣传奖励</Paragraph><Paragraph>邀请 1 个人以上——明信片
-  邀请 5 个人以上——书签、管理组亲签明信片
-  邀请 10 个人以上——钥匙扣、管理组亲签明信片
-  动态转发获赞 28 赞以上——书签
-  动态转发获赞 58 赞以上——亲签明信片
-  动态转发获赞 88 赞以上——钥匙扣
-注意：
-1、每一个被邀请人仅能制定一个邀请人，以新进服和超过 3 月未上线的玩家为主，正月初一中午 12 点后把邀请证明截图发给服主 Boen_Shi 核验
-2、动态转发请在正月初一中午 12 点后截图发给服主 Boen_Shi 核验</Paragraph>
+<Paragraph Style="{StaticResource H1}">oi 小鬼，元旦晚会要来力！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/110/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月26日 20:41:03
+</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025poster-Release-1.webp"/></BlockUIContainer><Paragraph></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph>亲爱的绵中方块人们：</Paragraph><Paragraph>蛇年新春将至，绵中方块人服务器为大家准备了一场精彩绝伦的春节联欢活动！活动将于 1 月 28 日开启，一直持续到 1 月 29 日，期间有各种丰富有趣的游戏和丰厚的奖励等你来拿。</Paragraph><Paragraph Style="{StaticResource H3}">邀请对象</Paragraph><Paragraph>绵中在校学生、绵中毕业学生、绵中学生邀请的好朋友</Paragraph><Paragraph Style="{StaticResource H3}">活动日程</Paragraph><Paragraph>1 月 28 日 （除夕）</Paragraph><Paragraph>06:00~18:00：解密前置任务</Paragraph><Paragraph>12:00~19:00：小游戏开放 （包括贪吃蛇、2048、打地鼠等多种小游戏）</Paragraph><Paragraph>19:00~20:00：起床战争</Paragraph><Paragraph>20:00~20:20：开幕式</Paragraph><Paragraph>20:20~21:00：寻宝</Paragraph><Paragraph>21:00~21:30：躲猫猫</Paragraph><Paragraph>21:30~22:00：跑酷</Paragraph><Paragraph>22:00~22:30：足球 （自行组队）</Paragraph><Paragraph>22:30~23:00：相扑 （自行报名）</Paragraph><Paragraph>23:00~23:50：冰船、赛车</Paragraph><Paragraph>23:50~00:00：许愿</Paragraph><Paragraph>00:00~00:30：倒计时、烟花、歌唱比赛</Paragraph><Paragraph>20:00~01:00：发红包 （活动间隙）</Paragraph><Paragraph Style="{StaticResource H3}">奖励内容</Paragraph><Paragraph><Bold>游戏内奖励</Bold>：建筑大礼包 （混凝土、玻璃、羊毛、木头、陶瓦、室内装饰等）、食物尝鲜包、玩家头颅、载具 （自行车、摩托车、小轿车、赛车）、游戏币、飞行卡</Paragraph><Paragraph><Bold>周边奖励</Bold>（管理送到班:)）：钥匙扣、明信片、书签</Paragraph><Paragraph Style="{StaticResource H3}">活动亮点</Paragraph><Paragraph><Bold>解密前置任务</Bold>：挑战智慧，解锁神秘奖励。</Paragraph><Paragraph><Bold>小游戏开放</Bold>：多种趣味小游戏，等你来战。</Paragraph><Paragraph><Bold>起床战争</Bold>：团队协作，争夺胜利。</Paragraph><Paragraph><Bold>寻宝</Bold>：探索未知，发现宝藏。</Paragraph><Paragraph><Bold>躲猫猫</Bold>：经典游戏，欢乐无限。</Paragraph><Paragraph><Bold>跑酷</Bold>：展示技巧，一决高下。</Paragraph><Paragraph><Bold>足球</Bold>：团队对抗，激情四溢。</Paragraph><Paragraph><Bold>相扑</Bold>：力量与技巧的较量。</Paragraph><Paragraph><Bold>冰船、赛车</Bold>：速度与激情的完美结合。</Paragraph><Paragraph><Bold>许愿</Bold>：许下新年愿望，开启美好未来。</Paragraph><Paragraph><Bold>倒计时、烟花、歌唱比赛</Bold>：共同迎接新年，欢庆时刻。</Paragraph><Paragraph Style="{StaticResource H3}">参与方式</Paragraph><Paragraph><Bold>宣传任务</Bold>：完成宣传任务，拉人或点赞，赢取周边奖励。</Paragraph><Paragraph><Bold>解密任务</Bold>：参与解密前置任务，集齐任务卡片，兑换丰厚奖励。</Paragraph><Paragraph><Bold>游戏参与</Bold>：在活动期间，积极参与各项游戏，赢取游戏内奖励和周边奖励。</Paragraph><Paragraph Style="{StaticResource H3}">期待你的加入</Paragraph><Paragraph>我们期待你的参与，一起度过一个欢乐、难忘的春节联欢活动！快来加入我们，共同迎接新的一年吧！</Paragraph><Paragraph>绵中方块人服务器团队</Paragraph><Paragraph Style="{StaticResource H3}">宣传奖励</Paragraph><Paragraph>邀请 1 个人以上——明信片</Paragraph><Paragraph>邀请 5 个人以上——书签、管理组亲签明信片</Paragraph><Paragraph>邀请 10 个人以上——钥匙扣、管理组亲签明信片</Paragraph><Paragraph>动态转发获赞 28 赞以上——书签</Paragraph><Paragraph>动态转发获赞 58 赞以上——亲签明信片</Paragraph><Paragraph>动态转发获赞 88 赞以上——钥匙扣</Paragraph><Paragraph>注意：</Paragraph><Paragraph>1、每一个被邀请人仅能制定一个邀请人，以新进服和超过 3 月未上线的玩家为主，正月初一中午 12 点后把邀请证明截图发给服主 Boen_Shi 核验</Paragraph><Paragraph>2、动态转发请在正月初一中午 12 点后截图发给服主 Boen_Shi 核验</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -185,29 +210,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">失落之国前置Ⅱ-序章一</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/145/p=%e5%a4%b1%e8%90%bd%e4%b9%8b%e5%9b%bd%e5%89%8d%e7%bd%ae%e2%85%b1-%e5%ba%8f%e7%ab%a0%e4%b8%80">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月22日 14:39:02</Paragraph><Paragraph>任务背景：经过各位冒险家的努力，阿尔图罗的第一次入侵被挫败了，但阿尔图罗的野心并不会因此而消减，于是，在整顿了一段时间后，阿尔图罗再次与地面的一位领主达成了合作—拉特朗帝斯，封号腐殖之主，可以释放污秽之源，侵染北大陆的土地，使其变得无法耕种。北大陆的众人也意识到了事态的严重，纷纷联合，试图将污染拒之门外。在上次战斗中斩杀了魔女的纯白鸢尾因为旧伤无法继续战斗，不过她为北大陆的人带来了解决污秽之源的方法—使用她所提供的配方合成特效清除剂，便可将污秽之源清理。但北大陆的军队正忙于抵挡入侵的怪物，只好邀请一些有实力的冒险家前往清楚污秽之源，你自然不会放过这次机会，但推荐信去哪里获得呢？你有些为难。  </Paragraph><Paragraph>任务奖励：一个时尚小垃圾 （满穗）  </Paragraph><Paragraph>纪念奖章 （用于后续剧情）  </Paragraph><Paragraph>任务流程：玩家需根据指示，准备材料合成清除剂 （纯白鸢尾处） 并清除在四周散落的污秽之源</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="服务器视距已升级！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">服务器视距已升级！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/102/p=%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%a7%86%e8%b7%9d%e5%b7%b2%e5%8d%87%e7%ba%a7%ef%bc%81">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月20日 15:59:58</Paragraph><Paragraph>由于服务器的配置更新，生存界和资源界的视距已更新！</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">生存界：由原来的 8 格提升到 32 格</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源界：由原来的 10 格提升到 16 格</Paragraph></ListItem>
-</List><Paragraph>欢迎大家上线游玩！</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="欢迎新朋友！一起探索我们的 MC 世界" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">欢迎新朋友！一起探索我们的 MC 世界</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/44/p=%e6%ac%a2%e8%bf%8e%e6%96%b0%e6%9c%8b%e5%8f%8b%ef%bc%81%e4%b8%80%e8%b5%b7%e6%8e%a2%e7%b4%a2%e6%88%91%e4%bb%ac%e7%9a%84mc%e4%b8%96%e7%95%8c">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月20日 10:54:32</Paragraph><Paragraph Style="{StaticResource H3}"><Bold>亲爱的 MC 玩家们：</Bold></Paragraph><Paragraph>在这个充满无限可能的方块世界里，我们非常荣幸地迎来了新伙伴的加入！为了让新朋友们更好地了解我们的服务器，群友们策划了一场别开生面的参观之旅。现在，就让我们一起踏上这段奇妙的旅程吧！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_17.26.59.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H3}">国铁之旅：初探科创园区</Paragraph><Paragraph>我们的参观之旅从国铁车站开始。新朋友们将在群友的引导下，乘坐国铁前往科创园区。在这里，你可以看到修建的神社。这座神社采用日式风格，木质结构搭配樱花树和石灯笼，营造出宁静而庄严的氛围。你可以在这里拍照打卡，感受建筑的魅力，还能与其他玩家交流心得。</Paragraph><Paragraph Style="{StaticResource H3}">缆车之旅：雪山的浪漫之行</Paragraph><Paragraph>接下来，我们将前往雪山地区。乘坐缆车缓缓上升，雪山的壮丽景色尽收眼底。你可以欣赏到雪山的浩瀚与壮观，感受城市与雪山交相辉映的浪漫。在缆车的终点，还有玩家们精心打造的雪山小镇，你可以在这里探索、拍照，留下美好的回忆。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_22.58.06.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H3}">飞机之旅：雪山西部的奇幻探险</Paragraph><Paragraph>为了更深入地探索雪山西部，我们将换乘飞机。从空中俯瞰，雪山的全貌展现在眼前，那种震撼无法用言语形容。群友们会带你飞越雪山的山谷、冰川和雪峰，让你领略大自然的鬼斧神工。在这片广袤的雪地之上，你还会看到一些巧妙融入自然环境的建筑——比如依山而建的小屋、隐藏在冰川裂缝中的秘密基地，以及跨越山谷的木质桥梁。这些设计完美地结合了自然与建筑之美，仿佛是大自然的一部分。
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_23.01.02.webp"/></InlineUIContainer></Paragraph><Paragraph Style="{StaticResource H3}">飞越大湾区：领略现代都市的繁华</Paragraph><Paragraph>最后，我们将乘坐飞机前往大湾区。在这里，你可以看到玩家们建造的现代化城镇，高楼、桥梁、港口……每一处都展现了玩家们的精湛技艺和对细节的追求。飞越大湾区，感受现代城镇的繁华与活力，相信你会被这里的景象深深吸引。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_23.14.02.webp"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_23.17.10.webp"/></BlockUIContainer><Paragraph>参观结束后，我们诚挚地邀请新朋友们加入我们的建造行列。无论你是建筑新手还是资深玩家，都可以在这里找到属于自己的乐趣。群友们会为你提供各种资源和建议，帮助你建造出独一无二的房屋。你可以与大家一起合作，共同打造一个属于我们的美好家园。
-新朋友们，欢迎你们加入我们的绵中方块人服务器！在这里，你可以尽情发挥想象力，与朋友们一起创造属于我们的世界。让我们携手共进，开启一段难忘的冒险之旅！
-<Span TextDecorations="Strikethrough">下图中 Yinja_Zhu 正在做饭……</Span></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025-01-19_23.57.33.webp"/></BlockUIContainer>
+<Paragraph Style="{StaticResource H1}">失落之国前置Ⅱ-序章一</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/145/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月22日 14:39:02
+任务背景：经过各位冒险家的努力，阿尔图罗的第一次入侵被挫败了，但阿尔图罗的野心并不会因此而消减，于是，在整顿了一段时间后，阿尔图罗再次与地面的一位领主达成了合作—拉特朗帝斯，封号腐殖之主，可以释放污秽之源，侵染北大陆的土地，使其变得无法耕种。北大陆的众人也意识到了事态的严重，纷纷联合，试图将污染拒之门外。在上次战斗中斩杀了魔女的纯白鸢尾因为旧伤无法继续战斗，不过她为北大陆的人带来了解决污秽之源的方法—使用她所提供的配方合成特效清除剂，便可将污秽之源清理。但北大陆的军队正忙于抵挡入侵的怪物，只好邀请一些有实力的冒险家前往清楚污秽之源，你自然不会放过这次机会，但推荐信去哪里获得呢？你有些为难。<LineBreak/>
+任务奖励：一个时尚小垃圾 （满穗）<LineBreak/>
+纪念奖章 （用于后续剧情）<LineBreak/>
+任务流程：玩家需根据指示，准备材料合成清除剂 （纯白鸢尾处） 并清除在四周散落的污秽之源</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
