@@ -11,6 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,18 +35,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：我们每年都会举行新春庆祝活动" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：加载器的发行代号其实是绵中的各个楼以正大门为原点从近到远排的" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -71,7 +71,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="资源界随机传送、自动重制系统上线，畅享高效资源采集！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="正版玩家自动登录上线！解放双手，快捷入服！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">正版玩家自动登录上线！解放双手，快捷入服！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/259/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月07日 12:22:37
+</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250607113147192857.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>「哇这就是自动登录吗，太迅速了！」「是啊是啊，这也太方便了！」「那么在哪里可以得到呢？」</Paragraph><Paragraph>进入绵中方块人服务器，在聊天栏敲下<TextBox Style="{StaticResource InlineCode}">/premium</TextBox> 这段神秘代码，并大喊一声 「boen 的恩情还不完✋😭✋」，就能得到图片同款自动登录~基岩版也可以哟</Paragraph><Paragraph>事实就是如此，小编也觉得很惊讶呢，你觉得这个自动登录怎么样，快来评论区讨论一下吧~</Paragraph><Paragraph>⚠️注意: 离线登录玩家请勿开启，否则将无法进服。</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="资源界随机传送、自动重制系统上线，畅享高效资源采集！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -203,18 +212,6 @@ wiki 教程：<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">oi 小鬼，元旦晚会要来力！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/110/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月26日 20:41:03
 </Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025poster-Release-1.webp"/></BlockUIContainer><Paragraph></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph>亲爱的绵中方块人们：</Paragraph><Paragraph>蛇年新春将至，绵中方块人服务器为大家准备了一场精彩绝伦的春节联欢活动！活动将于 1 月 28 日开启，一直持续到 1 月 29 日，期间有各种丰富有趣的游戏和丰厚的奖励等你来拿。</Paragraph><Paragraph Style="{StaticResource H3}">邀请对象</Paragraph><Paragraph>绵中在校学生、绵中毕业学生、绵中学生邀请的好朋友</Paragraph><Paragraph Style="{StaticResource H3}">活动日程</Paragraph><Paragraph>1 月 28 日 （除夕）</Paragraph><Paragraph>06:00~18:00：解密前置任务</Paragraph><Paragraph>12:00~19:00：小游戏开放 （包括贪吃蛇、2048、打地鼠等多种小游戏）</Paragraph><Paragraph>19:00~20:00：起床战争</Paragraph><Paragraph>20:00~20:20：开幕式</Paragraph><Paragraph>20:20~21:00：寻宝</Paragraph><Paragraph>21:00~21:30：躲猫猫</Paragraph><Paragraph>21:30~22:00：跑酷</Paragraph><Paragraph>22:00~22:30：足球 （自行组队）</Paragraph><Paragraph>22:30~23:00：相扑 （自行报名）</Paragraph><Paragraph>23:00~23:50：冰船、赛车</Paragraph><Paragraph>23:50~00:00：许愿</Paragraph><Paragraph>00:00~00:30：倒计时、烟花、歌唱比赛</Paragraph><Paragraph>20:00~01:00：发红包 （活动间隙）</Paragraph><Paragraph Style="{StaticResource H3}">奖励内容</Paragraph><Paragraph><Bold>游戏内奖励</Bold>：建筑大礼包 （混凝土、玻璃、羊毛、木头、陶瓦、室内装饰等）、食物尝鲜包、玩家头颅、载具 （自行车、摩托车、小轿车、赛车）、游戏币、飞行卡</Paragraph><Paragraph><Bold>周边奖励</Bold>（管理送到班:)）：钥匙扣、明信片、书签</Paragraph><Paragraph Style="{StaticResource H3}">活动亮点</Paragraph><Paragraph><Bold>解密前置任务</Bold>：挑战智慧，解锁神秘奖励。</Paragraph><Paragraph><Bold>小游戏开放</Bold>：多种趣味小游戏，等你来战。</Paragraph><Paragraph><Bold>起床战争</Bold>：团队协作，争夺胜利。</Paragraph><Paragraph><Bold>寻宝</Bold>：探索未知，发现宝藏。</Paragraph><Paragraph><Bold>躲猫猫</Bold>：经典游戏，欢乐无限。</Paragraph><Paragraph><Bold>跑酷</Bold>：展示技巧，一决高下。</Paragraph><Paragraph><Bold>足球</Bold>：团队对抗，激情四溢。</Paragraph><Paragraph><Bold>相扑</Bold>：力量与技巧的较量。</Paragraph><Paragraph><Bold>冰船、赛车</Bold>：速度与激情的完美结合。</Paragraph><Paragraph><Bold>许愿</Bold>：许下新年愿望，开启美好未来。</Paragraph><Paragraph><Bold>倒计时、烟花、歌唱比赛</Bold>：共同迎接新年，欢庆时刻。</Paragraph><Paragraph Style="{StaticResource H3}">参与方式</Paragraph><Paragraph><Bold>宣传任务</Bold>：完成宣传任务，拉人或点赞，赢取周边奖励。</Paragraph><Paragraph><Bold>解密任务</Bold>：参与解密前置任务，集齐任务卡片，兑换丰厚奖励。</Paragraph><Paragraph><Bold>游戏参与</Bold>：在活动期间，积极参与各项游戏，赢取游戏内奖励和周边奖励。</Paragraph><Paragraph Style="{StaticResource H3}">期待你的加入</Paragraph><Paragraph>我们期待你的参与，一起度过一个欢乐、难忘的春节联欢活动！快来加入我们，共同迎接新的一年吧！</Paragraph><Paragraph>绵中方块人服务器团队</Paragraph><Paragraph Style="{StaticResource H3}">宣传奖励</Paragraph><Paragraph>邀请 1 个人以上——明信片</Paragraph><Paragraph>邀请 5 个人以上——书签、管理组亲签明信片</Paragraph><Paragraph>邀请 10 个人以上——钥匙扣、管理组亲签明信片</Paragraph><Paragraph>动态转发获赞 28 赞以上——书签</Paragraph><Paragraph>动态转发获赞 58 赞以上——亲签明信片</Paragraph><Paragraph>动态转发获赞 88 赞以上——钥匙扣</Paragraph><Paragraph>注意：</Paragraph><Paragraph>1、每一个被邀请人仅能制定一个邀请人，以新进服和超过 3 月未上线的玩家为主，正月初一中午 12 点后把邀请证明截图发给服主 Boen_Shi 核验</Paragraph><Paragraph>2、动态转发请在正月初一中午 12 点后截图发给服主 Boen_Shi 核验</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="失落之国前置Ⅱ-序章一" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">失落之国前置Ⅱ-序章一</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/145/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月22日 14:39:02
-任务背景：经过各位冒险家的努力，阿尔图罗的第一次入侵被挫败了，但阿尔图罗的野心并不会因此而消减，于是，在整顿了一段时间后，阿尔图罗再次与地面的一位领主达成了合作—拉特朗帝斯，封号腐殖之主，可以释放污秽之源，侵染北大陆的土地，使其变得无法耕种。北大陆的众人也意识到了事态的严重，纷纷联合，试图将污染拒之门外。在上次战斗中斩杀了魔女的纯白鸢尾因为旧伤无法继续战斗，不过她为北大陆的人带来了解决污秽之源的方法—使用她所提供的配方合成特效清除剂，便可将污秽之源清理。但北大陆的军队正忙于抵挡入侵的怪物，只好邀请一些有实力的冒险家前往清楚污秽之源，你自然不会放过这次机会，但推荐信去哪里获得呢？你有些为难。<LineBreak/>
-任务奖励：一个时尚小垃圾 （满穗）<LineBreak/>
-纪念奖章 （用于后续剧情）<LineBreak/>
-任务流程：玩家需根据指示，准备材料合成清除剂 （纯白鸢尾处） 并清除在四周散落的污秽之源</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
