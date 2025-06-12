@@ -11,14 +11,28 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -38,10 +52,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这是绵中最大的MC服务器" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +89,29 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="正版玩家自动登录上线！解放双手，快捷入服！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/265/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月12日 15:18:13
+<Bold>本报讯 （记者 tsxc_java）</Bold> 2025 年 6 月 12 日，小岛社区与雪山西部在小岛火车站旁举行历史性外交仪式，正式签署 《小岛社区和雪山西部关于建立外交关系的联合公报》（以下简称 《联合公报》），标志着两区结束无正式邦交状态，开启双边关系新纪元。</Paragraph><Paragraph Style="{StaticResource H3}">核心共识</Paragraph><Paragraph>根据 《联合公报》，两区达成以下核心条款：</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>坚持和平共处五项原则</Bold>：相互尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处；</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>正式签署与文件陈列</Bold>：两区区长亲笔签署建交协议文本，正本将在双方大使馆永久公开陈列；</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>大使代理外交权</Bold>：各项外交事务由双方派驻大使全权代理；</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>单方面解约权</Bold>：双方保留基于国家利益单方面终止外交关系的权利；</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>互设使馆与派遣大使</Bold>：承诺尽快完成大使馆互设及首任大使派遣工作。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">签署仪式</Paragraph><Paragraph>《联合公报》 由小岛社区负责人 <Bold>tsxc_java</Bold> 与雪山西部负责人 <Bold>QFKA</Bold> 共同签署。仪式选址于象征连接与交流的小岛火车站旁，彰显双方 「以通促融」 的外交愿景。两区代表一致声明，自即日起，小岛社区与雪山西部正式建立外交关系。</Paragraph><Paragraph Style="{StaticResource H3}">历史意义</Paragraph><Paragraph>此次建交标志着两区关系实现根本性突破，为后续经贸合作、安全协调及人文交流奠定法理基础。分析人士指出，此举有望推动小岛-雪山地区双边经济发展进程进入快车道。</Paragraph><Paragraph>（附：联合公报签署现场照片）</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151953371555.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151925932796.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph><Italic>图示：两区负责人在小岛火车站站前广场完成签约，背景为建设中的小岛火车站。</Italic></Paragraph><Paragraph>附联合公报原文：</Paragraph><Paragraph></Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="小岛社区和雪山西部关于建立外交关系的联合公报&#x000A;​&#x000A;1. 坚持和平共处五项原则。&#x000A;2. 两区区长签署该书面协议，并交换在双方大使馆公开陈列。&#x000A;3. 各项外交事宜可由双方大使代理行使外交权。&#x000A;4. 两方有权利单方面解除外交关系。&#x000A;5. 尽快互设大使馆并互派大使。&#x000A;​&#x000A;小岛社区和雪山西部将于该协议签订日建立外交关系。&#x000A;​&#x000A;小岛社区负责人：tsxc_java&#x000A;雪山西部负责人：QFKA&#x000A;​&#x000A;2025/6/12"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph></Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="正版玩家自动登录上线！解放双手，快捷入服！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -205,15 +243,6 @@ wiki 教程：<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开
 <Paragraph>艾尔梅亚帝国覆灭之后，皇室的珍藏散落世界各地，最近，一位从南大陆来的神秘客人来到了这里，她带来了一副名画的消息，以及一道前往南大陆的委托。现在她已经到了主城中央，等待勇士的到来</Paragraph>
 
 </Section><Paragraph>地心的生物已经蠢蠢欲动，试图侵染北大陆这片净土，在大战中幸存下来的纯白鸢尾感受到地心帝皇阿尔图罗的气息，便顺着那股气息来到了此地。随着调查的深入，阿尔图罗的阴谋逐渐浮出水面，但在大战中受到 「重创」 的纯白鸢尾早已无力阻止。此时，她将视线投向了北大陆的原住民。纯白鸢尾以艾尔梅亚帝国皇室珍宝的情报，吸引了一大批冒险家前往，用以挫败阿尔图罗的阴谋。虽然击杀魔女对他们来说太过困难，但如果只是一些魔女召唤的杂兵，想必并不是什么问题。</Paragraph><Paragraph>于是，本着这个想法，纯白鸢尾向北大陆的众人发布了讨伐任务，并给出了一个让人无法拒绝的价格，在利益的驱使下，北大陆的冒险家纷纷前往，而艾尔梅亚帝国与地心的对决，在 30 年后，再次开始了</Paragraph><Paragraph>活动内容：为了挫败阿尔图罗的阴谋，玩家将会在魔女创造的永夜之中尽可能的击杀亡灵生物，以消耗她的魔力，击杀亡灵生物的掉落物可以找纯白鸢尾 （主城区） 兑换奖励</Paragraph><Paragraph>奖励内容：基础装备，高级附魔书，盔甲模板，以及南大陆通用货币 （可向南大陆 NPC 购买物品）</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="oi 小鬼，元旦晚会要来力！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">oi 小鬼，元旦晚会要来力！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/110/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月26日 20:41:03
-</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/2025poster-Release-1.webp"/></BlockUIContainer><Paragraph></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph>亲爱的绵中方块人们：</Paragraph><Paragraph>蛇年新春将至，绵中方块人服务器为大家准备了一场精彩绝伦的春节联欢活动！活动将于 1 月 28 日开启，一直持续到 1 月 29 日，期间有各种丰富有趣的游戏和丰厚的奖励等你来拿。</Paragraph><Paragraph Style="{StaticResource H3}">邀请对象</Paragraph><Paragraph>绵中在校学生、绵中毕业学生、绵中学生邀请的好朋友</Paragraph><Paragraph Style="{StaticResource H3}">活动日程</Paragraph><Paragraph>1 月 28 日 （除夕）</Paragraph><Paragraph>06:00~18:00：解密前置任务</Paragraph><Paragraph>12:00~19:00：小游戏开放 （包括贪吃蛇、2048、打地鼠等多种小游戏）</Paragraph><Paragraph>19:00~20:00：起床战争</Paragraph><Paragraph>20:00~20:20：开幕式</Paragraph><Paragraph>20:20~21:00：寻宝</Paragraph><Paragraph>21:00~21:30：躲猫猫</Paragraph><Paragraph>21:30~22:00：跑酷</Paragraph><Paragraph>22:00~22:30：足球 （自行组队）</Paragraph><Paragraph>22:30~23:00：相扑 （自行报名）</Paragraph><Paragraph>23:00~23:50：冰船、赛车</Paragraph><Paragraph>23:50~00:00：许愿</Paragraph><Paragraph>00:00~00:30：倒计时、烟花、歌唱比赛</Paragraph><Paragraph>20:00~01:00：发红包 （活动间隙）</Paragraph><Paragraph Style="{StaticResource H3}">奖励内容</Paragraph><Paragraph><Bold>游戏内奖励</Bold>：建筑大礼包 （混凝土、玻璃、羊毛、木头、陶瓦、室内装饰等）、食物尝鲜包、玩家头颅、载具 （自行车、摩托车、小轿车、赛车）、游戏币、飞行卡</Paragraph><Paragraph><Bold>周边奖励</Bold>（管理送到班:)）：钥匙扣、明信片、书签</Paragraph><Paragraph Style="{StaticResource H3}">活动亮点</Paragraph><Paragraph><Bold>解密前置任务</Bold>：挑战智慧，解锁神秘奖励。</Paragraph><Paragraph><Bold>小游戏开放</Bold>：多种趣味小游戏，等你来战。</Paragraph><Paragraph><Bold>起床战争</Bold>：团队协作，争夺胜利。</Paragraph><Paragraph><Bold>寻宝</Bold>：探索未知，发现宝藏。</Paragraph><Paragraph><Bold>躲猫猫</Bold>：经典游戏，欢乐无限。</Paragraph><Paragraph><Bold>跑酷</Bold>：展示技巧，一决高下。</Paragraph><Paragraph><Bold>足球</Bold>：团队对抗，激情四溢。</Paragraph><Paragraph><Bold>相扑</Bold>：力量与技巧的较量。</Paragraph><Paragraph><Bold>冰船、赛车</Bold>：速度与激情的完美结合。</Paragraph><Paragraph><Bold>许愿</Bold>：许下新年愿望，开启美好未来。</Paragraph><Paragraph><Bold>倒计时、烟花、歌唱比赛</Bold>：共同迎接新年，欢庆时刻。</Paragraph><Paragraph Style="{StaticResource H3}">参与方式</Paragraph><Paragraph><Bold>宣传任务</Bold>：完成宣传任务，拉人或点赞，赢取周边奖励。</Paragraph><Paragraph><Bold>解密任务</Bold>：参与解密前置任务，集齐任务卡片，兑换丰厚奖励。</Paragraph><Paragraph><Bold>游戏参与</Bold>：在活动期间，积极参与各项游戏，赢取游戏内奖励和周边奖励。</Paragraph><Paragraph Style="{StaticResource H3}">期待你的加入</Paragraph><Paragraph>我们期待你的参与，一起度过一个欢乐、难忘的春节联欢活动！快来加入我们，共同迎接新的一年吧！</Paragraph><Paragraph>绵中方块人服务器团队</Paragraph><Paragraph Style="{StaticResource H3}">宣传奖励</Paragraph><Paragraph>邀请 1 个人以上——明信片</Paragraph><Paragraph>邀请 5 个人以上——书签、管理组亲签明信片</Paragraph><Paragraph>邀请 10 个人以上——钥匙扣、管理组亲签明信片</Paragraph><Paragraph>动态转发获赞 28 赞以上——书签</Paragraph><Paragraph>动态转发获赞 58 赞以上——亲签明信片</Paragraph><Paragraph>动态转发获赞 88 赞以上——钥匙扣</Paragraph><Paragraph>注意：</Paragraph><Paragraph>1、每一个被邀请人仅能制定一个邀请人，以新进服和超过 3 月未上线的玩家为主，正月初一中午 12 点后把邀请证明截图发给服主 Boen_Shi 核验</Paragraph><Paragraph>2、动态转发请在正月初一中午 12 点后截图发给服主 Boen_Shi 核验</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
