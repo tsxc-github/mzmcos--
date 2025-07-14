@@ -5,32 +5,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -50,13 +26,37 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：手机可以用FCL玩javaMC" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -88,7 +88,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="绵中方块人服务器新天地：创造界开放！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="📢 PCL MZMC Edition 内测计划正式启动！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">📢 PCL MZMC Edition 内测计划正式启动！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/308/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月14日 13:52:01
+亲爱的 PCL MZMC Edition 用户：</Paragraph><Paragraph>为持续优化用户体验与软件质量，我们将启动 <Bold>PCL MZMC Edition 专项内测计划</Bold>。诚邀您加入内测团队，共同完善产品！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250713233825023010.webp"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250714135105190017.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">🔍 内测参与权益</Paragraph><Paragraph>1️⃣ <Bold>专属反馈通道</Bold>：加入官方 QQ 群优先提交 Bug 🐛 及功能建议</Paragraph><Paragraph>2️⃣ <Bold>高效问题处理</Bold>：内测群反馈将获得专属技术响应通道</Paragraph><Paragraph>3️⃣ <Bold>潜在荣誉奖励</Bold>：积极贡献者有机会获得限定称号 （具体规则待定）</Paragraph><Paragraph Style="{StaticResource H2}">⚠️ 重要须知 （申请前必读）</Paragraph><Paragraph Style="{StaticResource H3}">1️⃣ <Bold>强制更新机制</Bold></Paragraph><Paragraph>✅ 获选后须<Bold>强制升级至最新内测版</Bold></Paragraph><Paragraph>✅ 启动器将<Bold>自动保持版本同步更新</Bold></Paragraph><Paragraph Style="{StaticResource H3}">2️⃣ <Bold>数据收集说明</Bold></Paragraph><Paragraph>📊 <Bold>遥测功能 （匿名数据收集） 将强制开启</Bold></Paragraph><Paragraph Style="{StaticResource H3}">3️⃣ <Bold>资格动态管理</Bold></Paragraph><Paragraph>🔄 保留随时调整内测成员的权利</Paragraph><Paragraph>🛑 可能因测试需求取消参与者资格</Paragraph><Paragraph Style="{StaticResource H3}">4️⃣ <Bold>退出机制</Bold></Paragraph><Paragraph>⏹️ 申请退出请联络：@tsxc_java</Paragraph><Paragraph Style="{StaticResource H2}">📮 申请通道</Paragraph><Paragraph>▶️请在群内蹲守下一次申请的开始~我们会不定期放出名额。</Paragraph><Paragraph>‼️ 关键提示：</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>名额严格受限</Bold> - 满额后将关闭申请入口</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>非注册即加入</Bold> - 采用 （包括随机筛选在内的） 复合筛选机制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>过程不透明</Bold> - 筛选流程及标准不予公示</Paragraph></ListItem>
+</List><Section Style="{StaticResource Hr}"/><Paragraph>🚨 <Bold>最终声明</Bold></Paragraph><Paragraph>本次内测最终解释权归项目管理方所有，测试政策可能根据实际情况动态调整。</Paragraph><Paragraph>期待与您携手打造更完善的 PCL MZMC Edition ！</Paragraph><Paragraph><Bold>—— 绵中方块人服务器管理组 （技术部）</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250713233823363851.webp"/></BlockUIContainer>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器新天地：创造界开放！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -214,29 +227,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </Section><Paragraph>比如：通慧 Release 2.5.1-202502012<LineBreak/>
 一般来说, 发行代号&amp; 发行类型&amp; 修订版本号&amp; 日期码您不需要关心，<LineBreak/>
 不过我们推荐您在次版本号变动时更新，在主版本号变动时我们强烈推荐您更新。</Paragraph><Paragraph>（其实在我们实装加载器自更新之前都是想更就更）</Paragraph><Paragraph>哈哈，今天开发杂谈就到这里了，祝各位元宵快乐!</Paragraph><Paragraph>——绵中方块人服务器管理组</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器语音聊天功能正式上线——开启实时互动新篇章！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/163/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 14:05:25
-亲爱的方块人玩家们：</Paragraph><Paragraph>历经数周的筹备与测试，我们自豪地宣布——<Bold>绵中方块人服务器语音聊天功能正式上线！</Bold> 从即日起，各位玩家可以在游戏内通过语音实时交流，让协作更高效、冒险更畅快、友谊更紧密！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>为什么需要语音聊天？</Bold></Paragraph><Paragraph>作为绵阳中学学生自发搭建的 Minecraft 服务器，我们始终以 「打造沉浸式校园社区」 为目标。随着服务器规模扩大，玩家们对实时沟通的需求日益增长。无论是组队挑战副本、合作搭建史诗建筑，还是深夜闲聊分享趣事，文字聊天已无法满足我们的热情。<LineBreak/>
-<Bold>语音功能将带来三大升级：</Bold></Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>高效协作</Bold>：红石电路太复杂？指令总出错？直接语音沟通，手把手教学更清晰！</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>社交升级</Bold>：听见同学的笑声、语调与个性，让线上友谊更有温度。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>沉浸体验</Bold>：暴风雨夜的洞穴探险、末地屠龙的团队欢呼……用声音感受游戏世界的真实心跳！</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>如何开启语音功能？</Bold></Paragraph><Paragraph>我们已经编写了详细的 wiki 文档，请见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL3BsYXlpbmdnYW1lL3ZvaWNlLWNoYXQtaW4tZ2FtZQ==">这里</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>使用须知与文明公约</Bold></Paragraph><Paragraph>为维护和谐友好的交流环境，请所有玩家遵守以下规则：<LineBreak/>
-✅ <Bold>文明用语</Bold>：禁止人身攻击、恶意刷屏、传播不当内容。<LineBreak/>
-✅ <Bold>尊重隐私</Bold>：未经允许不得录制或传播他人语音。<LineBreak/>
-✅ <Bold>适度使用</Bold>：深夜游玩时请降低音量，避免打扰他人。</Paragraph><Paragraph>语音聊天记录受服务器后台监管，违规者将视情节处以<Bold>禁言、封禁</Bold>等处罚。让我们共同守护这片属于绵中人的纯净天地！</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H3}"><Bold>现在，说出你的第一句话吧！</Bold></Paragraph><Paragraph>语音功能不仅是技术的升级，更是绵中人联结彼此的桥梁。无论你是建筑大师、红石工程师，还是热衷探险的生存玩家，期待听到你的声音，让方块世界因你而生动！</Paragraph><Paragraph><Bold>即刻登录服务器，开启你的语音冒险之旅！</Bold><LineBreak/>
-如有问题，请联系管理组 （QQ 群：1170263999）</Paragraph><Paragraph>——绵中方块人管理团队<LineBreak/>
-2025 年 2 月 6 日</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph><Bold>附：语音功能 Q&amp;A</Bold><LineBreak/>
-Q：语音插件是否会影响游戏流畅度？<LineBreak/>
-A：插件经优化处理，占用资源极低，无需担心卡顿！<LineBreak/>
-Q：手机版玩家如何适配？<LineBreak/>
-A：boen 已经在写网页了，敬请期待!</Paragraph><Paragraph><Bold>团结、创意、欢乐——这里是绵中人自己的 MC 家园！</Bold> 🎮✨</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
