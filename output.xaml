@@ -11,7 +11,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -27,12 +30,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -52,12 +49,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这是绵中最大的MC服务器" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：烙饼说他想让全服的人只能用加载器进服" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -89,25 +89,83 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="绵中方块人服务器新天地：创造界开放！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器新天地：创造界开放！</Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/300/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月06日 16:03:10
+<BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002256957463.jpg"/></BlockUIContainer><Paragraph>亲爱的建筑大师们，</Paragraph><Paragraph>在绵中方块人服务器，我们始终致力于为您提供更广阔的创造空间和更自由的建筑体验。今天，我们自豪地宣布一个全新的区域——<Bold>创造界</Bold>正式开放！这是一个专为建筑爱好者设计的平坦地形区域，您可以在这里尽情发挥您的创造力，建造属于您的梦想世界。</Paragraph><Paragraph Style="{StaticResource H2}">创造界：无限创造的空间</Paragraph><Paragraph><Bold>创造界</Bold>是一个平坦的地形，专为建筑和创造而设计。在这里，您可以使用 WorldEdit 创世神插件，以及即将上线的 schematic 文件上传功能，让您的建筑过程更加高效和便捷。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002258388731.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">如何进入创造界</Paragraph><Paragraph>使用简单的命令<TextBox Style="{StaticResource InlineCode}">/cre</TextBox>，您就可以立即传送到创造界，开始您的建筑之旅。</Paragraph><Paragraph Style="{StaticResource H2}">创造界的规则</Paragraph><Paragraph>为了确保所有玩家都能享受到创造的乐趣，我们制定了一些基本规则：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>有序建设</Bold>：请尽量朝一个方向建筑，避免影响他人的建筑项目。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>尊重他人</Bold>：请不要破坏他人的建筑。创造界是一个共享的空间，需要每个人的共同维护。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>和谐共处</Bold>：如果您不小心破坏了他人的建筑，请及时联系服主，我们将协助解决。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">WorldEdit 创世神插件</Paragraph><Paragraph>WorldEdit 是一个强大的建筑工具，它允许您快速地进行地形编辑、复制、粘贴和变换等操作。在创造界，您将可以充分利用这一工具，实现您的建筑构想。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002259484163.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">schematic 文件上传 （开发中）</Paragraph><Paragraph>我们正在开发允许玩家上传 schematic 文件的功能，这将使您能够导入和导出您的建筑作品，与他人分享您的创意，或者将您的建筑作品应用到服务器的其他区域。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您在创造界遇到任何问题，或者有任何建议和想法，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您在创造界中建造的宏伟建筑，也期待您在绵中方块人服务器中享受更加自由和愉快的建筑体验！</Paragraph><Paragraph>加入我们，一起创造无限可能！</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="探索新维度：绵中方块人服务器推出传送界碑功能" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">探索新维度：绵中方块人服务器推出传送界碑功能</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/290/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月06日 00:17:03
+亲爱的探险家们，</Paragraph><Paragraph>随着绵中方块人服务器的不断发展，我们很高兴地向您介绍一项革命性的新功能——<Bold>传送界碑</Bold>。这一创新工具将彻底改变您在 Minecraft 世界的探险方式，为您带来前所未有的便捷和乐趣。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001449418169.jpg"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送界碑：开启传送新时代</Paragraph><Paragraph><Bold>传送界碑</Bold>是一种全新的游戏内物品，它赋予了玩家瞬间移动的能力，让玩家能够在服务器的各个地区之间快速传送。这不仅极大地提高了探险的效率，还为玩家提供了更多的战略选择和个性化装饰的机会。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001336520289.gif"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送界碑的优势</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>即时移动</Bold>：告别漫长的旅行，享受瞬间到达目的地的快感。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>无缝探索</Bold>：轻松访问服务器的每一个角落，无论是遥远的边境还是未知的深处。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>战术灵活性</Bold>：在 PvP 或团队合作中，快速集结或撤退，获得战术上的优势。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>时间效率</Bold>：节省旅行时间，让您有更多时间专注于建造、探险和社交。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>个性化展示</Bold>：通过装饰传送界碑，展现您的创意和个人风格。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">如何申请和使用传送界碑</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>申请传送界碑</Bold>：作为地区负责人或建设者，您可以向服务器管理员申请一个传送界碑。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>个性化装饰</Bold>：在申请到传送界碑后，您可以自由地围绕界碑进行装饰建设，展现您的创意和风格。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>联系修建</Bold>：一旦传送界碑周围的装饰建设完成，请联系 Boen_Shi 进行传送界碑的最终修建工作。</Paragraph></ListItem>
+</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001448178896.jpg"/></BlockUIContainer><Paragraph>3 种传送界碑</Paragraph><Paragraph Style="{StaticResource H2}">传送界碑的装饰建设</Paragraph><Paragraph>传送界碑不仅是一个实用的传送工具，也是展示您创意和艺术才能的平台。您可以围绕界碑建造各种装饰，如花园、雕塑、喷泉等，使其成为地区的一个亮点。我们鼓励玩家发挥想象力，创造出独特而美丽的传送界碑装饰。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您有任何关于传送界碑的问题，或者需要帮助进行装饰建设，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您创意无限的传送界碑装饰，也期待您在绵中方块人服务器中享受更加便捷的游戏体验！</Paragraph><Paragraph>加入我们，一起探索无限可能！</Paragraph><Paragraph>绵中方块人服务器管理团队</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="PCL MZMC Edition 正式发布！超越经典，体验升级！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">PCL MZMC Edition 正式发布！超越经典，体验升级！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/268/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月13日 22:19:06
+<Bold>🎯 项目起源与上游依托</Bold></Paragraph><Paragraph>PCL MZMC Edition 基于功能强大的 <Bold>PCL-CE</Bold>（PCL2 社区版） 构建。它不仅继承了原版 PCL 的所有优点，更融入了大量社区制作的实用功能，为你带来更丰富的模组管理、游戏配置体验。</Paragraph><Paragraph><Bold>🔄 无缝切换，极致兼容</Bold></Paragraph><Paragraph>担心学习成本？大可放心！本启动器设计以<Bold>极致的无缝切换体验</Bold>为核心。你可以<Bold>直接覆盖安装</Bold>原有 PCL 主程序，操作习惯将最大程度保持一致，让你无痛迁移，即刻畅玩。</Paragraph><Paragraph><Bold>🎮 全版本支持，玩家之选</Bold></Paragraph><Paragraph>PCL MZMC Edition 定位为玩家日常主力启动器：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可启动 <Bold>PCL 支持的所有 Minecraft 实例</Bold>（Forge, Fabric, Quilt, LiteLoader, OptiFine 等） 。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>郑重承诺：永不限制玩家可安装的 Minecraft 版本</Bold>，放心将其作为你现有启动器的升级或替代品。</Paragraph></ListItem>
+</List><Paragraph><Bold>🔒 隐私安全，我们守护</Bold></Paragraph><Paragraph>你的隐私极其重要：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">启动器<Bold>绝不会上传</Bold>你的单人生存存档、本地截图等任何敏感信息至云端。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">你的数据，始终保存在你自己的设备上。</Paragraph></ListItem>
+</List><Paragraph><Bold>📜 开源透明，持续进化</Bold></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">项目<Bold>完全开源</Bold>！欢迎访问 GitHub 仓库查看源代码、贡献代码或反馈问题： <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly9naXRodWIuY29tL3RzeGMtZ2l0aHViL1BDTDItQ0Uv">tsxc-github/PCL2-CE</local:MyTextButton></Underline></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>持续同步上游</Bold>：我们将不定期合并上游 PCL-CE 的最新提交，这意味着你可以<Bold>提前享受到 PCL-CE 的未发布新功能</Bold>和错误修复。</Paragraph></ListItem>
+</List><Paragraph><Bold>✨ 核心特性一览 (当前已实现)</Bold></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>启动器自动更新</Bold>：保持启动器本身是最新状态。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>PCL-CE 拓展功能</Bold>：继承 PCL-CE 原有的光影包下载、材质包下载、截图管理等功能。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>新闻主页</Bold>：默认启用新闻主页，及时获取 MZMC 相关资讯。</Paragraph></ListItem>
+</List><Paragraph><Bold>🚀 未来规划前瞻 (Coming s∞n...)</Bold></Paragraph><Paragraph>更多激动人心的功能正在路上：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>官方客户端一键下载</Bold>：快捷方便，无须复杂配置即刻享受绵中方块人服务器完整游玩体验。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>官方客户端自动更新</Bold>：解放双手，自动更新，再也不用去群里下载了。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更多请期待！欢迎提出意见！</Paragraph></ListItem>
+</List><Paragraph>下载：前往群文件获得 PCL MZMC Edition</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/265/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月12日 15:18:13
-<Bold>本报讯 （记者 tsxc_java）</Bold> 2025 年 6 月 12 日，小岛社区与雪山西部在小岛火车站旁举行历史性外交仪式，正式签署 《小岛社区和雪山西部关于建立外交关系的联合公报》（以下简称 《联合公报》），标志着两区结束无正式邦交状态，开启双边关系新纪元。</Paragraph><Paragraph Style="{StaticResource H3}">核心共识</Paragraph><Paragraph>根据 《联合公报》，两区达成以下核心条款：</Paragraph><List MarkerStyle="Decimal">
+<Bold>本报讯 （记者 tsxc_java）</Bold> 2025 年 6 月 12 日，小岛社区与雪山西部在小岛火车站旁举行历史性外交仪式，正式签署 《小岛社区和雪山西部关于建立外交关系的联合公报》 （以下简称 《联合公报》），标志着两区结束无正式邦交状态，开启双边关系新纪元。</Paragraph><Paragraph Style="{StaticResource H3}">核心共识</Paragraph><Paragraph>根据 《联合公报》，两区达成以下核心条款：</Paragraph><List MarkerStyle="Decimal">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>坚持和平共处五项原则</Bold>：相互尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处；</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>正式签署与文件陈列</Bold>：两区区长亲笔签署建交协议文本，正本将在双方大使馆永久公开陈列；</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>大使代理外交权</Bold>：各项外交事务由双方派驻大使全权代理；</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>单方面解约权</Bold>：双方保留基于国家利益单方面终止外交关系的权利；</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>互设使馆与派遣大使</Bold>：承诺尽快完成大使馆互设及首任大使派遣工作。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">签署仪式</Paragraph><Paragraph>《联合公报》 由小岛社区负责人 <Bold>tsxc_java</Bold> 与雪山西部负责人 <Bold>QFKA</Bold> 共同签署。仪式选址于象征连接与交流的小岛火车站旁，彰显双方 「以通促融」 的外交愿景。两区代表一致声明，自即日起，小岛社区与雪山西部正式建立外交关系。</Paragraph><Paragraph Style="{StaticResource H3}">历史意义</Paragraph><Paragraph>此次建交标志着两区关系实现根本性突破，为后续经贸合作、安全协调及人文交流奠定法理基础。分析人士指出，此举有望推动小岛-雪山地区双边经济发展进程进入快车道。</Paragraph><Paragraph>（附：联合公报签署现场照片）</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151953371555.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151925932796.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph><Italic>图示：两区负责人在小岛火车站站前广场完成签约，背景为建设中的小岛火车站。</Italic></Paragraph><Paragraph>附联合公报原文：</Paragraph><Paragraph></Paragraph><BlockUIContainer>
+</List><Paragraph Style="{StaticResource H3}">签署仪式</Paragraph><Paragraph>《联合公报》 由小岛社区负责人 <Bold>tsxc_java</Bold> 与雪山西部负责人 <Bold>QFKA</Bold> 共同签署。仪式选址于象征连接与交流的小岛火车站旁，彰显双方 「以通促融」 的外交愿景。两区代表一致声明，自即日起，小岛社区与雪山西部正式建立外交关系。</Paragraph><Paragraph Style="{StaticResource H3}">历史意义</Paragraph><Paragraph>此次建交标志着两区关系实现根本性突破，为后续经贸合作、安全协调及人文交流奠定法理基础。分析人士指出，此举有望推动小岛-雪山地区双边经济发展进程进入快车道。</Paragraph>（附：联合公报签署现场照片）<BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151953371555.webp"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151925932796.webp"/></BlockUIContainer><Paragraph><Italic>图示：两区负责人在小岛火车站站前广场完成签约，背景为建设中的小岛火车站。</Italic></Paragraph><Paragraph>附联合公报原文：</Paragraph><BlockUIContainer>
 <Border Style="{StaticResource BlockCodeBorder}" >
 <StackPanel Margin="0,2,0,0">
 <TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
 <TextBox Style="{StaticResource BlockCode}" Text="小岛社区和雪山西部关于建立外交关系的联合公报&#x000A;​&#x000A;1. 坚持和平共处五项原则。&#x000A;2. 两区区长签署该书面协议，并交换在双方大使馆公开陈列。&#x000A;3. 各项外交事宜可由双方大使代理行使外交权。&#x000A;4. 两方有权利单方面解除外交关系。&#x000A;5. 尽快互设大使馆并互派大使。&#x000A;​&#x000A;小岛社区和雪山西部将于该协议签订日建立外交关系。&#x000A;​&#x000A;小岛社区负责人：tsxc_java&#x000A;雪山西部负责人：QFKA&#x000A;​&#x000A;2025/6/12"/>
 </StackPanel>
 </Border>
-</BlockUIContainer><Paragraph></Paragraph>
+</BlockUIContainer>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -115,8 +173,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">正版玩家自动登录上线！解放双手，快捷入服！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/259/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月07日 12:22:37
-</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250607113147192857.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>「哇这就是自动登录吗，太迅速了！」「是啊是啊，这也太方便了！」「那么在哪里可以得到呢？」</Paragraph><Paragraph>进入绵中方块人服务器，在聊天栏敲下<TextBox Style="{StaticResource InlineCode}">/premium</TextBox> 这段神秘代码，并大喊一声 「boen 的恩情还不完✋😭✋」，就能得到图片同款自动登录~基岩版也可以哟</Paragraph><Paragraph>事实就是如此，小编也觉得很惊讶呢，你觉得这个自动登录怎么样，快来评论区讨论一下吧~</Paragraph><Paragraph>⚠️注意: 离线登录玩家请勿开启，否则将无法进服。</Paragraph>
+<Paragraph Style="{StaticResource H1}">正版玩家自动登录上线！解放双手，快捷入服！</Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/259/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月07日 12:22:37
+<BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250607113147192857.webp"/></BlockUIContainer><Paragraph>「哇这就是自动登录吗，太迅速了！」 「是啊是啊，这也太方便了！」 「那么在哪里可以得到呢？」</Paragraph><Paragraph>进入绵中方块人服务器，在聊天栏敲下<TextBox Style="{StaticResource InlineCode}">/premium</TextBox> 这段神秘代码，并大喊一声 「boen 的恩情还不完✋😭✋」，就能得到图片同款自动登录~基岩版也可以哟</Paragraph><Paragraph>事实就是如此，小编也觉得很惊讶呢，你觉得这个自动登录怎么样，快来评论区讨论一下吧~</Paragraph><Paragraph>⚠️注意: 离线登录玩家请勿开启，否则将无法进服。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -125,14 +183,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">资源界随机传送、自动重制系统上线，畅享高效资源采集！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/227/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月14日 00:15:14
-各位亲爱的玩家，绵中方块人服务器管理组一直致力于为大家提供更优质的游戏体验。针对大家反馈的资源界刷新过慢、资源更新不及时、随机传送无法使用等问题，我们经过不懈努力，终于开发出了全新的自动刷新资源界，并且搭配了便捷的随机传送系统，让资源采集不再困难！</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001316880533.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">传送方法</Paragraph><List MarkerStyle="Decimal">
+各位亲爱的玩家，绵中方块人服务器管理组一直致力于为大家提供更优质的游戏体验。针对大家反馈的资源界刷新过慢、资源更新不及时、随机传送无法使用等问题，我们经过不懈努力，终于开发出了全新的自动刷新资源界，并且搭配了便捷的随机传送系统，让资源采集不再困难！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001316880533.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送方法</Paragraph><List MarkerStyle="Decimal">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>进入资源界</Bold>：首先使用指令<TextBox Style="{StaticResource InlineCode}">/res</TextBox> 传送到资源界，你将出生在一个平坦的世界，这里是资源采集的起点。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>随机传送</Bold>：到达资源界后，你可以根据需求选择不同的资源区域。使用<TextBox Style="{StaticResource InlineCode}">/zy</TextBox> 随机传送到资源主世界，这里拥有丰富的自然资源，是采集基础材料的好去处；使用<TextBox Style="{StaticResource InlineCode}">/dy</TextBox> 随机传送到资源地狱界，那里有独特的地狱资源，等待你去探索；使用<TextBox Style="{StaticResource InlineCode}">/md</TextBox> 随机传送到资源末地界，末地的稀有资源将为你的建设增添助力。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">注意事项</Paragraph><List MarkerStyle="Decimal">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>默认随机传送</Bold>：输入传送指令后，系统将自动为你随机选择一个位置进行传送，无需额外操作，方便快捷。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>刷新时间提示</Bold>：传送后，你可以在聊天框看到当前世界的刷新时间，默认为每周日晚上 12 点。请合理安排采集时间，确保在刷新前获取足够的资源。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>禁止建筑修建</Bold>：为了保证资源界的正常刷新，我们特别提醒各位玩家，请勿在资源界修建任何建筑。一旦自动刷新启动，所有建筑将被清除，且不会进行任何赔偿。</Paragraph></ListItem>
-</List><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001402852826.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>现在，就让我们一起体验全新的资源界随机传送系统吧！无论是初入游戏的新手，还是资源采集的高手，都能在这里找到属于自己的宝藏。快来绵中方块人服务器，开启你的高效资源采集之旅，为你的建设事业添砖加瓦！</Paragraph>
+</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001402852826.png"/></BlockUIContainer><Paragraph>现在，就让我们一起体验全新的资源界随机传送系统吧！无论是初入游戏的新手，还是资源采集的高手，都能在这里找到属于自己的宝藏。快来绵中方块人服务器，开启你的高效资源采集之旅，为你的建设事业添砖加瓦！</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -140,8 +198,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器工单系统成功上线：开启高效管理新时代</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/219/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月02日 12:47:06
-</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124628728454.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>在方块人游戏的世界中，服务器的稳定运行和高效管理是每一位玩家和管理员的共同追求。如今，绵中方块人服务器迎来了一个重要的里程碑——全新的工单系统正式制作完成并投入使用。这一创新举措不仅为玩家带来了更加便捷的体验，也为服务器的管理注入了新的活力。</Paragraph><Paragraph>工单系统是连接玩家与管理员的重要桥梁。通过这个系统，玩家在游戏过程中遇到的任何问题，无论是游戏内的建筑损坏、物品丢失，还是与其他玩家的纠纷，都可以通过简单易用的界面快速提交。玩家只需填写游戏 ID、问题标题和详细描述，并根据问题的紧急程度进行评级，管理员就能迅速收到通知并展开处理。此外，玩家还可以上传相关截图或文件作为补充材料，帮助管理员更准确地了解问题所在。</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124701123747.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>对于管理员来说，工单系统更是提升管理效率的利器。系统会自动对工单进行分类和优先级排序，管理员可以根据紧急程度优先处理重要问题。同时，系统还提供了详细的工单记录和统计功能，方便管理员回顾过往问题的处理情况，总结经验教训，进一步优化服务器的管理策略。</Paragraph><Paragraph>绵中方块人服务器工单系统的成功上线，是服务器管理团队长期努力的成果。它不仅提升了玩家的体验，让玩家的问题能够得到更快速、更有效的解决，也为管理员提供了更加高效、透明的管理工具。未来，绵中方块人服务器将继续致力于优化系统功能，为玩家打造一个更加稳定、和谐的游戏环境。无论是在游戏内的探索，还是在游戏外的互动，绵中方块人服务器都将是玩家最可靠的伙伴。</Paragraph>
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器工单系统成功上线：开启高效管理新时代</Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/219/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月02日 12:47:06
+<BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124628728454.webp"/></BlockUIContainer><Paragraph>在方块人游戏的世界中，服务器的稳定运行和高效管理是每一位玩家和管理员的共同追求。如今，绵中方块人服务器迎来了一个重要的里程碑——全新的工单系统正式制作完成并投入使用。这一创新举措不仅为玩家带来了更加便捷的体验，也为服务器的管理注入了新的活力。</Paragraph><Paragraph>工单系统是连接玩家与管理员的重要桥梁。通过这个系统，玩家在游戏过程中遇到的任何问题，无论是游戏内的建筑损坏、物品丢失，还是与其他玩家的纠纷，都可以通过简单易用的界面快速提交。玩家只需填写游戏 ID 、问题标题和详细描述，并根据问题的紧急程度进行评级，管理员就能迅速收到通知并展开处理。此外，玩家还可以上传相关截图或文件作为补充材料，帮助管理员更准确地了解问题所在。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124701123747.webp"/></BlockUIContainer><Paragraph>对于管理员来说，工单系统更是提升管理效率的利器。系统会自动对工单进行分类和优先级排序，管理员可以根据紧急程度优先处理重要问题。同时，系统还提供了详细的工单记录和统计功能，方便管理员回顾过往问题的处理情况，总结经验教训，进一步优化服务器的管理策略。</Paragraph><Paragraph>绵中方块人服务器工单系统的成功上线，是服务器管理团队长期努力的成果。它不仅提升了玩家的体验，让玩家的问题能够得到更快速、更有效的解决，也为管理员提供了更加高效、透明的管理工具。未来，绵中方块人服务器将继续致力于优化系统功能，为玩家打造一个更加稳定、和谐的游戏环境。无论是在游戏内的探索，还是在游戏外的互动，绵中方块人服务器都将是玩家最可靠的伙伴。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -150,7 +208,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/184/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月12日 22:29:32
-恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader」 已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）</Span>和各位玩家老爷的使用 <Span TextDecorations="Strikethrough">（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
+恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader 」已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）</Span>和各位玩家老爷的使用 <Span TextDecorations="Strikethrough">（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
   
 <Paragraph>发行代号 发行类型 主版本号. 次版本号. 修订版本号-日期码</Paragraph>
 
@@ -180,69 +238,6 @@ Q：语音插件是否会影响游戏流畅度？<LineBreak/>
 A：插件经优化处理，占用资源极低，无需担心卡顿！<LineBreak/>
 Q：手机版玩家如何适配？<LineBreak/>
 A：boen 已经在写网页了，敬请期待!</Paragraph><Paragraph><Bold>团结、创意、欢乐——这里是绵中人自己的 MC 家园！</Bold> 🎮✨</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="探索游戏内点歌系统" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">探索游戏内点歌系统</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/160/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月06日 13:10:17
-</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738808881179.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>在 Minecraft 的世界里，玩家不仅可以自由探索、建造，还能通过独特的游戏内点歌系统，享受音乐带来的乐趣。这一创新功能为传统的沙盒游戏体验增添了别样的魅力，让玩家在方块世界中也能沉浸在音乐的海洋。</Paragraph><Paragraph Style="{StaticResource H3}">什么是游戏内点歌系统</Paragraph><Paragraph>游戏内点歌系统是 Minecraft 绵中方块人服务器为玩家提供的一项特色服务。它允许玩家在游戏中通过简单的指令，搜索、播放、点播自己喜爱的歌曲。这一系统打破了游戏与音乐的界限，让玩家在建造、冒险的同时，能够随时聆听音乐，提升游戏的趣味性和沉浸感。</Paragraph><Paragraph Style="{StaticResource H3}">点歌系统的亮点</Paragraph><Paragraph>• 多平台支持</Paragraph><Paragraph>点歌系统支持多种音乐平台，包括网易云音乐、QQ 音乐等。玩家可以根据自己的喜好选择不同的平台进行歌曲搜索和播放。目前，网易云音乐的适配最为完善，拥有丰富的歌曲资源，包括付费歌曲。</Paragraph><Paragraph>• 便捷的操作方式</Paragraph><Paragraph>玩家可以通过简单的指令完成歌曲的搜索、播放和点播。例如，使用<TextBox Style="{StaticResource InlineCode}">/zm search &lt; 平台&gt; &lt; 歌名&gt;</TextBox>可以搜索歌曲，而<TextBox Style="{StaticResource InlineCode}">/zm play &lt; 平台&gt; &lt; 歌名&gt;</TextBox>则可以直接播放歌曲。此外，玩家还可以通过歌单功能，批量导入和播放自己喜欢的歌单。</Paragraph><Paragraph>• 社交互动性</Paragraph><Paragraph>点歌系统不仅是一个音乐播放工具，更是一个社交平台。玩家可以将自己喜欢的歌曲推送给全服玩家，让大家一起欣赏。这种互动性让游戏内的社交氛围更加浓厚，玩家之间的联系也更加紧密。</Paragraph><Paragraph>• 个性化体验</Paragraph><Paragraph>玩家可以根据自己的心情和游戏场景选择不同的音乐。无论是冒险时的激昂旋律，还是建造时的舒缓音乐，点歌系统都能满足玩家的需求。此外，系统还提供了多种播放模式，如单曲循环、列表随机等，让玩家能够根据自己的喜好自由调整。</Paragraph><Paragraph Style="{StaticResource H3}">如何使用全服点歌系统</Paragraph><Paragraph>下面链接的 WIKI 介绍得非常清楚，快去看吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL3BsYXlpbmdnYW1lL211c2ljLWluLXNlcnZlcg==">https://wiki.boen.fun/zh/playinggame/music-in-server</local:MyTextButton></Underline></Paragraph><Section Style="{StaticResource Quote}">
-  
-<Paragraph>在未来，随着技术的不断进步和更多平台的适配，游戏内点歌系统有望为玩家带来更加丰富和个性化的音乐体验。让我们一起期待这个系统在未来的发展，为 Minecraft 的世界增添更多色彩。</Paragraph>
-
-</Section><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/1738818383664.webp"/></BlockUIContainer><Paragraph></Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="节前闲得慌？来做点前置任务吧！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">节前闲得慌？来做点前置任务吧！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/123/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月28日 06:00:32
-前言
-==</Paragraph><Paragraph>各位方块人们，蛇年将至，我们管理组在这里先给大家拜个早年！</Paragraph><Paragraph>据不可靠消息，有些玩家已经提前解决了所有作业，正愁找不到事情做。对此，我们管理组集思广益，尽心设计了九个前置活动，作为我们除夕联欢晚会的预热！</Paragraph><Paragraph>下面，请看详细内容</Paragraph><Paragraph Style="{StaticResource H1}">内容</Paragraph><Paragraph>我们管理组<Span TextDecorations="Strikethrough">丧心病狂</Span>制作了九个散布在全服各地的指引 NPC(下文简称 NPC)，通过指引找到 NPC，完成 NPC 发布的任务，就可以获得奖励。</Paragraph><Paragraph>这个时候就有人会问了：主播主播，你的想法固然很好但生存界这么大，我去哪里找呢？</Paragraph><Paragraph>这时候，就得隆重请出我们管理组尽心制作的任务指引单了！<Span TextDecorations="Strikethrough">盐都不带盐的</Span><LineBreak/>
-我们只需要在生存界输入/kits 指令，就可以获得指引单<Span TextDecorations="Strikethrough">一张纸</Span>了</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76737972055361.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/Image_76739022909683.webp"/></BlockUIContainer><Paragraph></Paragraph><Paragraph>根据指引找到 NPC 进行交易就可以获得奖券 <Span TextDecorations="Strikethrough">Fabric: 那我走</Span></Paragraph><Paragraph Style="{StaticResource H1}">那我集齐以后呢</Paragraph><Paragraph>这块布也是有名字的，叫 「凭此兑换奖品」<LineBreak/>
-集齐 3 张以上可以从 Boen 身上爆金币、食物尝鲜包</Paragraph><Paragraph>集齐 6 张以上可以爆很多金币、食物尝鲜包和一张飞行卡</Paragraph><Paragraph>集齐 9 张可以把全管理组的金币爆出来还有食物尝鲜包➕一张飞行卡➕摩托车</Paragraph><Paragraph>别忘了在正月初一中午 12 点后统一找 Boen_Shi 兑换奖励！</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="除夕前的两则短讯" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">除夕前的两则短讯</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/134/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 22:09:42
-1. 专门为各位方块人制作的 『MianzhongMinecraftLoader』 在烙饼的努力和星澜曦光的测试下正式出炉力！<LineBreak/>
-该加载器已经实现了整合包的自动下载、自动更新和一些稀奇古怪的东西。<LineBreak/>
-欢迎各位方块人积极体验反馈 awa</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}">方块人的信息获取方式迎来重大更新！现在隆重推出 PCL2 启动器专属主页--&gt;「绵中方块人 新闻主页」。你再也不需要费劲地来到官网才能查看到最新信息，同时免去记忆网址的麻烦——你所需要做的全部就是启用此主页！<LineBreak/>
-新年新气象，在此新的一年里，新闻主页为大家排忧解难，让你的 mc 游戏变得更加便利，更加快捷。<LineBreak/>
-新闻主页将不断更新，如果有其他启动器也支持自定义主页，也欢迎大家提出建议，让我们为共创美好的 mzmc 贡献力量！<LineBreak/>
-如果有任何问题或意见，欢迎大家拷打 tsxc，催他加班。你的声音不仅仅是给你自己带来方便，也是为他人创造美好的 mc 游戏环境。全心全意为人民服务是我们的根本宗旨，是我们一切行动的根本出发点和落脚点，为人民服务，做人民满意的公仆！<LineBreak/>
-此致，敬礼！<LineBreak/>
-尚未完成的工作：<LineBreak/>
-给每篇文章添加原文链接<LineBreak/>
-全自动更新主页<LineBreak/>
-以下是效果图和启用教程：<LineBreak/></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/FF6A95F74915C0354DA37D38819FAADE.webp"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}"><LineBreak/></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/01/399AF3E9F55D0CE784645433CC03833D.webp"/></BlockUIContainer><Paragraph Style="{StaticResource Lp}"><LineBreak/>
-wiki 教程：<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly93aWtpLmJvZW4uZnVuL3poL290aGVyL3BjbC1uZXdzLXBhZ2U=">https://wiki.boen.fun/zh/other/pcl-news-page</local:MyTextButton></Underline><LineBreak/>
-神秘地址：https://mzmcos.tsxc.xyz/output.xaml<LineBreak/>
-本文作者：星澜曦光_tsxc<LineBreak/>
-主页作者：星澜曦光_tsxc<LineBreak/>
-特别鸣谢：烧瑚烙饼、boen、<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly9naXRodWIuY29tL0xpZ2h0LUJlYWNvbi9Ib21lcGFnZUJ1aWxkZXI=">HomepageBuilder</local:MyTextButton></Underline></Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="失落之国-前置 I" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">失落之国-前置 I</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/01/133/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年01月27日 19:27:38</Paragraph><Section Style="{StaticResource Quote}">
-  
-<Paragraph>艾尔梅亚帝国覆灭之后，皇室的珍藏散落世界各地，最近，一位从南大陆来的神秘客人来到了这里，她带来了一副名画的消息，以及一道前往南大陆的委托。现在她已经到了主城中央，等待勇士的到来</Paragraph>
-
-</Section><Paragraph>地心的生物已经蠢蠢欲动，试图侵染北大陆这片净土，在大战中幸存下来的纯白鸢尾感受到地心帝皇阿尔图罗的气息，便顺着那股气息来到了此地。随着调查的深入，阿尔图罗的阴谋逐渐浮出水面，但在大战中受到 「重创」 的纯白鸢尾早已无力阻止。此时，她将视线投向了北大陆的原住民。纯白鸢尾以艾尔梅亚帝国皇室珍宝的情报，吸引了一大批冒险家前往，用以挫败阿尔图罗的阴谋。虽然击杀魔女对他们来说太过困难，但如果只是一些魔女召唤的杂兵，想必并不是什么问题。</Paragraph><Paragraph>于是，本着这个想法，纯白鸢尾向北大陆的众人发布了讨伐任务，并给出了一个让人无法拒绝的价格，在利益的驱使下，北大陆的冒险家纷纷前往，而艾尔梅亚帝国与地心的对决，在 30 年后，再次开始了</Paragraph><Paragraph>活动内容：为了挫败阿尔图罗的阴谋，玩家将会在魔女创造的永夜之中尽可能的击杀亡灵生物，以消耗她的魔力，击杀亡灵生物的掉落物可以找纯白鸢尾 （主城区） 兑换奖励</Paragraph><Paragraph>奖励内容：基础装备，高级附魔书，盔甲模板，以及南大陆通用货币 （可向南大陆 NPC 购买物品）</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
