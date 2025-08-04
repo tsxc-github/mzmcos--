@@ -5,9 +5,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
@@ -32,9 +30,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
@@ -53,10 +51,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：手机可以用FCL玩javaMC" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -88,7 +87,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="📢 PCL MZMC Edition 内测计划正式启动！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="失落之国——前置 III  坚守" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">失落之国——前置 III  坚守</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/08/319/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年08月04日 16:07:10
+随着污秽之源被清楚，污秽之主的进攻被迫停止，双方在九雍 （北开发区于剧情中的代称，后续该注解不再出现） 的临时防线上僵持下来，这对于素瑞玛教廷 （信奉污秽之主和其他地狱恶魔的邪教，在艾尔梅亚帝国中期便已经存在，RPG 的主要 「反派」 之一） 来说并不是一个好消息，如果让刚刚经历重大变故的枢机府趁着现在稳定下来，控制 Sacrosanctum(主城区) 的计划极有可能宣告失败。正当教廷苦恼之际，一封密信被送到了奥西里安手中。在之前的战斗中，由于枢机府指挥系统崩溃，本该由天璇卫驻守的蛇盘隘被孟中堂用其掌控下的第三协卫营调换。于是，经过慎重考虑，教皇——亡者之喉奥西里安决定，于蛇盘隘发起猛攻，撕开刚刚形成的北方防线。</Paragraph><Paragraph>未成经过任何正面战场战斗的第三协卫营很快便被猛烈的进攻击溃，虽然凭借关隘的防御工事，第一次进攻被勉强抵御，但军心涣散的第三协卫营很明显无法抵御接下来的攻击了。一旦关口被突破，后方将无险可守，教廷的兵锋将直指 Sacrosanctum 。 但在枢机府混乱的当下，附近已经没有可以成建制调动部队的军事组织了。就在这岌岌可危的时间点，内务府的干事卡莉拉，也是原先大赛的负责人，却不顾其他干事反对，强行举行了预选赛。也许她有其他的打算？你不太清楚，不过你清晰的预感到，出人头地的机会到了</Paragraph><Paragraph>剧情将于 8 月 6 日开始</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="📢 PCL MZMC Edition 内测计划正式启动！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -212,21 +220,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">绵中方块人服务器工单系统成功上线：开启高效管理新时代</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/219/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月02日 12:47:06
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124628728454.webp"/></InlineUIContainer></Paragraph><Paragraph>在方块人游戏的世界中，服务器的稳定运行和高效管理是每一位玩家和管理员的共同追求。如今，绵中方块人服务器迎来了一个重要的里程碑——全新的工单系统正式制作完成并投入使用。这一创新举措不仅为玩家带来了更加便捷的体验，也为服务器的管理注入了新的活力。</Paragraph><Paragraph>工单系统是连接玩家与管理员的重要桥梁。通过这个系统，玩家在游戏过程中遇到的任何问题，无论是游戏内的建筑损坏、物品丢失，还是与其他玩家的纠纷，都可以通过简单易用的界面快速提交。玩家只需填写游戏 ID 、问题标题和详细描述，并根据问题的紧急程度进行评级，管理员就能迅速收到通知并展开处理。此外，玩家还可以上传相关截图或文件作为补充材料，帮助管理员更准确地了解问题所在。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124701123747.webp"/></BlockUIContainer><Paragraph>对于管理员来说，工单系统更是提升管理效率的利器。系统会自动对工单进行分类和优先级排序，管理员可以根据紧急程度优先处理重要问题。同时，系统还提供了详细的工单记录和统计功能，方便管理员回顾过往问题的处理情况，总结经验教训，进一步优化服务器的管理策略。</Paragraph><Paragraph>绵中方块人服务器工单系统的成功上线，是服务器管理团队长期努力的成果。它不仅提升了玩家的体验，让玩家的问题能够得到更快速、更有效的解决，也为管理员提供了更加高效、透明的管理工具。未来，绵中方块人服务器将继续致力于优化系统功能，为玩家打造一个更加稳定、和谐的游戏环境。无论是在游戏内的探索，还是在游戏外的互动，绵中方块人服务器都将是玩家最可靠的伙伴。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">开发杂谈 —— MianzhongMincraftLoader 的元宵特别篇</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/02/184/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年02月12日 22:29:32
-恭喜！旨在优化各位玩家初次入服体验而研发的 「MianzhongMincraftLoader 」已经更新到了 2.5.1 了！</Paragraph><Paragraph>在这里，先要感谢 Boen 和星澜曦光提供的帮助 <Span TextDecorations="Strikethrough">（磕头）~~和各位玩家老爷的使用 ~~（继续磕头）</Span></Paragraph><Paragraph>目前，MianzhongMincraftLoader 已经发版了三个大版本了，它们分别是——</Paragraph><Paragraph>只有黑乎乎命令行窗口的 0.x 版本；</Paragraph><Paragraph>从 0.x 修改而来的<Span TextDecorations="Strikethrough">胡乱拼凑</Span>的 1.x 版本；</Paragraph><Paragraph>以及目前第三次重写的 2.x 版本。</Paragraph><Paragraph>没有各位玩家的支持，我们是不可能获得如此之大的动力滴！</Paragraph><Paragraph>(Boen 看了都说好)</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/02/20250212222604839570.webp"/></BlockUIContainer><Paragraph>借此机会，我们也想给各位介绍一下加载器的版本号规则：</Paragraph><Paragraph>一般来说，它长这样：</Paragraph><Section Style="{StaticResource Quote}">
-  
-<Paragraph>发行代号 发行类型 主版本号. 次版本号. 修订版本号-日期码</Paragraph>
-
-</Section><Paragraph>比如：通慧 Release 2.5.1-202502012<LineBreak/>
-一般来说, 发行代号&amp; 发行类型&amp; 修订版本号&amp; 日期码您不需要关心，<LineBreak/>
-不过我们推荐您在次版本号变动时更新，在主版本号变动时我们强烈推荐您更新。</Paragraph><Paragraph>（其实在我们实装加载器自更新之前都是想更就更）</Paragraph><Paragraph>哈哈，今天开发杂谈就到这里了，祝各位元宵快乐!</Paragraph><Paragraph>——绵中方块人服务器管理组</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
