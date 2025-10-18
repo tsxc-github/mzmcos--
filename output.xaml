@@ -5,15 +5,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -28,9 +20,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -50,12 +48,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen的饼一般会在三年内完成" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -87,7 +87,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="失落之国——前置 III  坚守" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/10/332/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年10月18日 22:44:25
+绵中 MC 建筑社社团管理委员会：</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组决定：</Paragraph><Paragraph>任命：</Paragraph><Paragraph>Nikolaos 为绵中 MC 建筑社社长；</Paragraph><Paragraph>xingxiang114 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>Usicy 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>C__157 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>免去：</Paragraph><Paragraph>C__157 绵中 MC 建筑社社长职务，另有任用。</Paragraph><Paragraph>特此通知。</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组</Paragraph><Paragraph>2025-10-18</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="失落之国——前置 III  坚守" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -211,15 +220,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>刷新时间提示</Bold>：传送后，你可以在聊天框看到当前世界的刷新时间，默认为每周日晚上 12 点。请合理安排采集时间，确保在刷新前获取足够的资源。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>禁止建筑修建</Bold>：为了保证资源界的正常刷新，我们特别提醒各位玩家，请勿在资源界修建任何建筑。一旦自动刷新启动，所有建筑将被清除，且不会进行任何赔偿。</Paragraph></ListItem>
 </List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001402852826.png"/></BlockUIContainer><Paragraph>现在，就让我们一起体验全新的资源界随机传送系统吧！无论是初入游戏的新手，还是资源采集的高手，都能在这里找到属于自己的宝藏。快来绵中方块人服务器，开启你的高效资源采集之旅，为你的建设事业添砖加瓦！</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器工单系统成功上线：开启高效管理新时代" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器工单系统成功上线：开启高效管理新时代</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/219/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月02日 12:47:06
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124628728454.webp"/></InlineUIContainer></Paragraph><Paragraph>在方块人游戏的世界中，服务器的稳定运行和高效管理是每一位玩家和管理员的共同追求。如今，绵中方块人服务器迎来了一个重要的里程碑——全新的工单系统正式制作完成并投入使用。这一创新举措不仅为玩家带来了更加便捷的体验，也为服务器的管理注入了新的活力。</Paragraph><Paragraph>工单系统是连接玩家与管理员的重要桥梁。通过这个系统，玩家在游戏过程中遇到的任何问题，无论是游戏内的建筑损坏、物品丢失，还是与其他玩家的纠纷，都可以通过简单易用的界面快速提交。玩家只需填写游戏 ID 、问题标题和详细描述，并根据问题的紧急程度进行评级，管理员就能迅速收到通知并展开处理。此外，玩家还可以上传相关截图或文件作为补充材料，帮助管理员更准确地了解问题所在。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250302124701123747.webp"/></BlockUIContainer><Paragraph>对于管理员来说，工单系统更是提升管理效率的利器。系统会自动对工单进行分类和优先级排序，管理员可以根据紧急程度优先处理重要问题。同时，系统还提供了详细的工单记录和统计功能，方便管理员回顾过往问题的处理情况，总结经验教训，进一步优化服务器的管理策略。</Paragraph><Paragraph>绵中方块人服务器工单系统的成功上线，是服务器管理团队长期努力的成果。它不仅提升了玩家的体验，让玩家的问题能够得到更快速、更有效的解决，也为管理员提供了更加高效、透明的管理工具。未来，绵中方块人服务器将继续致力于优化系统功能，为玩家打造一个更加稳定、和谐的游戏环境。无论是在游戏内的探索，还是在游戏外的互动，绵中方块人服务器都将是玩家最可靠的伙伴。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
