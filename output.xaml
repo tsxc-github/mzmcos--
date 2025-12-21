@@ -5,8 +5,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -27,12 +27,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="FontSize" Value="14" />
@@ -48,14 +52,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：我们每年都会举行新春庆祝活动" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -87,7 +87,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="OMG！！！！新新新新的工单系统今天震撼首发！！！&gt;o&lt;" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">OMG！！！！新新新新的工单系统今天震撼首发！！！&gt;o&lt;</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/12/356/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年12月21日 23:25:10
+由我们亲爱的副腐竹，<Bold>Akir_</Bold> 编写的新版本<Bold>工单系统 2.0</Bold> 今天上线！<LineBreak/>
+<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2025/12/1766359261_8183_20251221152101699559.png"/></InlineUIContainer></Paragraph><Paragraph>简单大气的界面，整齐的输入框，还有人性化的紧急程度选择栏，处处透露着腐竹们对于广大玩家的爱护，让人恨不得立马提交工单上号建一万遍绵中 WWWW！各位方块人们，还在等什么，赶紧登录官网，提交工单，进服肝肝肝 o/o/o/！！！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2025/12/1766359060_7309_20251221151740612409.png"/></BlockUIContainer><Paragraph>以下是更新内容原文：</Paragraph><Paragraph>🔈🔈🔈全新的绵中方块人服务器-工单系统 2.0 已上线！<LineBreak/>
+【更新内容】 <LineBreak/>
+使用 MzmcOS 问卷系统，带来更优质的体验！<LineBreak/>
+优化了问题分类的设置，让分类选择不再冗杂~<LineBreak/>
+其他视觉设计优化。 <LineBreak/>
+【如何使用】 <LineBreak/>
+访问官网 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top">https://mzmc.top</local:MyTextButton></Underline><LineBreak/>
+首页即可提交工单~</Paragraph><Paragraph>MzmcOS 管理团队 <LineBreak/>
+2025.12.21</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -204,22 +222,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">正版玩家自动登录上线！解放双手，快捷入服！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/259/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月07日 12:22:37
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250607113147192857.webp"/></InlineUIContainer></Paragraph><Paragraph>「哇这就是自动登录吗，太迅速了！」 「是啊是啊，这也太方便了！」 「那么在哪里可以得到呢？」</Paragraph><Paragraph>进入绵中方块人服务器，在聊天栏敲下<TextBox Style="{StaticResource InlineCode}">/premium</TextBox> 这段神秘代码，并大喊一声 「boen 的恩情还不完✋😭✋」，就能得到图片同款自动登录~基岩版也可以哟</Paragraph><Paragraph>事实就是如此，小编也觉得很惊讶呢，你觉得这个自动登录怎么样，快来评论区讨论一下吧~</Paragraph><Paragraph>⚠️注意: 离线登录玩家请勿开启，否则将无法进服。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="资源界随机传送、自动重制系统上线，畅享高效资源采集！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">资源界随机传送、自动重制系统上线，畅享高效资源采集！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/03/227/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年03月14日 00:15:14
-各位亲爱的玩家，绵中方块人服务器管理组一直致力于为大家提供更优质的游戏体验。针对大家反馈的资源界刷新过慢、资源更新不及时、随机传送无法使用等问题，我们经过不懈努力，终于开发出了全新的自动刷新资源界，并且搭配了便捷的随机传送系统，让资源采集不再困难！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001316880533.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送方法</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>进入资源界</Bold>：首先使用指令<TextBox Style="{StaticResource InlineCode}">/res</TextBox> 传送到资源界，你将出生在一个平坦的世界，这里是资源采集的起点。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>随机传送</Bold>：到达资源界后，你可以根据需求选择不同的资源区域。使用<TextBox Style="{StaticResource InlineCode}">/zy</TextBox> 随机传送到资源主世界，这里拥有丰富的自然资源，是采集基础材料的好去处；使用<TextBox Style="{StaticResource InlineCode}">/dy</TextBox> 随机传送到资源地狱界，那里有独特的地狱资源，等待你去探索；使用<TextBox Style="{StaticResource InlineCode}">/md</TextBox> 随机传送到资源末地界，末地的稀有资源将为你的建设增添助力。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">注意事项</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>默认随机传送</Bold>：输入传送指令后，系统将自动为你随机选择一个位置进行传送，无需额外操作，方便快捷。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>刷新时间提示</Bold>：传送后，你可以在聊天框看到当前世界的刷新时间，默认为每周日晚上 12 点。请合理安排采集时间，确保在刷新前获取足够的资源。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>禁止建筑修建</Bold>：为了保证资源界的正常刷新，我们特别提醒各位玩家，请勿在资源界修建任何建筑。一旦自动刷新启动，所有建筑将被清除，且不会进行任何赔偿。</Paragraph></ListItem>
-</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/03/20250314001402852826.png"/></BlockUIContainer><Paragraph>现在，就让我们一起体验全新的资源界随机传送系统吧！无论是初入游戏的新手，还是资源采集的高手，都能在这里找到属于自己的宝藏。快来绵中方块人服务器，开启你的高效资源采集之旅，为你的建设事业添砖加瓦！</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
