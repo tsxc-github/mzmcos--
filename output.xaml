@@ -5,10 +5,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -23,9 +28,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -45,17 +49,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：手机可以用FCL玩javaMC" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这个服务器里的很多成员都有自己宏伟的规划" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -92,7 +92,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">绵中方块人服务器 2026 新年贺词</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/12/370/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年12月30日 19:00:32
-各位朋友们：</Paragraph><Paragraph>大家新年好！灵蛇负瑞雪，奔马迎春归。万物伊始，百舸争流。 2026，到来了。</Paragraph><Paragraph>今年已经是我们携手走过的第四个春秋了。难忘啊，一路上的旅程。在这辞旧迎新的时间，我们不妨一同端详这构建在数字世界的纽带，让即使在天南海北的我们，重新燃起火花。</Paragraph><Paragraph>2022 年暑假我们的群聊有 30 多人。而如今，我们自豪地拥有 300＋，这已然增长十倍的数据。从粘液科技到新存档，从资源界到创造界……每一次方块的交互，是满怀希望的初次尝试，还是为实现目标而顶住再来的魄力？每一次 PvP 的挑战，无论有备而来还是背水一战，都已献给我们共同的回忆。</Paragraph><Paragraph>我们喜欢你，亲爱的绵中方块人。我们喜欢你以一己之力建起城垣，惊叹与美学与肝帝的融合；我们喜欢你建起聚落，用规划与交流缝补可能并不完美的世界规则；最重要的是－－我们喜欢你来。我们的世界因为你的到来而不寂寞，我们的开发因为你的需求而有价值。这毋庸置疑。因为我们也是你。我们有共同的名字：绵中方块人。我们欣喜于你提出的设想，满足于我们将它变为现实，一次次追求新的创意，是一段写在 0 和 1 中的故事，独属于我们的一切。</Paragraph><Paragraph>你记得吗？</Paragraph><Paragraph>粘液科技档里神秘的合金盔甲大神，太璃神宫的原型出自何处，雪山地区曾上演 《人们的名义》……你从一无所有到仗剑天涯，成长着的，不只是时间，也是萤幕后的你我。我们的故事很长，长到要用一生去丈量；我们的距离很短，短到只需毫秒之间就可触及彼此。</Paragraph><Paragraph>我们的成长，是从独当一面到双人成行，再到众志成城。我们会为了 bug 和技术实现方案而讨论，把会议开到零点以后；我们也会集众人之力，想方设法带来更新奇，独一份的游戏体验……我们制定规则，即使我们知道鲜有人愿意倾注时间去看——但我们需要为长远考虑，你我的未来不只是在方块之间流动，更需要在规则与监督之下保证公平。自研反作弊到登录插件的修改，我们清楚令人头大的 「最后一公里」 问题在哪里；同时，我们吸纳有能力的小伙伴积极参与维护，全面放权，用我们的人才培养方式去构建未来的行业先锋，这里可能不是你写在简历上的第一站实习经历，但是足以带你叩响信息产业的大门……我们是绵中方块人服管委，玩家的先锋队，行业的探索者，你亲密无间的好朋友。</Paragraph><Paragraph>感谢你，看到这的你，不论你身处何方，是潜水于群中，或是活跃的话匣子，绵中方块人是我们的共同记号，游离于现实而又依托于你我的精神家园。若能寻一丝慰藉，便不虚此行；三五好友共话，尽得人间清欢。</Paragraph><Paragraph>2026，要有龙马精神，甘做勤劳 「牛马」，敢做行业奔马。去问明天何似？明朝日月新天，万马奔腾，其道大光。</Paragraph><Paragraph>出发吧，2026，明天，会更好的。</Paragraph><Paragraph>绵中方块人服务器管理委员会</Paragraph><Paragraph>2025.12.30</Paragraph>
+<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2025/12/20251230103520396861.webp"/></InlineUIContainer></Paragraph><Paragraph>各位朋友们：</Paragraph><Paragraph>大家新年好！灵蛇负瑞雪，奔马迎春归。万物伊始，百舸争流。 2026，到来了。</Paragraph><Paragraph>今年已经是我们携手走过的第四个春秋了。难忘啊，一路上的旅程。在这辞旧迎新的时间，我们不妨一同端详这构建在数字世界的纽带，让即使在天南海北的我们，重新燃起火花。</Paragraph><Paragraph>2022 年暑假我们的群聊有 30 多人。而如今，我们自豪地拥有 300＋，这已然增长十倍的数据。从粘液科技到新存档，从资源界到创造界……每一次方块的交互，是满怀希望的初次尝试，还是为实现目标而顶住再来的魄力？每一次 PvP 的挑战，无论有备而来还是背水一战，都已献给我们共同的回忆。</Paragraph><Paragraph>我们喜欢你，亲爱的绵中方块人。我们喜欢你以一己之力建起城垣，惊叹与美学与肝帝的融合；我们喜欢你建起聚落，用规划与交流缝补可能并不完美的世界规则；最重要的是－－我们喜欢你来。我们的世界因为你的到来而不寂寞，我们的开发因为你的需求而有价值。这毋庸置疑。因为我们也是你。我们有共同的名字：绵中方块人。我们欣喜于你提出的设想，满足于我们将它变为现实，一次次追求新的创意，是一段写在 0 和 1 中的故事，独属于我们的一切。</Paragraph><Paragraph>你记得吗？</Paragraph><Paragraph>粘液科技档里神秘的合金盔甲大神，太璃神宫的原型出自何处，雪山地区曾上演 《人们的名义》……你从一无所有到仗剑天涯，成长着的，不只是时间，也是萤幕后的你我。我们的故事很长，长到要用一生去丈量；我们的距离很短，短到只需毫秒之间就可触及彼此。</Paragraph><Paragraph>我们的成长，是从独当一面到双人成行，再到众志成城。我们会为了 bug 和技术实现方案而讨论，把会议开到零点以后；我们也会集众人之力，想方设法带来更新奇，独一份的游戏体验……我们制定规则，即使我们知道鲜有人愿意倾注时间去看——但我们需要为长远考虑，你我的未来不只是在方块之间流动，更需要在规则与监督之下保证公平。自研反作弊到登录插件的修改，我们清楚令人头大的 「最后一公里」 问题在哪里；同时，我们吸纳有能力的小伙伴积极参与维护，全面放权，用我们的人才培养方式去构建未来的行业先锋，这里可能不是你写在简历上的第一站实习经历，但是足以带你叩响信息产业的大门……我们是绵中方块人服管委，玩家的先锋队，行业的探索者，你亲密无间的好朋友。</Paragraph><Paragraph>感谢你，看到这的你，不论你身处何方，是潜水于群中，或是活跃的话匣子，绵中方块人是我们的共同记号，游离于现实而又依托于你我的精神家园。若能寻一丝慰藉，便不虚此行；三五好友共话，尽得人间清欢。</Paragraph><Paragraph>2026，要有龙马精神，甘做勤劳 「牛马」，敢做行业奔马。去问明天何似？明朝日月新天，万马奔腾，其道大光。</Paragraph><Paragraph>出发吧，2026，明天，会更好的。</Paragraph><Paragraph>绵中方块人服务器管理委员会</Paragraph><Paragraph>2025.12.30</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
