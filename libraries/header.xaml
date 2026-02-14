@@ -11,7 +11,7 @@
           </StackPanel>
           <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
             <!-- <Image Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/LB.png"/> -->
-            <Image Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/PHB_2.png" />
+            <Image Margin="2" Source="https://i1.hdslb.com/bfs/new_dyn/ae62d18476b04e732aa3725d5a8e0199277543816.png" />
           </StackPanel>
           <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,0,0,10">
             <local:MyIconTextButton HorizontalAlignment="Left" Text="官网" ToolTip="前往官网" EventType="打开网页" EventData="https://mzmc.top/" LogoScale="1" Logo="M907.636364 643.397818A54.853818 54.853818 0 0 1 852.852364 698.181818H171.147636A54.853818 54.853818 0 0 1 116.363636 643.397818V217.716364A54.877091 54.877091 0 0 1 171.147636 162.909091h681.704728A54.877091 54.877091 0 0 1 907.636364 217.716364v425.681454zM852.852364 93.090909H171.147636A124.765091 124.765091 0 0 0 46.545455 217.716364v425.681454A124.741818 124.741818 0 0 0 171.147636 768H477.090909v93.090909H302.545455a34.909091 34.909091 0 0 0 0 69.818182h418.90909a34.909091 34.909091 0 1 0 0-69.818182h-174.545454v-93.090909h305.943273A124.741818 124.741818 0 0 0 977.454545 643.397818V217.716364A124.765091 124.765091 0 0 0 852.852364 93.090909z"/>
