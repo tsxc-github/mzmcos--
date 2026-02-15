@@ -5,28 +5,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -46,16 +26,22 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这是绵中最大的MC服务器" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：我们每年都会举行新春庆祝活动" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -87,7 +73,68 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="绵中方块人服务器 2026 新年贺词" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="服务器有史以来最大规模更新! 跟着管委会一起看看吧!" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">服务器有史以来最大规模更新! 跟着管委会一起看看吧!</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/382/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月15日 19:30:50
+<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/20260214155800230505.webp"/></InlineUIContainer></Paragraph><Paragraph>哈喽哈喽好久不见, 各位玩家你们好!</Paragraph><Paragraph>耗时 12 天, 在技术部和常务委员会的接续努力下, 服务器完成了有史以来最大规模的更新! 这次, 我们从底层版本到上层玩法, 对服务器进行了全方位升级改造, 只为给各位玩家带来更流畅、更丰富的游戏体验。接下来, 让我们一起来看看本次的更新内容吧!</Paragraph><Paragraph Style="{StaticResource H2}">🚀 核心升级</Paragraph><Paragraph Style="{StaticResource H3}">更新服务器游戏版本至 1.21.4</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/20260214164611699027.webp"/></InlineUIContainer><LineBreak/>
+千呼万唤始出来! 现在, 我们将服务器的版本更新至 1.21.4, 这意味着你可以享受到新的游戏特性 (比如期望颇高的<Bold>重锤</Bold>和<Bold>狼铠</Bold>) 、 bug 修复和性能优化。</Paragraph><Paragraph Style="{StaticResource H3}">更新 Geyser, 基岩版后续版本跟随最新版本更新</Paragraph><Paragraph>根据服务器的统计数据, 服务器内有近<Bold>六分之一</Bold>的玩家使用<Bold>基岩版</Bold>游玩服务器。为了确保不同的平台玩家能获得一致的游戏体验, 我们同步更新了 Geyser, 基岩版玩家现在也能享受到新版本的所有内容了!</Paragraph><Paragraph Style="{StaticResource H3}">跨服端核心更换, 性能更上一层楼</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/velocity.webp"/></InlineUIContainer><LineBreak/>
+本次更新中, 我们同步更换了技术更先进、性能更好的跨服核心。即刻体验更丝滑的游戏体验吧!</Paragraph><Paragraph Style="{StaticResource H3}">QQ 机器人正式启用</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/bot.webp"/></InlineUIContainer><LineBreak/>
+经过内部多轮测试修改, 现在, 我们向您介绍——由绵中方块人服务器管理委员会技术部研发的 QQ 机器人! 那么, 机器人可以做什么呢?</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>获取服务器状态</Bold>: 随时查询服务器运行状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>查看在线列表</Bold>: 一键查看当前在线的玩家</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>QQ 绑定足不出群</Bold>: 无需进入游戏, 通过 QQ 就能完成绑定和相关操作</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其他面向管理员的便捷功能<LineBreak/>
+  快去群里发<TextBox Style="{StaticResource InlineCode}">/help</TextBox> 试试吧!</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">MzmcOSAPISDK 开放使用</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/SDK.webp"/></InlineUIContainer><LineBreak/>
+随着 MzmcOSAPI 的全面重写, 旧的开发文档已经不再适用。这对部分有技术的玩家造成了极大的困扰。现在，我们正式开放了由官方维护的 Python 和 C# SDK 用于对接 API, 快来试试吧!</Paragraph><Paragraph Style="{StaticResource H2}">🏛️ 组织架构优化</Paragraph><Paragraph Style="{StaticResource H3}">管理委员会组织架构进一步优化改革</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E6%9E%B6%E6%9E%84%E6%94%B9%E9%9D%A9.webp"/></InlineUIContainer><LineBreak/>
+为了提升管理效率和服务质量, 绵中方块人服务器管理委员会常务委员会对组织架构做出了进一步优化改革的决定, 力争让管理委员会更好地为玩家服务。</Paragraph><Paragraph Style="{StaticResource H2}">🎓 体验增强</Paragraph><Paragraph Style="{StaticResource H3}">新手引导系统实装</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E5%BC%95%E5%AF%BC.webp"/></InlineUIContainer> </Paragraph><Section Style="{StaticResource Quote}">
+  
+<Paragraph>管理管理, 这个功能怎么用啊?</Paragraph>
+<Paragraph>管理管理, 这个怎么用不了啊?</Paragraph>
+<Paragraph>管理管理, 你们这个做的什么啊?</Paragraph>
+
+</Section><Paragraph>&quot; 妈妈再也不怕不知道服务器有什么玩法/功能怎么用了!&quot;</Paragraph><Paragraph>我们基于新技术, 打造了让你耳目一新的新手引导系统, 手把手带你了解服务器的发展历程、独特玩法、插件功能和社区规则, 让你快速上手, 融入我们的大家庭。</Paragraph><Paragraph Style="{StaticResource H3}">游戏菜单</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E8%8F%9C%E5%8D%95.webp"/></InlineUIContainer><LineBreak/>
+全新游戏菜单 <TextBox Style="{StaticResource InlineCode}">/m</TextBox> 上线! 更方便的交互方式, 一键访问各种功能。功能仍在持续更新中, 敬请期待更多便捷操作!</Paragraph><Paragraph Style="{StaticResource H3}">导航系统</Paragraph><Paragraph>&quot; 妈妈再也不用担心我迷路啦!&quot; <LineBreak/>
+全新的 GPS 导航系统帮你精准定位, 无论是寻找建筑、资源点还是朋友, 都能快速导航, 告别迷路烦恼。</Paragraph><Paragraph Style="{StaticResource H3}">不装 mod 也能使用的高级功能</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/nomod.webp"/></InlineUIContainer><LineBreak/>
+移动光源、整理背包，这些模组整合包常见的功能, 你有曾想过无需 mod 能否实现? 现在, 它们来了! 聊天框输入神秘指令<TextBox Style="{StaticResource InlineCode}">/invactions</TextBox>, 即可享受超多功能!</Paragraph><Paragraph Style="{StaticResource H3}">精致传送石来了</Paragraph><Paragraph>找不到心仪的聚落? 四处奔波? 传送石来帮你! 每个聚落都有自己的传送石，动动手指, 便能穿梭于不同聚落!</Paragraph><Paragraph Style="{StaticResource H2}">⚔️ 玩法拓展</Paragraph><Paragraph Style="{StaticResource H3}">更多附魔</Paragraph><Paragraph>原版附魔法书太多不够用? 有些附魔太鸡肋?</Paragraph><Paragraph>我们为原版附魔系统增添了 <Bold>60+全新附魔</Bold>! 所有附魔都可以通过原版附魔台获得, 无需额外安装模组。快来让你的装备更强大, 战斗更刺激!</Paragraph><Paragraph Style="{StaticResource H3}">增加载具系统</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/2026-02-15_00.21.26.webp"/></InlineUIContainer><LineBreak/>
+<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/2026-02-15_01.12.30.webp"/></InlineUIContainer><LineBreak/>
+玩家现在可以<Bold>驾驶车辆</Bold>前往目的地! 全新的载具系统让长途旅行变得更轻松有趣, 还能与朋友们一起享受驾驶乐趣。</Paragraph><Paragraph Style="{StaticResource H3}">恭喜发财, 红包拿来</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/fhb.webp"/></InlineUIContainer><LineBreak/>
+新年快乐，发个红包么? 每个玩家都可发红包与收红包! 聊天栏输入<TextBox Style="{StaticResource InlineCode}">/fhb new</TextBox> 即可发红包!</Paragraph><Paragraph Style="{StaticResource H2}">📕内容拓展 (DLC) 预告</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">二周目 RPG 玩法，双线剧情等你选择 （制作中）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">吃的太少? 不丰富? 二周目食物拓展来了!（制作中）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">活动服小游戏增加，起床战争、跑酷、绝地求生以及社会实践都在路上了 （配置中，即将上线）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">聚落管理清人难? 创建解散难? 加入退出难? 区籍数字化管理系统绝赞编写中!</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">coming s∞n...</Paragraph></ListItem>
+</List><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">🧑‍💻管理说</Paragraph><Paragraph>12 天连轴转, 维护了这么多天, 来看看参与服务器更新的同志们都有些什么想说的吧!</Paragraph><Paragraph Style="{StaticResource H3}">Boen_Shi</Paragraph><Paragraph>我去，两周，每天熬到半夜，累死我了！</Paragraph><Paragraph Style="{StaticResource H3}">Akir_</Paragraph><Paragraph>年年如是，或者一往无前，<LineBreak/>
+工作一年，大家都辛苦了，<LineBreak/>
+生活不需要什么特殊仪式，<LineBreak/>
+烟火寻常便是最佳的答案，<LineBreak/>
+你所热爱的，便是你的生活，<LineBreak/>
+你所做之事，终被赋予价值。<LineBreak/>
+风里雨里，我们在服里等你。<LineBreak/>
+感谢相伴，一起走过的四年。</Paragraph><Paragraph Style="{StaticResource H3}">laobinghu</Paragraph><Paragraph>作为一名 2025 年寒假正式加入管委会 (那时还叫管理组) 的成员, 转眼间我已经干满 1 年了。其实我最开始以为自己只是个干纯技术的。直到有一次偶然我提起建社的事情, 博文说,&quot; 可以, 你去嘛&quot;, 然后我真的去了。我这辈子都忘不了为了找团委书记&quot; 一周十二趟, 跑完七趟空&quot; 的伟大事迹。好在后来终于把社团建起来了。再到后来, 管理组改革、机器人、 API+SDK 等等, 我干的事情越来越多, 博文能交给我干的事情也越来越多。这次 12 天连轴转, 我学到了很多, 也想明白了很多。有些事情, 还是得提前规划、提前布局; 好的创意, 平时想到了可以先记下来......</Paragraph><Paragraph><Span TextDecorations="Strikethrough">别催了真的在赶工了</Span></Paragraph><Paragraph Style="{StaticResource H3}">tsxc_java</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://cdn.647382.xyz/img/80cbcb27188cd04f17b1fd9cc1885456.png"/></BlockUIContainer>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/379/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月15日 19:30:50
+绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定
+===================================</Paragraph><Paragraph>服务器管理委员会全体下属部门：</Paragraph><Paragraph>为进一步提高服务器管理服务效率，经服管委常委讨论，现就进一步深化改革及优化人员作如下决定：</Paragraph><List MarkerStyle="Decimal">
+<ListItem><Paragraph>改革机构设置</Paragraph></ListItem>
+<ListItem><Paragraph>整合组建新宣传部，将宣传部和绵中 MC 社社团管理委员会 （简称社管委） 职能合并，统筹服务器校内外宣传工作，社管委社长职能移交宣传部部长。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原组织与发展部更名为策划部。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">优化人员配置<LineBreak/>
+   经民主推荐、组织考察、服管委常委研究决定：</Paragraph></ListItem>
+</List><Paragraph>1. xingxiang114 同志任新宣传部部长，负责服务器宣传工作及校内社团管理统筹工作。</Paragraph><Paragraph>2. tsxc_java 同志任常务委员会副主席。</Paragraph><Paragraph>3. Nikolaos 同志任策划部部员，免去其原社管委社长职务</Paragraph><Paragraph>4. C__157 同志任策划部部员，免去其原宣传部部长职务</Paragraph><Paragraph>5. WhiteSand_KAF 同志经考察，认为其符合条件，现予以转正。</Paragraph><Paragraph>本决定自发布之日起施行，绵中方块人服务器管理委员会常务委员会负责解释。</Paragraph><Paragraph>绵中方块人服务器管理委员会常务委员会</Paragraph><Paragraph>2026-02-05</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人服务器 2026 新年贺词" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -174,54 +221,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>个性化装饰</Bold>：在申请到传送界碑后，您可以自由地围绕界碑进行装饰建设，展现您的创意和风格。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>联系修建</Bold>：一旦传送界碑周围的装饰建设完成，请联系 Boen_Shi 进行传送界碑的最终修建工作。</Paragraph></ListItem>
 </List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001448178896.jpg"/></BlockUIContainer><Paragraph>3 种传送界碑</Paragraph><Paragraph Style="{StaticResource H2}">传送界碑的装饰建设</Paragraph><Paragraph>传送界碑不仅是一个实用的传送工具，也是展示您创意和艺术才能的平台。您可以围绕界碑建造各种装饰，如花园、雕塑、喷泉等，使其成为地区的一个亮点。我们鼓励玩家发挥想象力，创造出独特而美丽的传送界碑装饰。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您有任何关于传送界碑的问题，或者需要帮助进行装饰建设，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您创意无限的传送界碑装饰，也期待您在绵中方块人服务器中享受更加便捷的游戏体验！</Paragraph><Paragraph>加入我们，一起探索无限可能！</Paragraph><Paragraph>绵中方块人服务器管理团队</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="PCL MZMC Edition 正式发布！超越经典，体验升级！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">PCL MZMC Edition 正式发布！超越经典，体验升级！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/268/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月13日 22:19:06
-<Bold>🎯 项目起源与上游依托</Bold></Paragraph><Paragraph>PCL MZMC Edition 基于功能强大的 <Bold>PCL-CE</Bold>（PCL2 社区版） 构建。它不仅继承了原版 PCL 的所有优点，更融入了大量社区制作的实用功能，为你带来更丰富的模组管理、游戏配置体验。</Paragraph><Paragraph><Bold>🔄 无缝切换，极致兼容</Bold></Paragraph><Paragraph>担心学习成本？大可放心！本启动器设计以<Bold>极致的无缝切换体验</Bold>为核心。你可以<Bold>直接覆盖安装</Bold>原有 PCL 主程序，操作习惯将最大程度保持一致，让你无痛迁移，即刻畅玩。</Paragraph><Paragraph><Bold>🎮 全版本支持，玩家之选</Bold></Paragraph><Paragraph>PCL MZMC Edition 定位为玩家日常主力启动器：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">可启动 <Bold>PCL 支持的所有 Minecraft 实例</Bold>（Forge, Fabric, Quilt, LiteLoader, OptiFine 等） 。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>郑重承诺：永不限制玩家可安装的 Minecraft 版本</Bold>，放心将其作为你现有启动器的升级或替代品。</Paragraph></ListItem>
-</List><Paragraph><Bold>🔒 隐私安全，我们守护</Bold></Paragraph><Paragraph>你的隐私极其重要：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">启动器<Bold>绝不会上传</Bold>你的单人生存存档、本地截图等任何敏感信息至云端。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你的数据，始终保存在你自己的设备上。</Paragraph></ListItem>
-</List><Paragraph><Bold>📜 开源透明，持续进化</Bold></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">项目<Bold>完全开源</Bold>！欢迎访问 GitHub 仓库查看源代码、贡献代码或反馈问题： <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://mzmc.top/go/?url=aHR0cHM6Ly9naXRodWIuY29tL3RzeGMtZ2l0aHViL1BDTDItQ0Uv">tsxc-github/PCL2-CE</local:MyTextButton></Underline></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>持续同步上游</Bold>：我们将不定期合并上游 PCL-CE 的最新提交，这意味着你可以<Bold>提前享受到 PCL-CE 的未发布新功能</Bold>和错误修复。</Paragraph></ListItem>
-</List><Paragraph><Bold>✨ 核心特性一览 (当前已实现)</Bold></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>启动器自动更新</Bold>：保持启动器本身是最新状态。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>PCL-CE 拓展功能</Bold>：继承 PCL-CE 原有的光影包下载、材质包下载、截图管理等功能。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>新闻主页</Bold>：默认启用新闻主页，及时获取 MZMC 相关资讯。</Paragraph></ListItem>
-</List><Paragraph><Bold>🚀 未来规划前瞻 (Coming s∞n...)</Bold></Paragraph><Paragraph>更多激动人心的功能正在路上：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>官方客户端一键下载</Bold>：快捷方便，无须复杂配置即刻享受绵中方块人服务器完整游玩体验。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>官方客户端自动更新</Bold>：解放双手，自动更新，再也不用去群里下载了。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更多请期待！欢迎提出意见！</Paragraph></ListItem>
-</List><Paragraph>下载：前往群文件获得 PCL MZMC Edition</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">小岛社区与雪山西部正式建立外交关系——两区签署历史性建交联合公报</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/06/265/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年06月12日 15:18:13
-<Bold>本报讯 （记者 tsxc_java）</Bold> 2025 年 6 月 12 日，小岛社区与雪山西部在小岛火车站旁举行历史性外交仪式，正式签署 《小岛社区和雪山西部关于建立外交关系的联合公报》 （以下简称 《联合公报》），标志着两区结束无正式邦交状态，开启双边关系新纪元。</Paragraph><Paragraph Style="{StaticResource H3}">核心共识</Paragraph><Paragraph>根据 《联合公报》，两区达成以下核心条款：</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>坚持和平共处五项原则</Bold>：相互尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处；</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>正式签署与文件陈列</Bold>：两区区长亲笔签署建交协议文本，正本将在双方大使馆永久公开陈列；</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>大使代理外交权</Bold>：各项外交事务由双方派驻大使全权代理；</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>单方面解约权</Bold>：双方保留基于国家利益单方面终止外交关系的权利；</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>互设使馆与派遣大使</Bold>：承诺尽快完成大使馆互设及首任大使派遣工作。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">签署仪式</Paragraph><Paragraph>《联合公报》 由小岛社区负责人 <Bold>tsxc_java</Bold> 与雪山西部负责人 <Bold>QFKA</Bold> 共同签署。仪式选址于象征连接与交流的小岛火车站旁，彰显双方 「以通促融」 的外交愿景。两区代表一致声明，自即日起，小岛社区与雪山西部正式建立外交关系。</Paragraph><Paragraph Style="{StaticResource H3}">历史意义</Paragraph><Paragraph>此次建交标志着两区关系实现根本性突破，为后续经贸合作、安全协调及人文交流奠定法理基础。分析人士指出，此举有望推动小岛-雪山地区双边经济发展进程进入快车道。</Paragraph><Paragraph>（附：联合公报签署现场照片）<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151953371555.webp"/></InlineUIContainer></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/06/20250612151925932796.webp"/></BlockUIContainer><Paragraph><Italic>图示：两区负责人在小岛火车站站前广场完成签约，背景为建设中的小岛火车站。</Italic></Paragraph><Paragraph>附联合公报原文：</Paragraph><BlockUIContainer>
-<Border Style="{StaticResource BlockCodeBorder}" >
-<StackPanel Margin="0,2,0,0">
-<TextBlock Foreground="White" FontSize="14" Text="小岛社区和雪山西部关于建立外交关系的联合公报" Margin="10,4"/>
-<TextBox Style="{StaticResource BlockCode}" Text="​&#x000A;1. 坚持和平共处五项原则。&#x000A;2. 两区区长签署该书面协议，并交换在双方大使馆公开陈列。&#x000A;3. 各项外交事宜可由双方大使代理行使外交权。&#x000A;4. 两方有权利单方面解除外交关系。&#x000A;5. 尽快互设大使馆并互派大使。&#x000A;​&#x000A;小岛社区和雪山西部将于该协议签订日建立外交关系。&#x000A;​&#x000A;小岛社区负责人：tsxc_java&#x000A;雪山西部负责人：QFKA&#x000A;​&#x000A;2025/6/12"/>
-</StackPanel>
-</Border>
-</BlockUIContainer>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
