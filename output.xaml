@@ -5,12 +5,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,18 +39,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这个服务器里的很多成员都有自己宏伟的规划" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="装备绑定系统介绍：命运之链" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="全新建材商店上线，让你的建造之旅更加轻松！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">全新建材商店上线，让你的建造之旅更加轻松！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/405/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月23日 17:33:58
+<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771839154431.webp"/></InlineUIContainer></Paragraph><Paragraph>亲爱的玩家们，我们为你们带来了一个激动人心的更新——全新建材商店！无论是想要快速获取各种建材，还是不想浪费时间在挂机中，我们的商店都能帮助你轻松解决！现在，获取你需要的建筑材料变得前所未有的便捷。</Paragraph><Paragraph><Bold>商店功能介绍：</Bold><LineBreak/>
+在商店中，你可以购买到几乎所有建材，包括混凝土、石头、木材、沙子等等，随时满足你的建筑需求。为了确保游戏的平衡，我们为你提供了合理的价格，保证你能在不影响游戏乐趣的情况下，轻松获取各种资源。</Paragraph><Paragraph><Bold>如何打开商店：</Bold><LineBreak/>
+打开商店的方法非常简单：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">快捷菜单：只需输入<TextBox Style="{StaticResource InlineCode}">/m</TextBox>，然后点击右下角的商店按钮，就能快速打开商店菜单。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">命令输入：你也可以直接输入<TextBox Style="{StaticResource InlineCode}">/shop</TextBox> 来打开商店界面，享受便捷购物体验。</Paragraph></ListItem>
+</List><Paragraph><Bold>适合玩家：</Bold><LineBreak/>
+不想挂机的玩家： 对于不想花时间在挂机站上等待建材的玩家，我们的商店为你提供了快捷的购买方式。你可以用少量的游戏币快速获得所需资源，让你的建造之旅不再等待。</Paragraph><Paragraph>挂机速度慢的玩家： 如果你觉得挂机站的建材获取速度不够快，不妨试试商店。你可以快速补充所需的资源，继续进行创作与建造！</Paragraph><Paragraph><Bold>丰富的建材选择：</Bold><LineBreak/>
+商店内提供了各种基础和高级建材，满足不同建筑需求：<LineBreak/>
+基础建材： 混凝土、石头、沙子、木材、玻璃、泥土等。<LineBreak/>
+特殊建材： 例如不同颜色的混凝土、特殊装饰物料等。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771839189595.webp"/></BlockUIContainer><Paragraph>赶快来体验吧！ 无论你是想快速建造，还是需要大量材料来支撑你的创意，商店都能提供帮助。现在就来商店，开启属于你的创作之旅吧！</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="装备绑定系统介绍：命运之链" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -211,25 +229,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>尊重他人</Bold>：请不要破坏他人的建筑。创造界是一个共享的空间，需要每个人的共同维护。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>和谐共处</Bold>：如果您不小心破坏了他人的建筑，请及时联系服主，我们将协助解决。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">WorldEdit 创世神插件</Paragraph><Paragraph>WorldEdit 是一个强大的建筑工具，它允许您快速地进行地形编辑、复制、粘贴和变换等操作。在创造界，您将可以充分利用这一工具，实现您的建筑构想。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002259484163.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">schematic 文件上传 （开发中）</Paragraph><Paragraph>我们正在开发允许玩家上传 schematic 文件的功能，这将使您能够导入和导出您的建筑作品，与他人分享您的创意，或者将您的建筑作品应用到服务器的其他区域。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您在创造界遇到任何问题，或者有任何建议和想法，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您在创造界中建造的宏伟建筑，也期待您在绵中方块人服务器中享受更加自由和愉快的建筑体验！</Paragraph><Paragraph>加入我们，一起创造无限可能！</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="探索新维度：绵中方块人服务器推出传送界碑功能" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">探索新维度：绵中方块人服务器推出传送界碑功能</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/290/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月06日 00:17:03
-亲爱的探险家们，</Paragraph><Paragraph>随着绵中方块人服务器的不断发展，我们很高兴地向您介绍一项革命性的新功能——<Bold>传送界碑</Bold>。这一创新工具将彻底改变您在 Minecraft 世界的探险方式，为您带来前所未有的便捷和乐趣。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001449418169.jpg"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送界碑：开启传送新时代</Paragraph><Paragraph><Bold>传送界碑</Bold>是一种全新的游戏内物品，它赋予了玩家瞬间移动的能力，让玩家能够在服务器的各个地区之间快速传送。这不仅极大地提高了探险的效率，还为玩家提供了更多的战略选择和个性化装饰的机会。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001336520289.gif"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">传送界碑的优势</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>即时移动</Bold>：告别漫长的旅行，享受瞬间到达目的地的快感。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>无缝探索</Bold>：轻松访问服务器的每一个角落，无论是遥远的边境还是未知的深处。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>战术灵活性</Bold>：在 PvP 或团队合作中，快速集结或撤退，获得战术上的优势。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>时间效率</Bold>：节省旅行时间，让您有更多时间专注于建造、探险和社交。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>个性化展示</Bold>：通过装饰传送界碑，展现您的创意和个人风格。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">如何申请和使用传送界碑</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>申请传送界碑</Bold>：作为地区负责人或建设者，您可以向服务器管理员申请一个传送界碑。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>个性化装饰</Bold>：在申请到传送界碑后，您可以自由地围绕界碑进行装饰建设，展现您的创意和风格。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>联系修建</Bold>：一旦传送界碑周围的装饰建设完成，请联系 Boen_Shi 进行传送界碑的最终修建工作。</Paragraph></ListItem>
-</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706001448178896.jpg"/></BlockUIContainer><Paragraph>3 种传送界碑</Paragraph><Paragraph Style="{StaticResource H2}">传送界碑的装饰建设</Paragraph><Paragraph>传送界碑不仅是一个实用的传送工具，也是展示您创意和艺术才能的平台。您可以围绕界碑建造各种装饰，如花园、雕塑、喷泉等，使其成为地区的一个亮点。我们鼓励玩家发挥想象力，创造出独特而美丽的传送界碑装饰。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您有任何关于传送界碑的问题，或者需要帮助进行装饰建设，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您创意无限的传送界碑装饰，也期待您在绵中方块人服务器中享受更加便捷的游戏体验！</Paragraph><Paragraph>加入我们，一起探索无限可能！</Paragraph><Paragraph>绵中方块人服务器管理团队</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
