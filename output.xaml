@@ -5,17 +5,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,10 +33,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 
 </StackPanel.Resources>
 <local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：官网现在的主题是腐竹从我这里薅的" />
@@ -73,7 +73,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="全新建材商店上线，让你的建造之旅更加轻松！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="全新附魔拓展插件上线：近 60 种新附魔效果，丰富你的游戏体验" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">全新附魔拓展插件上线：近 60 种新附魔效果，丰富你的游戏体验</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/410/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月26日 23:19:51</Paragraph><Section Style="{StaticResource Quote}">
+  
+<Paragraph>我们非常高兴地宣布，全新附魔拓展插件正式上线！此次更新为玩家带来了将近六十种全新的拓展附魔，极大地丰富了游戏的可玩性和挑战性。以下是插件的详细功能介绍，帮助玩家更好地理解和使用这些新附魔。</Paragraph>
+
+</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1772119065113.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H1}">新拓展附魔与附魔台使用</Paragraph><Paragraph>插件新增了将近六十种原版拓展附魔，带来了更多的装备和武器定制选项。玩家依然可以使用原版附魔台进行附魔，虽然新附魔不会在附魔台界面中显示，但可以通过附魔后的装备或武器查看到拓展附魔效果。附魔台的使用方式和概率如下：</Paragraph><Paragraph Style="{StaticResource H2}">拓展附魔概率：每次附魔有 33% 的概率获得拓展附魔。</Paragraph><Paragraph Style="{StaticResource H3}">附魔台等级与附魔数量：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">低等级附魔：有几率获得 1 个额外拓展附魔。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">中等级附魔：有几率获得 1-2 个额外拓展附魔。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高等级附魔：有几率获得 2-3 个额外拓展附魔。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">附魔书与装备附魔限制</Paragraph><Paragraph><Bold>附魔书获得概率：</Bold> 附魔台有 3% 的概率附魔出附魔书，且只有在高等级附魔时才可能获得。</Paragraph><Paragraph><Bold>装备附魔槽位：</Bold> 每个装备或武器最多可附加 3 个拓展附魔槽位。玩家需要合理规划附魔，确保每个装备的效果最大化。</Paragraph><Paragraph Style="{StaticResource H3}">绑定装备的附魔与合并</Paragraph><Paragraph><Bold>绑定装备的附魔与祛魔：</Bold> 已绑定的装备依然可以进行附魔和祛魔操作，且不会影响绑定状态。</Paragraph><Paragraph><Bold>铁砧合并要求：</Bold> 使用铁砧合并装备时，已绑定的装备必须放在铁砧的第一个格子中，才能确保绑定状态不丢失。</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">展望未来</Paragraph><Paragraph>本次插件为 Minecraft 的附魔系统带来了全新的玩法和更多的自由度，但这只是开始。我们将在未来的 RPG 版本中推出更多附魔槽位和拓展附魔选项，进一步丰富玩家的游戏体验。</Paragraph><Paragraph>通过这个插件，玩家可以享受更加个性化的附魔体验，并且能够更好地定制装备。赶快加入游戏，试试这些新的附魔效果，打造专属于你的强力装备吧！</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="全新建材商店上线，让你的建造之旅更加轻松！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -216,19 +232,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>非注册即加入</Bold> - 采用 （包括随机筛选在内的） 复合筛选机制</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Bold>过程不透明</Bold> - 筛选流程及标准不予公示</Paragraph></ListItem>
 </List><Section Style="{StaticResource Hr}"/><Paragraph>🚨 <Bold>最终声明</Bold></Paragraph><Paragraph>本次内测最终解释权归项目管理方所有，测试政策可能根据实际情况动态调整。</Paragraph><Paragraph>期待与您携手打造更完善的 PCL MZMC Edition ！</Paragraph><Paragraph><Bold>—— 绵中方块人服务器管理组 （技术部）</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250713233823363851.webp"/></BlockUIContainer>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器新天地：创造界开放！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器新天地：创造界开放！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/300/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月06日 16:03:10
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002256957463.jpg"/></InlineUIContainer></Paragraph><Paragraph>亲爱的建筑大师们，</Paragraph><Paragraph>在绵中方块人服务器，我们始终致力于为您提供更广阔的创造空间和更自由的建筑体验。今天，我们自豪地宣布一个全新的区域——<Bold>创造界</Bold>正式开放！这是一个专为建筑爱好者设计的平坦地形区域，您可以在这里尽情发挥您的创造力，建造属于您的梦想世界。</Paragraph><Paragraph Style="{StaticResource H2}">创造界：无限创造的空间</Paragraph><Paragraph><Bold>创造界</Bold>是一个平坦的地形，专为建筑和创造而设计。在这里，您可以使用 WorldEdit 创世神插件，以及即将上线的 schematic 文件上传功能，让您的建筑过程更加高效和便捷。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002258388731.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">如何进入创造界</Paragraph><Paragraph>使用简单的命令<TextBox Style="{StaticResource InlineCode}">/cre</TextBox>，您就可以立即传送到创造界，开始您的建筑之旅。</Paragraph><Paragraph Style="{StaticResource H2}">创造界的规则</Paragraph><Paragraph>为了确保所有玩家都能享受到创造的乐趣，我们制定了一些基本规则：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>有序建设</Bold>：请尽量朝一个方向建筑，避免影响他人的建筑项目。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>尊重他人</Bold>：请不要破坏他人的建筑。创造界是一个共享的空间，需要每个人的共同维护。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>和谐共处</Bold>：如果您不小心破坏了他人的建筑，请及时联系服主，我们将协助解决。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">WorldEdit 创世神插件</Paragraph><Paragraph>WorldEdit 是一个强大的建筑工具，它允许您快速地进行地形编辑、复制、粘贴和变换等操作。在创造界，您将可以充分利用这一工具，实现您的建筑构想。</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250706002259484163.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">schematic 文件上传 （开发中）</Paragraph><Paragraph>我们正在开发允许玩家上传 schematic 文件的功能，这将使您能够导入和导出您的建筑作品，与他人分享您的创意，或者将您的建筑作品应用到服务器的其他区域。</Paragraph><Paragraph Style="{StaticResource H2}">联系我们</Paragraph><Paragraph>如果您在创造界遇到任何问题，或者有任何建议和想法，欢迎随时联系我们。您可以通过服务器内的联系方式或访问我们的官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/">绵中方块人服务器官网</local:MyTextButton></Underline>获取更多信息。</Paragraph><Paragraph>我们期待看到您在创造界中建造的宏伟建筑，也期待您在绵中方块人服务器中享受更加自由和愉快的建筑体验！</Paragraph><Paragraph>加入我们，一起创造无限可能！</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
