@@ -5,13 +5,18 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
@@ -34,14 +39,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen的饼一般会在三年内完成" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这个服务器里的很多成员都有自己宏伟的规划" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -81,7 +81,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
   
 <Paragraph>我们非常高兴地宣布，全新附魔拓展插件正式上线！此次更新为玩家带来了将近六十种全新的拓展附魔，极大地丰富了游戏的可玩性和挑战性。以下是插件的详细功能介绍，帮助玩家更好地理解和使用这些新附魔。</Paragraph>
 
-</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1772119065113.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">新拓展附魔与附魔台使用</Paragraph><Paragraph>插件新增了将近六十种原版拓展附魔，带来了更多的装备和武器定制选项。玩家依然可以使用原版附魔台进行附魔，虽然新附魔不会在附魔台界面中显示，但可以通过附魔后的装备或武器查看到拓展附魔效果。附魔台的使用方式和概率如下：</Paragraph><Paragraph Style="{StaticResource H2}">拓展附魔概率：每次附魔有 33% 的概率获得拓展附魔。</Paragraph><Paragraph Style="{StaticResource H3}">附魔台等级与附魔数量：</Paragraph><List>
+</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1772119065113.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">新拓展附魔与附魔台使用</Paragraph><Paragraph>插件新增了将近六十种原版拓展附魔，带来了更多的装备和武器定制选项。玩家依然可以使用原版附魔台进行附魔，虽然新附魔不会在附魔台界面中显示，但可以通过附魔后的装备或武器查看到拓展附魔效果。附魔台的使用方式和概率如下：</Paragraph><Paragraph Style="{StaticResource H2}">拓展附魔概率：每次附魔有 33% 的概率获得拓展附魔。</Paragraph><Paragraph Style="{StaticResource H3}">附魔台等级与附魔数量：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">低等级附魔：有几率获得 1 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">中等级附魔：有几率获得 1-2 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">高等级附魔：有几率获得 2-3 个额外拓展附魔。</Paragraph></ListItem>
