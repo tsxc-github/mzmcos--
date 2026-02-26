@@ -5,17 +5,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,13 +33,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：加载器的发行代号其实是绵中的各个楼以正大门为原点从近到远排的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen的饼一般会在三年内完成" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -81,11 +81,67 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
   
 <Paragraph>我们非常高兴地宣布，全新附魔拓展插件正式上线！此次更新为玩家带来了将近六十种全新的拓展附魔，极大地丰富了游戏的可玩性和挑战性。以下是插件的详细功能介绍，帮助玩家更好地理解和使用这些新附魔。</Paragraph>
 
-</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1772119065113.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H1}">新拓展附魔与附魔台使用</Paragraph><Paragraph>插件新增了将近六十种原版拓展附魔，带来了更多的装备和武器定制选项。玩家依然可以使用原版附魔台进行附魔，虽然新附魔不会在附魔台界面中显示，但可以通过附魔后的装备或武器查看到拓展附魔效果。附魔台的使用方式和概率如下：</Paragraph><Paragraph Style="{StaticResource H2}">拓展附魔概率：每次附魔有 33% 的概率获得拓展附魔。</Paragraph><Paragraph Style="{StaticResource H3}">附魔台等级与附魔数量：</Paragraph><List>
+</Section><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1772119065113.webp"/></BlockUIContainer><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">新拓展附魔与附魔台使用</Paragraph><Paragraph>插件新增了将近六十种原版拓展附魔，带来了更多的装备和武器定制选项。玩家依然可以使用原版附魔台进行附魔，虽然新附魔不会在附魔台界面中显示，但可以通过附魔后的装备或武器查看到拓展附魔效果。附魔台的使用方式和概率如下：</Paragraph><Paragraph Style="{StaticResource H2}">拓展附魔概率：每次附魔有 33% 的概率获得拓展附魔。</Paragraph><Paragraph Style="{StaticResource H3}">附魔台等级与附魔数量：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">低等级附魔：有几率获得 1 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">中等级附魔：有几率获得 1-2 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">高等级附魔：有几率获得 2-3 个额外拓展附魔。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">附魔书与装备附魔限制</Paragraph><Paragraph><Bold>附魔书获得概率：</Bold> 附魔台有 3% 的概率附魔出附魔书，且只有在高等级附魔时才可能获得。</Paragraph><Paragraph><Bold>装备附魔槽位：</Bold> 每个装备或武器最多可附加 3 个拓展附魔槽位。玩家需要合理规划附魔，确保每个装备的效果最大化。</Paragraph><Paragraph Style="{StaticResource H3}">绑定装备的附魔与合并</Paragraph><Paragraph><Bold>绑定装备的附魔与祛魔：</Bold> 已绑定的装备依然可以进行附魔和祛魔操作，且不会影响绑定状态。</Paragraph><Paragraph><Bold>铁砧合并要求：</Bold> 使用铁砧合并装备时，已绑定的装备必须放在铁砧的第一个格子中，才能确保绑定状态不丢失。</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">展望未来</Paragraph><Paragraph>本次插件为 Minecraft 的附魔系统带来了全新的玩法和更多的自由度，但这只是开始。我们将在未来的 RPG 版本中推出更多附魔槽位和拓展附魔选项，进一步丰富玩家的游戏体验。</Paragraph><Paragraph>通过这个插件，玩家可以享受更加个性化的附魔体验，并且能够更好地定制装备。赶快加入游戏，试试这些新的附魔效果，打造专属于你的强力装备吧！</Paragraph>
+</List><Paragraph Style="{StaticResource H3}">附魔书与装备附魔限制</Paragraph><Paragraph><Bold>附魔书获得概率：</Bold> 附魔台有 3% 的概率附魔出附魔书，且只有在高等级附魔时才可能获得。</Paragraph><Paragraph><Bold>装备附魔槽位：</Bold> 每个装备或武器最多可附加 3 个拓展附魔槽位。玩家需要合理规划附魔，确保每个装备的效果最大化。</Paragraph><Paragraph Style="{StaticResource H3}">绑定装备的附魔与合并</Paragraph><Paragraph><Bold>绑定装备的附魔与祛魔：</Bold> 已绑定的装备依然可以进行附魔和祛魔操作，且不会影响绑定状态。</Paragraph><Paragraph><Bold>铁砧合并要求：</Bold> 使用铁砧合并装备时，已绑定的装备必须放在铁砧的第一个格子中，才能确保绑定状态不丢失。</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">展望未来</Paragraph><Paragraph>本次插件为 Minecraft 的附魔系统带来了全新的玩法和更多的自由度，但这只是开始。我们将在未来的 RPG 版本中推出更多附魔槽位和拓展附魔选项，进一步丰富玩家的游戏体验。</Paragraph><Paragraph>通过这个插件，玩家可以享受更加个性化的附魔体验，并且能够更好地定制装备。赶快加入游戏，试试这些新的附魔效果，打造专属于你的强力装备吧！</Paragraph><Paragraph Style="{StaticResource H2}">附录：附魔表</Paragraph><Paragraph>| 名称 | 介绍 | 适用类型 | 等级简介 |
+| --- | --- | --- | --- |
+| abrasion 磨损 | 对敌方盔甲造成损坏 | 武器 （所有剑、所有斧） | Lv1:10% 几率耐久-1，Lv2:15% 几率耐久-2，Lv3:25% 几率耐久-3 |
+| adrenaline 肾上腺素 | 防御怪物攻击时获得力量 | 护甲 （全套） | Lv1:10% 几率吸收 I 60s，Lv2:20% 几率，Lv3:25% 几率 （冷却均为 5s） |
+| ascend 升空 | 右键激活漂浮 | 剑 | Lv1: 漂浮 25tick，Lv2: 漂浮 50tick，Lv3: 漂浮 75tick（均接缓降 100tick，冷却 90s） |
+| aura 光环 | 减少附近玩家所受的伤害 | 胸甲、护腿 | Lv1:3 格半径-10% 伤害，Lv2:5 格-20%，Lv3:7 格-30%（3s 冷却） |
+| blackout 致盲 | 使你的对手失明 | 剑 | Lv1-5:7%<Span TextDecorations="Strikethrough">15% 几率，失明 I 100</Span>180tick（每级+20tick） |
+| blast_mining 爆破挖矿 | 在 3x3 区域内挖掘方块 | 所有镐 | Lv1:5% 几率，Lv2:10%，Lv3:15%（均挖掘 3x3 区域） |
+| drain 抽血 | 使你的对手流血 | 剑 | Lv1-7:1.5%<Span TextDecorations="Strikethrough">9% 几率，流血效果 2</Span>14 秒 （每级+2 秒） |
+| caffeinated 咖啡因 | 奔跑时增加攻击速度几率 | 剑 | Lv1-3:10%/20%/30% 几率，冲刺时获得速度 I 60 秒 |
+| charge 冲锋 | 向前冲刺 | 剑 | Lv1: 冲刺 10(40s 冷却)，Lv2: 冲刺 20(30s 冷却)，Lv3: 更强冲刺 |
+| critical 暴击 | 增加暴击伤害 | 剑 | Lv1-3:7%/8%/12% 几率，暴击时+10%/15%/20% 伤害 （5s 冷却） |
+| cubism 立方体 | 对史莱姆/岩浆怪造成更多伤害 | 剑/斧/弓/十字弓 | Lv1-3: 对目标生物造成 10-40 随机额外伤害 |
+| enderbane 终结者 | 增加对末影系生物伤害 | 剑/斧 | Lv1-5:16%~41% 几率，对末影人/龙/末影螨造成 10-40 随机伤害 |
+| escape 逃脱 | 受伤后获得短暂加速 | 靴子 | Lv1:20% 几率速度 I 40tick(5s 冷却)，Lv2:50% 几率速度 II 60tick(3s 冷却) |
+| finishing 终结一击 | 对低血量敌人造成更多伤害 | 剑/斧 | Lv1-3: 目标血量&lt;5 时，+5/+10/+15 伤害 |
+| first_strike 先发制人 | 对满血敌人造成更多伤害 | 剑/斧 | Lv1-3: 目标血量&gt;18 时，+7/+10/+18 伤害 （5s 冷却） |
+| flashbang 闪光弹 | 命中后使对手失明 | 弓/十字弓 | Lv1-3:10%/20%/30% 几率，失明 III 50tick（5s 冷却） |
+| foraging 采集 | 有几率增加树叶掉落物 | 所有工具/剪刀 | Lv1-3:30%/40%/50% 几率，+1/+2/+3 额外掉落 （仅限树叶） |
+| frost 冰霜 | 有机会使对手被冻结 | 弓 | Lv1:5% 冻结 80tick，Lv2:7% 冻结 100tick，Lv3:100% 冻结 120tick |
+| postpone 延迟 | 有机会使敌人无法被击退 | 剑 | Lv1:40% 几率，Lv2:80%，Lv3:100%（停止击退效果） |
+| brightness 亮光 | 黑暗中对监守者造成更多伤害 | 剑 | Lv1-3:15%/20%/25% 几率，对 Warden +15/+20/+30 伤害 （5s 冷却） |
+| breaklessness 破碎禁咒 | 有机会无法破坏方块 | 镐/铲/斧 | Lv1-3:40%/30%/15% 几率取消挖掘事件 （反向附魔） |
+| carve 雕刻 | 挥剑时对附近实体造成伤害 | 剑 | Lv1-3:100% 几率，3/4/5 格半径造成 5 点伤害 （5s 冷却） |
+| contagion 传染 | 箭矢落地时生成虚空云团 | 弓 | Lv1-3:20%/30%/35% 几率生成墨汁粒子 （5/7/10s 冷却） |
+| end_affinity 末地亲和 | 减少在末地世界受到的伤害 | 护甲 （全套） | Lv1-3:20%/30%/40% 几率，末地世界中伤害减半 |
+| ninja 忍者 | 潜行时对敌人造成更多伤害 | 剑 | Lv1-3:15%/20%/25% 几率，潜行时+10/+15/+20 伤害 （5s 冷却） |
+| feather_step 羽毛步伐 | 有机会取消掉落伤害 | 靴子 | Lv1-5:15%/20%/25%/33%/40% 几率取消掉落伤害 （5s 冷却） |
+| getaway 逃脱 | 生命值&lt;20% 时受伤后获得移速 | 护甲 （全套） | Lv1-3:15%/20%/100% 几率，血量&lt;4 时获得速度 I 60 秒 |
+| harmlessness 无害诅咒 | 有机会使攻击无效 | 剑 | Lv1-3:15%/20%/25% 几率取消攻击事件 （5s 冷却，负面效果） |
+| infernaltouch 地狱之触 | 有机会熔炼矿物方块 | 镐/铲 | Lv1:33% 几率，Lv2:66%，Lv3:100%（自动熔炼掉落物） |
+| nether_affinity 下界亲和 | 减少在下界世界受到的伤害 | 护甲 （全套） | Lv1-3:20%/30%/40% 几率，下界世界中伤害减半 |
+| nether_prospector 下界勘探者 | 增加古代残骸掉落 | 所有镐 | Lv1-3:15%/20%/25% 几率，+1/+2/+3 古代残骸掉落 |
+| blazereaper 烈焰收割者 | 增加对下界生物伤害 | 剑/斧 | Lv1-3:16%/21%/29% 几率，对烈焰人/猪灵/恶魂造成 10-40 随机伤害 |
+| blow 双重打击 | 有机会造成双倍伤害 | 三叉戟 | Lv1-4:5%/8%/11%/14% 几率造成双倍伤害 （3-6s 冷却） |
+| waterborne 水上漂 | 帮助你在水下呼吸 | 头盔 | Lv1: 永久获得水下呼吸效果 （无等级差异） |
+| experience 经验 | 有机会从矿石获得更多经验 | 镐/铲/斧 | Lv1-5:15%~75% 几率，获得 2-5 额外经验 （冷却 1-5s） |
+| alacrity 敏捷 | 使你使用工具速度更快 | 镐/铲/斧 | Lv1-3: 急迫 I / II / III（永久生效） |
+| repel 击退 | 有机会将对手击退 | 剑 | Lv1-3:30%/36%/42% 几率，击退 1.0/1.5/2.0（12s 冷却） |
+| starvation 饥饿 | 有机会对敌人施加饥饿 | 剑/斧 | Lv1-3:12%/15%/18% 几率，饥饿 I-II 80-120tick（8s 冷却） |
+| resonate 共鸣 | 吸收伤害并反击 | 护甲 （全套） | Lv1-3:3%/4%/5% 几率，取消伤害并反弹+仙人掌效果 （5s 冷却） |
+| sharpnesshook 锋利钩 | 用钩子造成伤害 | 钓鱼竿 | Lv1-9: 钩中实体时造成 2/4/6/9/12/15/19/23/27 点伤害 |
+| poisonedhook 毒钩 | 钩子施加中毒效果 | 钓鱼竿 | Lv1-3:6%/22%/35% 几率，中毒 I-II 80-120tick（2s 冷却） |
+| firehook 火钩 | 钩子引发火焰 | 钓鱼竿 | Lv1-3:25%/35%/100% 几率，燃烧 40tick（3/6/8s 冷却） |
+| scorching 灼热 | 有机会点燃攻击者 | 护甲 （全套） | Lv1-3:21%/32%/49% 几率，燃烧攻击者 2/4/6 秒 （2s 冷却） |
+| ravenous 贪食 | 战斗中有机会恢复饥饿 | 剑/斧 | Lv1-4:14%~26% 几率，恢复 1-4 饥饿值 （2s 冷却） |
+| zombiecrusher 僵尸杀手 | 增加对僵尸伤害 | 剑/斧 | Lv1-3:16%/20%/40% 几率，对僵尸造成 10-40 随机伤害 （2s 冷却） |
+| skullcrusher 头骨破坏者 | 增加对骷髅伤害 | 剑/斧 | Lv1-3:25%/50%/75% 几率，对骷髅造成 10-40 随机伤害 （1-2s 冷却） |
+| incinerate 焚烧 | 增加对蜘蛛伤害 | 剑/斧 | Lv1-3:25%/50%/75% 几率，对蜘蛛造成 10-40 随机伤害 （2s 冷却/无冷却） |
+| allurement 诱惑 | 钓鱼时有机会获得双倍战利品 | 钓鱼竿 | Lv1-3:15%/18%/26% 几率+1 掉落 （10/15/20s 冷却） |
+| arcticfreeze 寒冰冻结 | 使对手减速并流血 | 剑 | Lv1-3:15%/18%/19% 几率，多次伤害+流血+缓慢效果 （12s 冷却） |
+| rebounding 反弹 | 将伤害反弹回攻击者 | 护甲 （全套） | Lv1-3:15%/18%/26% 几率，反弹伤害+仙人掌效果 （10/15/20s 冷却） |
+| rumble 震荡 | 对半径内所有实体造成伤害 | 护甲 （全套） | Lv1-3:15%/18%/26% 几率，3/4/5 格半径反弹伤害 （10/15/20s 冷却） |
+| shura 修罗 | 生命值&lt;50% 时增加暴击伤害 | 剑 | Lv1-3:7%/8%/12% 几率，暴击且血量&lt;10 时+5-25 随机伤害 （5s 冷却） |
+| thor 雷神 | 有机会对敌人施放闪电 | 剑/弓/十字弓/三叉戟 | Lv1-3:24%/32%/40% 几率召唤闪电 （3/3/4s 冷却） |
+| multishot 多重射击 | 向敌人发射箭雨 | 弓 | Lv1-3:15%/18%/22% 几率生成箭雨 （8s 冷却） |
+| vanish 隐形 | 受伤后有机会隐形 | 护甲 （全套） | Lv1-3:15%/18%/22% 几率，隐形 I 60/80/100tick（8s 冷却） |</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
