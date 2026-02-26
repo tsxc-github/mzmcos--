@@ -10,10 +10,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -33,15 +35,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：烙饼说他想让全服的人只能用加载器进服" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -85,7 +85,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">低等级附魔：有几率获得 1 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">中等级附魔：有几率获得 1-2 个额外拓展附魔。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">高等级附魔：有几率获得 2-3 个额外拓展附魔。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">附魔书与装备附魔限制</Paragraph><Paragraph><Bold>附魔书获得概率：</Bold> 附魔台有 3% 的概率附魔出附魔书，且只有在高等级附魔时才可能获得。</Paragraph><Paragraph><Bold>装备附魔槽位：</Bold> 每个装备或武器最多可附加 3 个拓展附魔槽位。玩家需要合理规划附魔，确保每个装备的效果最大化。</Paragraph><Paragraph Style="{StaticResource H3}">绑定装备的附魔与合并</Paragraph><Paragraph><Bold>绑定装备的附魔与祛魔：</Bold> 已绑定的装备依然可以进行附魔和祛魔操作，且不会影响绑定状态。</Paragraph><Paragraph><Bold>铁砧合并要求：</Bold> 使用铁砧合并装备时，已绑定的装备必须放在铁砧的第一个格子中，才能确保绑定状态不丢失。</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">展望未来</Paragraph><Paragraph>本次插件为 Minecraft 的附魔系统带来了全新的玩法和更多的自由度，但这只是开始。我们将在未来的 RPG 版本中推出更多附魔槽位和拓展附魔选项，进一步丰富玩家的游戏体验。</Paragraph><Paragraph>通过这个插件，玩家可以享受更加个性化的附魔体验，并且能够更好地定制装备。赶快加入游戏，试试这些新的附魔效果，打造专属于你的强力装备吧！</Paragraph><Paragraph Style="{StaticResource H2}">附录：附魔表</Paragraph><Paragraph>| 名称 | 介绍 | 适用类型 | 等级简介 |
+</List><Paragraph Style="{StaticResource H3}">附魔书与装备附魔限制</Paragraph><Paragraph><Bold>附魔书获得概率：</Bold> 附魔台有 3% 的概率附魔出附魔书，且只有在高等级附魔时才可能获得。</Paragraph><Paragraph><Bold>装备附魔槽位：</Bold> 每个装备或武器最多可附加 3 个拓展附魔槽位。玩家需要合理规划附魔，确保每个装备的效果最大化。</Paragraph><Paragraph Style="{StaticResource H3}">绑定装备的附魔与合并</Paragraph><Paragraph><Bold>绑定装备的附魔与祛魔：</Bold> 已绑定的装备依然可以进行附魔和祛魔操作，且不会影响绑定状态。</Paragraph><Paragraph><Bold>铁砧合并要求：</Bold> 使用铁砧合并装备时，已绑定的装备必须放在铁砧的第一个格子中，才能确保绑定状态不丢失。</Paragraph><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">展望未来</Paragraph><Paragraph>本次插件为 Minecraft 的附魔系统带来了全新的玩法和更多的自由度，但这只是开始。我们将在未来的 RPG 版本中推出更多附魔槽位和拓展附魔选项，进一步丰富玩家的游戏体验。</Paragraph><Paragraph>通过这个插件，玩家可以享受更加个性化的附魔体验，并且能够更好地定制装备。赶快加入游戏，试试这些新的附魔效果，打造专属于你的强力装备吧！</Paragraph><Paragraph Style="{StaticResource H2}">附录：附魔表</Paragraph><Section Style="{StaticResource Quote}">
+  
+<Paragraph>手机可能无法完整显示，如果无法完整展示，请使用电脑查看！</Paragraph>
+
+</Section><Paragraph>| 名称 | 介绍 | 适用类型 | 等级简介 |
 | --- | --- | --- | --- |
 | abrasion 磨损 | 对敌方盔甲造成损坏 | 武器 （所有剑、所有斧） | Lv1:10% 几率耐久-1，Lv2:15% 几率耐久-2，Lv3:25% 几率耐久-3 |
 | adrenaline 肾上腺素 | 防御怪物攻击时获得力量 | 护甲 （全套） | Lv1:10% 几率吸收 I 60s，Lv2:20% 几率，Lv3:25% 几率 （冷却均为 5s） |
