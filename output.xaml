@@ -5,17 +5,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,13 +30,18 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：烙饼说他想让全服的人只能用加载器进服" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="全新附魔拓展插件上线：近 60 种新附魔效果，丰富你的游戏体验" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="绵中方块人 RPG 第一赛季：破笼之鸟更新内容概览：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">绵中方块人 RPG 第一赛季：破笼之鸟更新内容概览：</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/04/418/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年04月19日 23:54:25
+本次更新的内容梗概如下：</Paragraph><Paragraph>1: 主线剧情正式更新：在赛季开始后，我们将发布剧情：冒险启程；雨夜中的少女；主城 14 日。后续的剧情将在赛季内逐步更新</Paragraph><Paragraph>2: 每日委托系统发布：在玩家完成剧情冒险启程后，将解锁每日委托系统，玩家可以在各个地区的冒险家协会接取委托 （目前已经建造好协会的地区有：主城区，西部雪山，失落之地），并获取服务器代币奖励</Paragraph><Paragraph>3: 赛季任务系统发布：在玩家完成剧情冒险启程，且冒险等级达到 E 级后，将解锁赛季任务系统，玩家可于主城区的冒险家协会内查看委托，委托在赛季结束后消失</Paragraph><Paragraph>4：常驻副本：城郊平原，乱葬冈发布：在完成剧情冒险启程后，玩家可通过主城区冒险家协会内的引导员前往相应副本刷取材料。</Paragraph><Paragraph>5；装备更新：在本次赛季更新后，我们将加入新的 RPG 装备与强化宝石系统，并加入部分新的附魔。在完成主线剧情：雨夜中的少女后，玩家可以在西部雪山的冒险家协会的铁匠处购买或制作新的附魔书与强化宝石。</Paragraph><Paragraph>6：道具与食物更新：在本次更新后，服务器将会增加 8 种恢复类道具，4 种特殊食物，6 种战斗道具与 2 种整蛊道具，希望给广大玩家带来更加新奇的游戏体验</Paragraph><Paragraph>7：小游戏：魔法沙盘正式发布</Paragraph><Paragraph>8；单人挑战；JXZ 发布，在完成相应支线剧情后，玩家将获得 BOSS:JXZ 的挑战资格。同时，重做后的 QFKA 也将在同时上线生存服</Paragraph><Paragraph>9；赛季活动：赛季中期将会举行为期一周的赛季活动，玩家通过参加赛季活动可以获得大量赛季代币，用于兑换特殊奖励</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="全新附魔拓展插件上线：近 60 种新附魔效果，丰富你的游戏体验" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -279,19 +288,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">失落之国——前置 III  坚守</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/08/319/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年08月04日 16:07:10
 随着污秽之源被清楚，污秽之主的进攻被迫停止，双方在九雍 （北开发区于剧情中的代称，后续该注解不再出现） 的临时防线上僵持下来，这对于素瑞玛教廷 （信奉污秽之主和其他地狱恶魔的邪教，在艾尔梅亚帝国中期便已经存在，RPG 的主要 「反派」 之一） 来说并不是一个好消息，如果让刚刚经历重大变故的枢机府趁着现在稳定下来，控制 Sacrosanctum(主城区) 的计划极有可能宣告失败。正当教廷苦恼之际，一封密信被送到了奥西里安手中。在之前的战斗中，由于枢机府指挥系统崩溃，本该由天璇卫驻守的蛇盘隘被孟中堂用其掌控下的第三协卫营调换。于是，经过慎重考虑，教皇——亡者之喉奥西里安决定，于蛇盘隘发起猛攻，撕开刚刚形成的北方防线。</Paragraph><Paragraph>未成经过任何正面战场战斗的第三协卫营很快便被猛烈的进攻击溃，虽然凭借关隘的防御工事，第一次进攻被勉强抵御，但军心涣散的第三协卫营很明显无法抵御接下来的攻击了。一旦关口被突破，后方将无险可守，教廷的兵锋将直指 Sacrosanctum 。 但在枢机府混乱的当下，附近已经没有可以成建制调动部队的军事组织了。就在这岌岌可危的时间点，内务府的干事卡莉拉，也是原先大赛的负责人，却不顾其他干事反对，强行举行了预选赛。也许她有其他的打算？你不太清楚，不过你清晰的预感到，出人头地的机会到了</Paragraph><Paragraph>剧情将于 8 月 6 日开始</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="📢 PCL MZMC Edition 内测计划正式启动！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">📢 PCL MZMC Edition 内测计划正式启动！</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/07/308/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年07月14日 13:52:01
-亲爱的 PCL MZMC Edition 用户：</Paragraph><Paragraph>为持续优化用户体验与软件质量，我们将启动 <Bold>PCL MZMC Edition 专项内测计划</Bold>。诚邀您加入内测团队，共同完善产品！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250713233825023010.webp"/></BlockUIContainer><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250714135105190017.webp"/></BlockUIContainer><Paragraph Style="{StaticResource H2}">🔍 内测参与权益</Paragraph><Paragraph>1️⃣ <Bold>专属反馈通道</Bold>：加入官方 QQ 群优先提交 Bug 🐛 及功能建议</Paragraph><Paragraph>2️⃣ <Bold>高效问题处理</Bold>：内测群反馈将获得专属技术响应通道</Paragraph><Paragraph>3️⃣ <Bold>潜在荣誉奖励</Bold>：积极贡献者有机会获得限定称号 （具体规则待定）</Paragraph><Paragraph Style="{StaticResource H2}">⚠️ 重要须知 （申请前必读）</Paragraph><Paragraph Style="{StaticResource H3}">1️⃣ <Bold>强制更新机制</Bold></Paragraph><Paragraph>✅ 获选后须<Bold>强制升级至最新内测版</Bold></Paragraph><Paragraph>✅ 启动器将<Bold>自动保持版本同步更新</Bold></Paragraph><Paragraph Style="{StaticResource H3}">2️⃣ <Bold>数据收集说明</Bold></Paragraph><Paragraph>📊 <Bold>遥测功能 （匿名数据收集） 将强制开启</Bold></Paragraph><Paragraph Style="{StaticResource H3}">3️⃣ <Bold>资格动态管理</Bold></Paragraph><Paragraph>🔄 保留随时调整内测成员的权利</Paragraph><Paragraph>🛑 可能因测试需求取消参与者资格</Paragraph><Paragraph Style="{StaticResource H3}">4️⃣ <Bold>退出机制</Bold></Paragraph><Paragraph>⏹️ 申请退出请联络：@tsxc_java</Paragraph><Paragraph Style="{StaticResource H2}">📮 申请通道</Paragraph><Paragraph>▶️请在群内蹲守下一次申请的开始~我们会不定期放出名额。</Paragraph><Paragraph>‼️ 关键提示：</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>名额严格受限</Bold> - 满额后将关闭申请入口</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>非注册即加入</Bold> - 采用 （包括随机筛选在内的） 复合筛选机制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>过程不透明</Bold> - 筛选流程及标准不予公示</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph>🚨 <Bold>最终声明</Bold></Paragraph><Paragraph>本次内测最终解释权归项目管理方所有，测试政策可能根据实际情况动态调整。</Paragraph><Paragraph>期待与您携手打造更完善的 PCL MZMC Edition ！</Paragraph><Paragraph><Bold>—— 绵中方块人服务器管理组 （技术部）</Bold></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/07/20250713233823363851.webp"/></BlockUIContainer>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
