@@ -5,8 +5,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -26,22 +30,18 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：这个服务器里的很多成员都有自己宏伟的规划" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：烙饼说他想让全服的人只能用加载器进服" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="副本概览" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="意见回收" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">意见回收</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/04/428/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年04月21日 18:19:47
+对有关内容有疑问或者不满的可以在这篇文章下面进行评论，我们每周周末会统一为各位做出回复，如果有特别紧急的事情请直接在 QQ 群内寻找组织与发展部的成员解决，被采纳的意见会于此处公示，感谢大家的理解</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="副本概览" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -270,24 +279,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">绵中方块人服务器 2026 新年贺词</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/12/370/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年12月31日 15:28:32
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/12/20251230103520396861.webp"/></InlineUIContainer></Paragraph><Paragraph>各位朋友们：</Paragraph><Paragraph>大家新年好！灵蛇负瑞雪，奔马迎春归。万物伊始，百舸争流。 2026，到来了。</Paragraph><Paragraph>今年已经是我们携手走过的第四个春秋了。难忘啊，一路上的旅程。在这辞旧迎新的时间，我们不妨一同端详这构建在数字世界的纽带，让即使在天南海北的我们，重新燃起火花。</Paragraph><Paragraph>2022 年暑假我们的群聊有 30 多人。而如今，我们自豪地拥有 300＋，这已然增长十倍的数据。从粘液科技到新存档，从资源界到创造界……每一次方块的交互，是满怀希望的初次尝试，还是为实现目标而顶住再来的魄力？每一次 PvP 的挑战，无论有备而来还是背水一战，都已献给我们共同的回忆。</Paragraph><Paragraph>我们喜欢你，亲爱的绵中方块人。我们喜欢你以一己之力建起城垣，惊叹与美学与肝帝的融合；我们喜欢你建起聚落，用规划与交流缝补可能并不完美的世界规则；最重要的是－－我们喜欢你来。我们的世界因为你的到来而不寂寞，我们的开发因为你的需求而有价值。这毋庸置疑。因为我们也是你。我们有共同的名字：绵中方块人。我们欣喜于你提出的设想，满足于我们将它变为现实，一次次追求新的创意，是一段写在 0 和 1 中的故事，独属于我们的一切。</Paragraph><Paragraph>你记得吗？</Paragraph><Paragraph>粘液科技档里神秘的合金盔甲大神，太璃神宫的原型出自何处，雪山地区曾上演 《人们的名义》……你从一无所有到仗剑天涯，成长着的，不只是时间，也是萤幕后的你我。我们的故事很长，长到要用一生去丈量；我们的距离很短，短到只需毫秒之间就可触及彼此。</Paragraph><Paragraph>我们的成长，是从独当一面到双人成行，再到众志成城。我们会为了 bug 和技术实现方案而讨论，把会议开到零点以后；我们也会集众人之力，想方设法带来更新奇，独一份的游戏体验……我们制定规则，即使我们知道鲜有人愿意倾注时间去看——但我们需要为长远考虑，你我的未来不只是在方块之间流动，更需要在规则与监督之下保证公平。自研反作弊到登录插件的修改，我们清楚令人头大的 「最后一公里」 问题在哪里；同时，我们吸纳有能力的小伙伴积极参与维护，全面放权，用我们的人才培养方式去构建未来的行业先锋，这里可能不是你写在简历上的第一站实习经历，但是足以带你叩响信息产业的大门……我们是绵中方块人服管委，玩家的先锋队，行业的探索者，你亲密无间的好朋友。</Paragraph><Paragraph>感谢你，看到这的你，不论你身处何方，是潜水于群中，或是活跃的话匣子，绵中方块人是我们的共同记号，游离于现实而又依托于你我的精神家园。若能寻一丝慰藉，便不虚此行；三五好友共话，尽得人间清欢。</Paragraph><Paragraph>2026，要有龙马精神，甘做勤劳 「牛马」，敢做行业奔马。去问明天何似？明朝日月新天，万马奔腾，其道大光。</Paragraph><Paragraph>出发吧，2026，明天，会更好的。</Paragraph><Paragraph>绵中方块人服务器管理委员会</Paragraph><Paragraph>2025.12.30</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="OMG！！！新新新新的工单系统今天震撼首发！！！&gt;o&lt;" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">OMG！！！新新新新的工单系统今天震撼首发！！！&gt;o&lt;</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/12/356/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年12月21日 23:25:10
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/12/20251221153912575901.webp"/></InlineUIContainer></Paragraph><Paragraph>由我们亲爱的副腐竹，<Bold>Akir_</Bold> 编写的新版本<Bold>工单系统 2.0</Bold> 今天上线！</Paragraph><Paragraph>简单大气的界面，整齐的输入框，还有人性化的紧急程度选择栏，处处透露着腐竹们对于广大玩家的爱护，让人恨不得立马提交工单上号建一万遍绵中 WWWW！各位方块人们，还在等什么，赶紧登录官网，提交工单，进服肝肝肝 o/o/o/！！！</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/12/20251221154250518691.webp"/></InlineUIContainer><LineBreak/>
-以下是更新内容原文：</Paragraph><Paragraph>🔈🔈🔈全新的绵中方块人服务器-工单系统 2.0 已上线！<LineBreak/>
-【更新内容】 <LineBreak/>
-使用 MzmcOS 问卷系统，带来更优质的体验！<LineBreak/>
-优化了问题分类的设置，让分类选择不再冗杂~<LineBreak/>
-其他视觉设计优化。 <LineBreak/>
-【如何使用】 <LineBreak/>
-访问官网 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top">https://mzmc.top</local:MyTextButton></Underline><LineBreak/>
-首页即可提交工单~</Paragraph><Paragraph>MzmcOS 管理团队 <LineBreak/>
-2025.12.21</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
