@@ -6,15 +6,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Triggers>
 <StackPanel.Resources>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -34,14 +25,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen负责画饼，烙饼负责烙……" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="RPG 世界开放公告：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="副本概览：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">副本概览：</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/04/424/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年04月21日 17:29:57
+为了让各位玩家有更好的游戏体验，现将已经制作完成与预期在一个月内制作完成的副本公布在这篇文章内，各位玩家可以根据自己的需要进行阅读</Paragraph><Paragraph>注：标注为 sp 的怪物不会自然刷新，仅会在玩家触发特殊条件后触发</Paragraph><Paragraph>001：城外平原，副本怪物等级 （lv.1-lv.10），低度危险区域</Paragraph><Paragraph>怪物类型：野狼 （lv.1-lv.6）, 中立生物，在攻击后会激怒附近的同种生物，掉落：皮革，极少量经验</Paragraph><Paragraph>史莱姆 （lv.1-lv.6），敌对生物，会主动攻击玩家, 掉落：粘液，极少量经验</Paragraph><Paragraph>野猪 (lv.1-lv.8), 友好生物，无法攻击，掉落：猪肉</Paragraph><Paragraph>野狼王 (sp.lv.10) 中立生物，在附近的同种生物或自身被攻击后会被激怒，掉落：狼王的骨头 （中等概率）</Paragraph><Paragraph>002：林间小道，副本怪物等级 （lv.1-lv.4），低度危险区域</Paragraph><Paragraph>怪物类型</Paragraph><Paragraph>野狼 (lv.1-lv.4), 中立生物，在攻击后会激怒附近的同种生物，掉落：皮革，极少量经验</Paragraph><Paragraph>003: 镇外森林, 副本怪物等级 (lv.10-lv20), 中等危险区域</Paragraph><Paragraph>怪物类型:</Paragraph><Paragraph>山贼 (lv.10-lv.16), 敌对生物，远程攻击, 掉落：少量经验</Paragraph><Paragraph>精英山贼 (lv.16-lv.20), 敌对生物, 掉落：少量绿宝石，少量经验</Paragraph><Paragraph>腐尸 （lv.10-lv.29）, 敌对生物，掉落：腐烂的肉块</Paragraph><Paragraph>山贼头目 (lv.20), 敌对生物，远程攻击，掉落：头目的战利品</Paragraph><Paragraph>其余怪物制作中</Paragraph><Paragraph>004：乱葬岗. 副本怪物等级 (lv.1-lv.20). 中等危险区域 （制作中）</Paragraph><Paragraph>副本特殊环境：永夜</Paragraph><Paragraph>怪物类型:</Paragraph><Paragraph>骷髅 （lv.1-lv.4）, 敌对生物，掉落：骨头</Paragraph><Paragraph>骸骨 （lv5-lv.8）, 敌对生物，掉落：骸骨</Paragraph><Paragraph>骷髅卫士 （sp.lv.10-lv.15）, 敌对生物，掉落：无</Paragraph><Paragraph>骷髅骑士 (sp.lv.20), 中立生物，在被攻击后被激怒。掉落：骷髅骑士的战利品</Paragraph><Paragraph>幽灵 (lv.2-lv.8), 敌对生物，掉落：游魂粉末</Paragraph><Paragraph>盗墓贼 （lv.12-lv.15）, 中立生物，会主动攻击亡灵生物，掉落：铜币，洛阳铲 （小概率），盗墓者的护身符 （小概率）</Paragraph><Paragraph>未完待续</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="RPG 世界开放公告：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -279,15 +288,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 访问官网 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top">https://mzmc.top</local:MyTextButton></Underline><LineBreak/>
 首页即可提交工单~</Paragraph><Paragraph>MzmcOS 管理团队 <LineBreak/>
 2025.12.21</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/10/332/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年10月18日 22:44:25
-绵中 MC 建筑社社团管理委员会：</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组决定：</Paragraph><Paragraph>任命：</Paragraph><Paragraph>Nikolaos 为绵中 MC 建筑社社长；</Paragraph><Paragraph>xingxiang114 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>Usicy 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>C__157 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>免去：</Paragraph><Paragraph>C__157 绵中 MC 建筑社社长职务，另有任用。</Paragraph><Paragraph>特此通知。</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组</Paragraph><Paragraph>2025-10-18</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
