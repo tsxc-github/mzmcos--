@@ -6,11 +6,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Triggers>
 <StackPanel.Resources>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,18 +34,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="别杀怪物，你这个海豚！" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen负责画饼，烙饼负责烙……" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="绵中方块人 RPG 第一赛季：破笼之鸟更新内容概览：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="RPG 世界开放公告：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">RPG 世界开放公告：</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/04/423/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年04月21日 16:56:32
+经过一段时间的建设和测试，rpg 世界将在 6 月 25 日赛季更新后向各位绵中方块人开放。为了让各位玩家有更良好的体验，现将注意事项列举如下：</Paragraph><Paragraph>一：在该世界中，生命自然恢复的效率将大幅度降低，且会面临更加严重的饥饿惩罚，在前往该世界前，请确保你携带了足够的食物和补给品。当然，你也可以用货币在 npc 处进行购买，不过我不建议你在副本里进行这项操作，除非这真的必要。</Paragraph><Paragraph>二；在 rpg 世界中，不同的区域的风险也有所不同，在安全区域，你的饥饿值会自然恢复，且不会受到其他玩家的攻击，如果你在这个区域不慎死亡，你也不会受到任何惩罚。在低度危险区域中，你不会自然恢复饱食度，但也不会受到其他玩家的攻击，当然。如果你与对方都打开了 pvp 模式的话，你们还是能够互相伤害，这是被允许的。你死亡后不会掉落任何东西，相应的，一些珍惜的材料也不会在这些敌方刷新。在中等危险区域中，你不会受到其他玩家的攻击，也不会自然恢复饱食度，且在死亡之后，你的经验值将会掉落，但你的物品会被保留。在高度危险区域中，你不会自然恢复饱食度，且在死亡后掉落可以掉落的所有物品，但万幸的是，你仍然不能被其他玩家主动攻击，如果你关闭了 pvp 模式的话。  当然，这个世界还存在一些极度危险的区域，被称为无序之地，这种区域不一定会存在强大的怪物，但是，你将可以被其他玩家主动攻击，无论你是否开启了 pvp 模式，如果你在这里死亡，你不仅会掉落全部的物资，还会被扣除一定数量的货币，如果击杀你的是其他玩家，你还需要额外支付 TA 一定数量的货币。在中度危险区域以上的区域将会刷新珍贵资源点，里面会产出铸造高级装备，强化石，载具与其他品质较高物品的珍贵材料，当然，如果你对这些不感兴趣，冒险家协会也会提供一个不错的收购价格。</Paragraph><Paragraph>三：在 RPG 世界中，传送与飞行功能在大多数区域是被禁止的，如果你想要在这些区域内快速移动，末影珍珠也许是一个不错的选择，当然，你也可以选择使用载具，这是被允许的。除了要小心其他玩家偷偷将你的载具偷走之外</Paragraph><Paragraph>四：在一些危险的区域里，你可能会遇见一些不太幸运的倒霉蛋，如果你的身上正好有他们需要的东西，那名恭喜你，你会得到远高于你付出的回报，当然，这些家伙存在的时间有限，且每名 npc 交互的次数也是固定的，如果想要拿到那些奖励，最好快点。 【注；该类 npc 通常会使用蓝名进行标记，且会在玩家靠近其一定的距离后发出提示】</Paragraph><Paragraph>五：除了部分重要的 npc 之外，其他的 npc 也可以进行交流，多与他们谈谈，说不定会有一些意外收获。</Paragraph><Paragraph>六：在正式发布后，如果有什么其他问题，我们会继续更新这篇文章。</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="绵中方块人 RPG 第一赛季：破笼之鸟更新内容概览：" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -279,15 +288,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">绵中方块人服务器管理委员会 2025 级换届及增选工作组关于 C__157 等同志的任免的通知</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/10/332/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年10月18日 22:44:25
 绵中 MC 建筑社社团管理委员会：</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组决定：</Paragraph><Paragraph>任命：</Paragraph><Paragraph>Nikolaos 为绵中 MC 建筑社社长；</Paragraph><Paragraph>xingxiang114 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>Usicy 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>C__157 为绵中 MC 建筑社副社长；</Paragraph><Paragraph>免去：</Paragraph><Paragraph>C__157 绵中 MC 建筑社社长职务，另有任用。</Paragraph><Paragraph>特此通知。</Paragraph><Paragraph>绵中方块人服务器管理委员会 2025 级换届及增选工作组</Paragraph><Paragraph>2025-10-18</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="失落之国——前置 III  坚守" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">失落之国——前置 III  坚守</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/08/319/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年08月04日 16:07:10
-随着污秽之源被清楚，污秽之主的进攻被迫停止，双方在九雍 （北开发区于剧情中的代称，后续该注解不再出现） 的临时防线上僵持下来，这对于素瑞玛教廷 （信奉污秽之主和其他地狱恶魔的邪教，在艾尔梅亚帝国中期便已经存在，RPG 的主要 「反派」 之一） 来说并不是一个好消息，如果让刚刚经历重大变故的枢机府趁着现在稳定下来，控制 Sacrosanctum(主城区) 的计划极有可能宣告失败。正当教廷苦恼之际，一封密信被送到了奥西里安手中。在之前的战斗中，由于枢机府指挥系统崩溃，本该由天璇卫驻守的蛇盘隘被孟中堂用其掌控下的第三协卫营调换。于是，经过慎重考虑，教皇——亡者之喉奥西里安决定，于蛇盘隘发起猛攻，撕开刚刚形成的北方防线。</Paragraph><Paragraph>未成经过任何正面战场战斗的第三协卫营很快便被猛烈的进攻击溃，虽然凭借关隘的防御工事，第一次进攻被勉强抵御，但军心涣散的第三协卫营很明显无法抵御接下来的攻击了。一旦关口被突破，后方将无险可守，教廷的兵锋将直指 Sacrosanctum 。 但在枢机府混乱的当下，附近已经没有可以成建制调动部队的军事组织了。就在这岌岌可危的时间点，内务府的干事卡莉拉，也是原先大赛的负责人，却不顾其他干事反对，强行举行了预选赛。也许她有其他的打算？你不太清楚，不过你清晰的预感到，出人头地的机会到了</Paragraph><Paragraph>剧情将于 8 月 6 日开始</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
