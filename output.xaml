@@ -5,12 +5,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,18 +38,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="😨知识：烙饼说他想让全服的人只能用加载器进服" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：手机可以用FCL玩javaMC" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -209,51 +209,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">装备绑定系统介绍：命运之链</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/401/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月22日 20:29:52
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771763158031.webp"/></InlineUIContainer></Paragraph><Paragraph>在艾尔梅亚的大陆上，冒险家们为寻求财富和荣耀不断战斗。为了让每位冒险家拥有独特的装备与风格，我们引入了全新的 「命运之链」 系统。</Paragraph><Paragraph><Bold>什么是命运之链？</Bold></Paragraph><Paragraph>命运之链是一项装备绑定机制，每月允许玩家更换和重新绑定一整套装备，包括武器、盔甲和饰品。绑定的装备具备不可破坏的属性，不会掉耐久，始终保持最佳状态，帮助你轻松应对各种挑战。</Paragraph><Paragraph><Bold>每月更换一次装备绑定</Bold></Paragraph><Paragraph>命运之链让玩家每月有一次解绑并重新绑定的机会，可以根据战斗需求或策略灵活选择新的装备组合，始终保持最佳状态，面对冒险中的种种考验。</Paragraph><Paragraph><Bold>防止滥用，确保公平</Bold></Paragraph><Paragraph>每个玩家只能绑定一套装备，避免滥用。绑定后，装备的不可破坏属性将只在玩家个人身上有效，转交给他人会失去属性，并不可恢复。这一机制确保了装备使用的公平性与策略性。</Paragraph><Paragraph><Bold>如何使用命运之链？</Bold></Paragraph><Paragraph>找到指定的命运之链 NPC，选择绑定装备。在每月更新时，你可以解绑当前装备，并选择新的装备进行绑定，享受全新的战斗体验。</Paragraph><Paragraph><Bold>全新冒险，命运由你掌控</Bold></Paragraph><Paragraph>命运之链为玩家提供了更多的选择和策略空间。无论你是探索未知的冒险家，还是战斗中的勇士，命运之链都将成为你与命运抗争的重要工具。</Paragraph><Paragraph><Bold>快来试试吧，命运之链就在你身边！</Bold></Paragraph><Paragraph>准备好开启新的冒险了吗？找到主城附近的命运之链 NPC，体验每月装备更换与绑定，享受前所未有的战斗体验，改变你的命运！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771763080768.webp"/></BlockUIContainer>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="服务器有史以来最大规模更新! 跟着管委会一起看看吧!" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">服务器有史以来最大规模更新! 跟着管委会一起看看吧!</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/382/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月15日 19:30:50
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/20260214155800230505.webp"/></InlineUIContainer></Paragraph><Paragraph>哈喽哈喽好久不见, 各位玩家你们好!</Paragraph><Paragraph>耗时 12 天, 在技术部和常务委员会的接续努力下, 服务器完成了有史以来最大规模的更新! 这次, 我们从底层版本到上层玩法, 对服务器进行了全方位升级改造, 只为给各位玩家带来更流畅、更丰富的游戏体验。接下来, 让我们一起来看看本次的更新内容吧!</Paragraph><Paragraph Style="{StaticResource H2}">🚀 核心升级</Paragraph><Paragraph Style="{StaticResource H3}">更新服务器游戏版本至 1.21.4</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/20260214164611699027.webp"/></InlineUIContainer><LineBreak/>
-千呼万唤始出来! 现在, 我们将服务器的版本更新至 1.21.4, 这意味着你可以享受到新的游戏特性 (比如期望颇高的<Bold>重锤</Bold>和<Bold>狼铠</Bold>) 、 bug 修复和性能优化。</Paragraph><Paragraph Style="{StaticResource H3}">更新 Geyser, 基岩版后续版本跟随最新版本更新</Paragraph><Paragraph>根据服务器的统计数据, 服务器内有近<Bold>六分之一</Bold>的玩家使用<Bold>基岩版</Bold>游玩服务器。为了确保不同的平台玩家能获得一致的游戏体验, 我们同步更新了 Geyser, 基岩版玩家现在也能享受到新版本的所有内容了!</Paragraph><Paragraph Style="{StaticResource H3}">跨服端核心更换, 性能更上一层楼</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/velocity.webp"/></InlineUIContainer><LineBreak/>
-本次更新中, 我们同步更换了技术更先进、性能更好的跨服核心。即刻体验更丝滑的游戏体验吧!</Paragraph><Paragraph Style="{StaticResource H3}">QQ 机器人正式启用</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/bot.webp"/></InlineUIContainer><LineBreak/>
-经过内部多轮测试修改, 现在, 我们向您介绍——由绵中方块人服务器管理委员会技术部研发的 QQ 机器人! 那么, 机器人可以做什么呢?</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>获取服务器状态</Bold>: 随时查询服务器运行状态</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>查看在线列表</Bold>: 一键查看当前在线的玩家</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Bold>QQ 绑定足不出群</Bold>: 无需进入游戏, 通过 QQ 就能完成绑定和相关操作</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">其他面向管理员的便捷功能<LineBreak/>
-  快去群里发<TextBox Style="{StaticResource InlineCode}">/help</TextBox> 试试吧!</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">MzmcOSAPISDK 开放使用</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/SDK.webp"/></InlineUIContainer><LineBreak/>
-随着 MzmcOSAPI 的全面重写, 旧的开发文档已经不再适用。这对部分有技术的玩家造成了极大的困扰。现在，我们正式开放了由官方维护的 Python 和 C# SDK 用于对接 API, 快来试试吧!</Paragraph><Paragraph Style="{StaticResource H2}">🏛️ 组织架构优化</Paragraph><Paragraph Style="{StaticResource H3}">管理委员会组织架构进一步优化改革</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E6%9E%B6%E6%9E%84%E6%94%B9%E9%9D%A9.webp"/></InlineUIContainer><LineBreak/>
-为了提升管理效率和服务质量, 绵中方块人服务器管理委员会常务委员会对组织架构做出了进一步优化改革的决定, 力争让管理委员会更好地为玩家服务。</Paragraph><Paragraph Style="{StaticResource H2}">🎓 体验增强</Paragraph><Paragraph Style="{StaticResource H3}">新手引导系统实装</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E5%BC%95%E5%AF%BC.webp"/></InlineUIContainer> </Paragraph><Section Style="{StaticResource Quote}">
-  
-<Paragraph>管理管理, 这个功能怎么用啊?</Paragraph>
-<Paragraph>管理管理, 这个怎么用不了啊?</Paragraph>
-<Paragraph>管理管理, 你们这个做的什么啊?</Paragraph>
-
-</Section><Paragraph>&quot; 妈妈再也不怕不知道服务器有什么玩法/功能怎么用了!&quot;</Paragraph><Paragraph>我们基于新技术, 打造了让你耳目一新的新手引导系统, 手把手带你了解服务器的发展历程、独特玩法、插件功能和社区规则, 让你快速上手, 融入我们的大家庭。</Paragraph><Paragraph Style="{StaticResource H3}">游戏菜单</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/%E8%8F%9C%E5%8D%95.webp"/></InlineUIContainer><LineBreak/>
-全新游戏菜单 <TextBox Style="{StaticResource InlineCode}">/m</TextBox> 上线! 更方便的交互方式, 一键访问各种功能。功能仍在持续更新中, 敬请期待更多便捷操作!</Paragraph><Paragraph Style="{StaticResource H3}">导航系统</Paragraph><Paragraph>&quot; 妈妈再也不用担心我迷路啦!&quot; <LineBreak/>
-全新的 GPS 导航系统帮你精准定位, 无论是寻找建筑、资源点还是朋友, 都能快速导航, 告别迷路烦恼。</Paragraph><Paragraph Style="{StaticResource H3}">不装 mod 也能使用的高级功能</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/nomod.webp"/></InlineUIContainer><LineBreak/>
-移动光源、整理背包，这些模组整合包常见的功能, 你有曾想过无需 mod 能否实现? 现在, 它们来了! 聊天框输入神秘指令<TextBox Style="{StaticResource InlineCode}">/invactions</TextBox>, 即可享受超多功能!</Paragraph><Paragraph Style="{StaticResource H3}">精致传送石来了</Paragraph><Paragraph>找不到心仪的聚落? 四处奔波? 传送石来帮你! 每个聚落都有自己的传送石，动动手指, 便能穿梭于不同聚落!</Paragraph><Paragraph Style="{StaticResource H2}">⚔️ 玩法拓展</Paragraph><Paragraph Style="{StaticResource H3}">更多附魔</Paragraph><Paragraph>原版附魔法书太多不够用? 有些附魔太鸡肋?</Paragraph><Paragraph>我们为原版附魔系统增添了 <Bold>60+全新附魔</Bold>! 所有附魔都可以通过原版附魔台获得, 无需额外安装模组。快来让你的装备更强大, 战斗更刺激!</Paragraph><Paragraph Style="{StaticResource H3}">增加载具系统</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/2026-02-15_00.21.26.webp"/></InlineUIContainer><LineBreak/>
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/2026-02-15_01.12.30.webp"/></InlineUIContainer><LineBreak/>
-玩家现在可以<Bold>驾驶车辆</Bold>前往目的地! 全新的载具系统让长途旅行变得更轻松有趣, 还能与朋友们一起享受驾驶乐趣。</Paragraph><Paragraph Style="{StaticResource H3}">恭喜发财, 红包拿来</Paragraph><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/fhb.webp"/></InlineUIContainer><LineBreak/>
-新年快乐，发个红包么? 每个玩家都可发红包与收红包! 聊天栏输入<TextBox Style="{StaticResource InlineCode}">/fhb new</TextBox> 即可发红包!</Paragraph><Paragraph Style="{StaticResource H2}">📕内容拓展 (DLC) 预告</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">二周目 RPG 玩法，双线剧情等你选择 （制作中）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">吃的太少? 不丰富? 二周目食物拓展来了!（制作中）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">活动服小游戏增加，起床战争、跑酷、绝地求生以及社会实践都在路上了 （配置中，即将上线）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">聚落管理清人难? 创建解散难? 加入退出难? 区籍数字化管理系统绝赞编写中!</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">coming s∞n...</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph Style="{StaticResource H2}">🧑‍💻管理说</Paragraph><Paragraph>12 天连轴转, 维护了这么多天, 来看看参与服务器更新的同志们都有些什么想说的吧!</Paragraph><Paragraph Style="{StaticResource H3}">Boen_Shi</Paragraph><Paragraph>我去，两周，每天熬到半夜，累死我了！</Paragraph><Paragraph Style="{StaticResource H3}">Akir_</Paragraph><Paragraph>年年如是，或者一往无前，<LineBreak/>
-工作一年，大家都辛苦了，<LineBreak/>
-生活不需要什么特殊仪式，<LineBreak/>
-烟火寻常便是最佳的答案，<LineBreak/>
-你所热爱的，便是你的生活，<LineBreak/>
-你所做之事，终被赋予价值。<LineBreak/>
-风里雨里，我们在服里等你。<LineBreak/>
-感谢相伴，一起走过的四年。</Paragraph><Paragraph Style="{StaticResource H3}">laobinghu</Paragraph><Paragraph>作为一名 2025 年寒假正式加入管委会 (那时还叫管理组) 的成员, 转眼间我已经干满 1 年了。其实我最开始以为自己只是个干纯技术的。直到有一次偶然我提起建社的事情, 博文说,&quot; 可以, 你去嘛&quot;, 然后我真的去了。我这辈子都忘不了为了找团委书记&quot; 一周十二趟, 跑完七趟空&quot; 的伟大事迹。好在后来终于把社团建起来了。再到后来, 管理组改革、机器人、 API+SDK 等等, 我干的事情越来越多, 博文能交给我干的事情也越来越多。这次 12 天连轴转, 我学到了很多, 也想明白了很多。有些事情, 还是得提前规划、提前布局; 好的创意, 平时想到了可以先记下来......</Paragraph><Paragraph><Span TextDecorations="Strikethrough">别催了真的在赶工了</Span></Paragraph><Paragraph Style="{StaticResource H3}">tsxc_java</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://cdn.647382.xyz/img/80cbcb27188cd04f17b1fd9cc1885456.png"/></BlockUIContainer>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
