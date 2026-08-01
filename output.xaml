@@ -5,12 +5,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,14 +28,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
@@ -73,7 +73,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="意见回收" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="RPG 合成表 (部分)（持续更新中）" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">RPG 合成表 (部分)（持续更新中）</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/08/443/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年08月01日 19:23:06
+特此注明：1：部分在原版配方书中能看到的配方不在此强调</Paragraph><Paragraph>2: 工作台合成表位置如下 1 2 3 ，将以 【位置】 [物品][个数] 的形式给出, 个数未注明则默认                                                      4 5 6     为一</Paragraph><Paragraph>7 8 9</Paragraph><Paragraph>炼药锅配方位置如下: 4   5    6     格式与工作台配方相同</Paragraph><Paragraph>2    3</Paragraph><Paragraph>1</Paragraph><Paragraph>A：</Paragraph><Paragraph>奥术粉尘:</Paragraph><Paragraph>游魂粉末 {砂轮磨制}</Paragraph><Paragraph>奥术残晶:</Paragraph><Paragraph>[1 2 3 4 6 7 8 9][紫水晶碎片][2]+[5][魔力瓶·小]</Paragraph><Paragraph>B：</Paragraph><Paragraph>箔光瓶：[1] [掺钻玻璃] [3][掺钻玻璃][5] 掺钻玻璃]</Paragraph><Paragraph>C</Paragraph><Paragraph>掺钻玻璃; 玻璃 +钻石*2 铁砧锻造</Paragraph><Paragraph>草木精华 {合成配方见配方表} 【需特殊时间条件】</Paragraph><Paragraph>D</Paragraph><Paragraph>锻造锤</Paragraph><Paragraph>[1 2 3 4 6][铜锭][5 8][木棍]</Paragraph><Paragraph>F:</Paragraph><Paragraph>附魔骸骨:</Paragraph><Paragraph>未经处理的骸骨  砂轮磨制</Paragraph><Paragraph>奥术粉尘</Paragraph><Paragraph>H</Paragraph><Paragraph>含碳铁</Paragraph><Paragraph>铁锭 [4]</Paragraph><Paragraph>木炭   砂轮</Paragraph><Paragraph>L</Paragraph><Paragraph>狼皮:  未处理的狼皮 {篝火}</Paragraph><Paragraph>M:</Paragraph><Paragraph>魔力瓶·小</Paragraph><Paragraph>[1 2 3 4 6 7 8 9][游魂粉末]+[5] 玻璃瓶</Paragraph><Paragraph>S</Paragraph><Paragraph>水涤皮革:</Paragraph><Paragraph>炼药锅 [有水] [1][皮革]</Paragraph><Paragraph>T：</Paragraph><Paragraph>铁锭注模:</Paragraph><Paragraph>[2][4][5][6][7][8][9][树脂砖]</Paragraph><Paragraph>特制钢材:</Paragraph><Paragraph>未成形的钢材 铁锭注模 {铁砧打造}</Paragraph><Paragraph>W</Paragraph><Paragraph>未成形的钢材:</Paragraph><Paragraph>含碳铁 {烧制}</Paragraph><Paragraph>未完成的合成液:</Paragraph><Paragraph>(该配方需要与特殊 npc 对话获得)</Paragraph><Paragraph>X</Paragraph><Paragraph>雪原特制枪管:</Paragraph><Paragraph>由 [未完成的枪管] 在铁砧上经过 [锻造锤] 多次捶打后获得</Paragraph><Paragraph>血肉精华：</Paragraph><Paragraph>由特殊任务获取配方表</Paragraph><Paragraph>Y</Paragraph><Paragraph>月华溶剂： 草木精华</Paragraph><Paragraph>水瓶         砂轮合成</Paragraph><Paragraph>月华溶液：</Paragraph><Paragraph>(该配方需要与特殊 npc 对话获得)</Paragraph><Paragraph>月华精金：</Paragraph><Paragraph>(该配方需要与特殊 npc 对话获得)</Paragraph><Paragraph>未完待续</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="赛季活动预览—北蛮入侵" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">赛季活动预览—北蛮入侵</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/06/439/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年06月24日 11:57:19
+北方的冻土被寒冬榨干了最后一丝膏脂，连最顽强的苔藓都龟裂枯萎。那群裹着肮脏兽皮的蛮族，在饥饿的啃噬下双目猩红，狂躁的嘶吼震落冰原上的雪。他们的大酋长——那头曾咬下过南方血肉的豺狼，再一次将他贪婪而残忍的目光，死死锁定了我们南方无边的沃野、流淌黄金的城镇。噩耗传来：斯特洛克领已经沦陷！城墙崩塌于巨锤之下，守军尽数殉国，鲜血浸透每一块砖石，蛮子的兽皮旌旗插上了断壁残垣。他们的先头骑兵如决堤的污水般涌入联邦，烧杀劫掠，妇孺的哭喊淹没在铁蹄下，无数和平的村落化为烈火中的废墟。但我们不能后退，一步也不能！因为我们的身后便是我们的家园。这里，就是最后的防线！拔出你们的刀剑，激起满腔的血性，让这群贪婪的蛮子为他们踏出的每一步付出血的代价！</Paragraph><Paragraph>在本次赛季活动中，玩家将以地区为单位，共同抵御野蛮人的入侵。在活动的第一阶段 （7 月 4 日-7 月 6 日），除主城区外，其余地区的区长需要决定本地区的地区节点，节点确定后无法更改。地区节点拥有 1500 点血量，且无法移动，地区节点一旦被破坏，该区域将根据地区节点陷落的时间受到惩罚。若在活动结束后节点仍未失陷，玩家则会根据节点剩余的血量获得不同比例的奖励。</Paragraph><Paragraph>在活动的第二阶段 （7 月 7 日—7 月 12 日），野蛮人将会在地区节点附近建立前哨营地，在营地位置确认后，玩家可以根据红色旗帜的位置得知野蛮人的进攻路线。在此期间，玩家可以自由建造防御工事，但不得破坏进攻路线 （确保在不放置方块的前提下，可以通过破坏方块的方式正常行走至目标点即可）</Paragraph><Paragraph>在活动的第三阶段 （7 月 13 日—7 月 17 日），野蛮人将会在此期间周期刷新，并主动向地区节点处发起进攻。通过击杀野蛮人获取其首级，玩家可以在活动结束后凭借首级换取军功，军功可以在地区的军需官处换取奖励 （如果暂时没有想要的东西，也可暂时保留，随着剧情的推进，军功可以兑换的物品也会增加） 。同时，玩家建造的防御工事将被锁定，玩家无法继续建造任何防御工事，也不得对工事进行修改。</Paragraph><Paragraph>在活动的第四阶段 （7 月 18 日晚），野蛮人将对未被破坏的地区节点发起最后攻势，若在此之前或在最后攻势未结束前，所有地区的地区节点均已沦陷，则将进入 「神社守卫战」 。 （相关规则将在届时公布）</Paragraph><Paragraph>注意事项：1：野蛮人的实力会随着时间的推移逐渐增加</Paragraph><Paragraph>2：野蛮人的刷新时间固定，玩家无需一直固守</Paragraph><Paragraph>3：一旦有区域的地区节点陷落，野蛮人将立刻获得一次增强，且与该区域相邻的区域将会承担该区域的刷怪量。</Paragraph><Paragraph>4：在活动期间会刷新野蛮人头目，击败对方可获得丰厚奖励</Paragraph><Paragraph>如有其他修改，将会在此公布</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="意见回收" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -209,31 +227,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocument>
 <Paragraph Style="{StaticResource H1}">装备绑定系统介绍：命运之链</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/401/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月22日 20:29:52
 <InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771763158031.webp"/></InlineUIContainer></Paragraph><Paragraph>在艾尔梅亚的大陆上，冒险家们为寻求财富和荣耀不断战斗。为了让每位冒险家拥有独特的装备与风格，我们引入了全新的 「命运之链」 系统。</Paragraph><Paragraph><Bold>什么是命运之链？</Bold></Paragraph><Paragraph>命运之链是一项装备绑定机制，每月允许玩家更换和重新绑定一整套装备，包括武器、盔甲和饰品。绑定的装备具备不可破坏的属性，不会掉耐久，始终保持最佳状态，帮助你轻松应对各种挑战。</Paragraph><Paragraph><Bold>每月更换一次装备绑定</Bold></Paragraph><Paragraph>命运之链让玩家每月有一次解绑并重新绑定的机会，可以根据战斗需求或策略灵活选择新的装备组合，始终保持最佳状态，面对冒险中的种种考验。</Paragraph><Paragraph><Bold>防止滥用，确保公平</Bold></Paragraph><Paragraph>每个玩家只能绑定一套装备，避免滥用。绑定后，装备的不可破坏属性将只在玩家个人身上有效，转交给他人会失去属性，并不可恢复。这一机制确保了装备使用的公平性与策略性。</Paragraph><Paragraph><Bold>如何使用命运之链？</Bold></Paragraph><Paragraph>找到指定的命运之链 NPC，选择绑定装备。在每月更新时，你可以解绑当前装备，并选择新的装备进行绑定，享受全新的战斗体验。</Paragraph><Paragraph><Bold>全新冒险，命运由你掌控</Bold></Paragraph><Paragraph>命运之链为玩家提供了更多的选择和策略空间。无论你是探索未知的冒险家，还是战斗中的勇士，命运之链都将成为你与命运抗争的重要工具。</Paragraph><Paragraph><Bold>快来试试吧，命运之链就在你身边！</Bold></Paragraph><Paragraph>准备好开启新的冒险了吗？找到主城附近的命运之链 NPC，体验每月装备更换与绑定，享受前所未有的战斗体验，改变你的命运！</Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="http://mzmc.top/wp-content/uploads/2026/02/1771763080768.webp"/></BlockUIContainer>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/02/379/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年02月15日 19:30:50
-绵中方块人服务器管理委员会常务委员会关于进一步深化改革及优化人员的决定
-===================================</Paragraph><Paragraph>服务器管理委员会全体下属部门：</Paragraph><Paragraph>为进一步提高服务器管理服务效率，经服管委常委讨论，现就进一步深化改革及优化人员作如下决定：</Paragraph><List MarkerStyle="Decimal">
-<ListItem><Paragraph>改革机构设置</Paragraph></ListItem>
-<ListItem><Paragraph>整合组建新宣传部，将宣传部和绵中 MC 社社团管理委员会 （简称社管委） 职能合并，统筹服务器校内外宣传工作，社管委社长职能移交宣传部部长。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原组织与发展部更名为策划部。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">优化人员配置<LineBreak/>
-   经民主推荐、组织考察、服管委常委研究决定：</Paragraph></ListItem>
-</List><Paragraph>1. xingxiang114 同志任新宣传部部长，负责服务器宣传工作及校内社团管理统筹工作。</Paragraph><Paragraph>2. tsxc_java 同志任常务委员会副主席。</Paragraph><Paragraph>3. Nikolaos 同志任策划部部员，免去其原社管委社长职务</Paragraph><Paragraph>4. C__157 同志任策划部部员，免去其原宣传部部长职务</Paragraph><Paragraph>5. WhiteSand_KAF 同志经考察，认为其符合条件，现予以转正。</Paragraph><Paragraph>本决定自发布之日起施行，绵中方块人服务器管理委员会常务委员会负责解释。</Paragraph><Paragraph>绵中方块人服务器管理委员会常务委员会</Paragraph><Paragraph>2026-02-05</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="绵中方块人服务器 2026 新年贺词" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">绵中方块人服务器 2026 新年贺词</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2025/12/370/">文章链接</local:MyTextButton></Underline> 发布时间: 2025年12月31日 15:28:32
-<InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://mzmc.top/wp-content/uploads/2025/12/20251230103520396861.webp"/></InlineUIContainer></Paragraph><Paragraph>各位朋友们：</Paragraph><Paragraph>大家新年好！灵蛇负瑞雪，奔马迎春归。万物伊始，百舸争流。 2026，到来了。</Paragraph><Paragraph>今年已经是我们携手走过的第四个春秋了。难忘啊，一路上的旅程。在这辞旧迎新的时间，我们不妨一同端详这构建在数字世界的纽带，让即使在天南海北的我们，重新燃起火花。</Paragraph><Paragraph>2022 年暑假我们的群聊有 30 多人。而如今，我们自豪地拥有 300＋，这已然增长十倍的数据。从粘液科技到新存档，从资源界到创造界……每一次方块的交互，是满怀希望的初次尝试，还是为实现目标而顶住再来的魄力？每一次 PvP 的挑战，无论有备而来还是背水一战，都已献给我们共同的回忆。</Paragraph><Paragraph>我们喜欢你，亲爱的绵中方块人。我们喜欢你以一己之力建起城垣，惊叹与美学与肝帝的融合；我们喜欢你建起聚落，用规划与交流缝补可能并不完美的世界规则；最重要的是－－我们喜欢你来。我们的世界因为你的到来而不寂寞，我们的开发因为你的需求而有价值。这毋庸置疑。因为我们也是你。我们有共同的名字：绵中方块人。我们欣喜于你提出的设想，满足于我们将它变为现实，一次次追求新的创意，是一段写在 0 和 1 中的故事，独属于我们的一切。</Paragraph><Paragraph>你记得吗？</Paragraph><Paragraph>粘液科技档里神秘的合金盔甲大神，太璃神宫的原型出自何处，雪山地区曾上演 《人们的名义》……你从一无所有到仗剑天涯，成长着的，不只是时间，也是萤幕后的你我。我们的故事很长，长到要用一生去丈量；我们的距离很短，短到只需毫秒之间就可触及彼此。</Paragraph><Paragraph>我们的成长，是从独当一面到双人成行，再到众志成城。我们会为了 bug 和技术实现方案而讨论，把会议开到零点以后；我们也会集众人之力，想方设法带来更新奇，独一份的游戏体验……我们制定规则，即使我们知道鲜有人愿意倾注时间去看——但我们需要为长远考虑，你我的未来不只是在方块之间流动，更需要在规则与监督之下保证公平。自研反作弊到登录插件的修改，我们清楚令人头大的 「最后一公里」 问题在哪里；同时，我们吸纳有能力的小伙伴积极参与维护，全面放权，用我们的人才培养方式去构建未来的行业先锋，这里可能不是你写在简历上的第一站实习经历，但是足以带你叩响信息产业的大门……我们是绵中方块人服管委，玩家的先锋队，行业的探索者，你亲密无间的好朋友。</Paragraph><Paragraph>感谢你，看到这的你，不论你身处何方，是潜水于群中，或是活跃的话匣子，绵中方块人是我们的共同记号，游离于现实而又依托于你我的精神家园。若能寻一丝慰藉，便不虚此行；三五好友共话，尽得人间清欢。</Paragraph><Paragraph>2026，要有龙马精神，甘做勤劳 「牛马」，敢做行业奔马。去问明天何似？明朝日月新天，万马奔腾，其道大光。</Paragraph><Paragraph>出发吧，2026，明天，会更好的。</Paragraph><Paragraph>绵中方块人服务器管理委员会</Paragraph><Paragraph>2025.12.30</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
