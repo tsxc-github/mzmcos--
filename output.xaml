@@ -5,10 +5,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -28,20 +33,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="你知道吗：加载器的发行代号其实是绵中的各个楼以正大门为原点从近到远排的" />
+<local:MyHint Margin="0,8,0,2" IsWarn="False" Text="热知识：boen的饼一般会在三年内完成" />
 <local:MyCard Margin="0,10,0,14">
   <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
     <StackPanel>
@@ -73,7 +73,49 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </StackPanel>
   </Border>
 </local:MyCard>
-<local:MyCard Title="RPG 合成表 (部分)（持续更新中）" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="8 月 29 日平衡性调整公告" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">8 月 29 日平衡性调整公告</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mzmc.top/2026/08/448/">文章链接</local:MyTextButton></Underline> 发布时间: 2026年08月29日 23:13:55
+根据近日对各 RPG 武器的测试与实战表现，现在对以下武器进行统一调整：<LineBreak/>
+一： 饮鸠：在实战表现中，组织与发展部发现该武器的吸血效率过高，不符合设计时对该武器的定位，在本次调整中，将该武器的基础吸血效率从 25% 降低至 10%，并删除其扣除最大生命值的负面效果，以平衡其过于强大的吸血能力<LineBreak/>
+二：法杖类武器：在实战测试中，组织与发展部发现该类武器表现不佳，相较于弓箭类型武器几乎毫无优势，在本次调整中，组织与发展部将为普通评级以上的法杖类武器增加魔力增强符文槽，玩家可以通过探索，合成或 PVE 获得相应的增强宝石，玩家可以通过镶嵌宝石，增强该类武器的作战能力，优化其使用手感。同时，我们将增加部分高甲低血怪物，以鼓励玩家使用更加多元的武器策略。<LineBreak/>
+三：火枪类武器：在实战测试中，组织与发展部发现该类武器表现不佳，并未起到丰富玩家选择的预期目的，在本次调整中，单发类火枪将统一增加 5 点基础攻击伤害，同时，普通评级以上的火枪也将与法杖一同增加增强宝石，通过镶嵌该类宝石，玩家手中的火枪将获得更加强大的作战能力<LineBreak/>
+四：匕首类武器：在实战测试中，组织与发展部发现匕首类型武器的背后增伤效果与其操作风险并不相当，并未有效体现该类武器的特色，在本次更新中，所有匕首类武器背刺伤害将上调 30%，以突出其武器特色<LineBreak/>
+五：boss：QFKA 调整：在实战测试中，组织与发展部发现该怪物的部分机制给玩家的挫败感较强，未能给予玩家良好的游戏体验，现对其部分技能与基础属性做出如下调整 <LineBreak/>
+1：在实战测试中，QFKA 召唤出的小怪数值较高，给挑战玩家带来的挫败感强，故在本次调整中，QFKA 的幻想基础血量由 60 降低为 35，基础攻击伤害由 6 点下降至 3 点，并增加 5 点基础护甲值，期望该调整会使该怪物的数值结构更加合理 <LineBreak/>
+2：在实战测试中，我们发现 QFKA 的爆炸技能伤害较高，对挑战玩家的挫败感极强，故在本次调整中，我们将该技能的伤害下降 12%，并将索敌范围由 10 格下降至 6 格，并增加预警消息和施法前摇，使该技能更加具有交互感 <LineBreak/>
+3：数值结构调整：最大生命值：由 425 下降至 245 <LineBreak/>
+基础护甲值：增加 8 点<LineBreak/>
+对投射物伤害减伤：由 30% 增加至 40% <LineBreak/>
+击退抗性：不受击退调整为 40% 的击退减免<LineBreak/>
+六：部分小怪调整：<LineBreak/>
+在实战测试中，我们发现部分怪物数值不合理，给玩家的挫败感较强，现对这部分怪物做出如下调整：<LineBreak/>
+山贼 （含绿色精英山贼） 每级生命值增加由 2.3 降低为 1.3 <LineBreak/>
+头领护卫： 每级生命值增加由 1.8 降低为 1.2 <LineBreak/>
+劲弩山贼： 每级生命值增加由 1.7 降低为 1.2, 基础伤害降低 1 点<LineBreak/>
+山贼刀牌手： 每级生命值增加由 2.8 降低为 2.2 <LineBreak/>
+山贼营地道中刷怪速率由 20s 降低为 30s，防止该区域怪物堆积过多导致体验较差<LineBreak/>
+骷髅护卫：每级伤害增加由 0.05 增加为 0.1 <LineBreak/>
+骷髅骑士 [无名]：增加 6 点基础护甲<LineBreak/>
+增加拉取技能，提升玩家交互感<LineBreak/>
+对投射物减伤增加至 30% <LineBreak/>
+增加弱魔特质，提高 60% 其收到的魔法伤害<LineBreak/>
+基础生命值由 85 降低至 75 <LineBreak/>
+幽灵： 对投射物减伤由 80% 提升为 90% <LineBreak/>
+七：部分套装效果调整 <LineBreak/>
+1：狼王骨套装：4 件套效果：对亡灵类生物增伤 10% 增强为对亡灵类生物增伤 25%<LineBreak/>
+2：骸骨套装：5 件套效果：获得 8% 伤害减免增强为获得 15% 伤害减免 <LineBreak/>
+3：雪原游侠套装：5 件套效果：获得 8% 伤害减免，并额外获得 1 点伤害加成增强为获得 12% 伤害减免，并额外获得 2 点伤害加成 <LineBreak/>
+4：冒险新人套装新增 3 件套效果：穿戴时获得生命恢复 1 效果 <LineBreak/>
+5：雪原猎手套装：5 件套效果：获得 5% 暴击率及 20% 爆伤增强为获得 10% 暴击率与 25% 爆伤 <LineBreak/>
+6：草木之佑套装：3 件套效果：增加 25 点最大法力值增强为增加 75 点最大法力值<LineBreak/>
+在维护完成后，组织与发展部将为全体玩家发放艾尔梅亚铜币 <Italic>32，银币</Italic> 1，高效草药 <Italic>5，魔法增强核心·元素伤害</Italic> 1，魔法增强核心·法术冷却 <Italic>1，学徒法杖·冰</Italic> 1，万能修复剂*3 作为本次调整更新的补偿，感谢各位玩家对组织与发展部工作的理解与配合</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="RPG 合成表 (部分)（持续更新中）" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
